@@ -129,21 +129,21 @@
         <p>
             To understand linear vs. nonlinear ODEs we must first understand the basic structure in which ODEs are written. A commone way we will see an ODE written is as follows:
             $$a_n(x)y^{(n)}+a_{n-1}y^{(n-1)}+...+a_1(x)y'+a_0(x)y = g(x).$$
-            The values of $a_n$ are called the coefficients, and the number of "primes" (as in $y'$ for example) represents the number of derivitives we are taking of y with respect to
+            The values of $a_n$ are called the coefficients, and the number of "primes" (as in $`y'`$ for example) represents the number of derivitives we are taking of y with respect to
             the independent variable (in this case $x$). If the coefficients are only functions of the independent variable, as they are in the above equation, then the ODE is called linear. 
             This still probably is a bit too abstract at the moment, so lets look at some examples to get a better understanding. The following equation:
-            $$y'' + y = 0$$,
-            is a linear equation, because notice that $y$ and all of it's derivatives only have coefficients that depend on $x$ (in this case it is actually just the constant value 1 for the
+            $$y'' + y = 0,$$
+            is a linear equation, because notice that $`y`$ and all of it's derivatives only have coefficients that depend on $`x`$ (in this case it is actually just the constant value 1 for the
             coefficients but this is still not considered a function of $y$), and also note that $y$ and all of it's derivatives are also only linear. Let's turn this up a notch, the following 
             equation:
-            $$y'' + y = cos(x)+e^x$$,
+            $$y'' + y = cos(x)+e^x,$$
             is also linear. Even though there are nonlinear functions of the <em>independent</em> variable $x$, the coefficients are linear and all of the terms containing $y$ are also linear.
             However,
-            $$[y'']^2 + y = 0$$,
+            $$[y'']^2 + y = 0,$$
             is nonlinear, because the term containing $y''$ is nonlinear. Similarly,
-            $$y'y'' + y = 10$$,
+            $$y'y'' + y = 10,$$
             is nonlinear, because $y'y''$ is the multiplication of 2 terms containing $y$. Also,
-            $$y''+cos(y) = cos(x)$$,
+            $$y''+cos(y) = cos(x),$$
             is nonlinear, because the $cos(y)$ is obviously nonlinear in $y$. 
 
         </p>
