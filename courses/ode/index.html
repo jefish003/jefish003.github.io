@@ -146,7 +146,7 @@
             is nonlinear, because the term containing \(y''\) is nonlinear. Similarly,
             $$y'y'' + y = 10,$$
             is nonlinear, because \(y'y''\) is the multiplication of 2 terms containing \(y\). Also,
-            $$y''+cos(y) = cos(x),$$
+            $$y''+\mbox{cos}(y) = \mbox{cos}(x),$$
             is nonlinear, because the \(cos(y)\) is obviously nonlinear in \(y\). 
 
         </p>
@@ -173,8 +173,8 @@
         </p>
 
         <p>
-            If you want the fast version, below is a short video introducing how to identify whether an ODE is linear or nonlinear. Otherwise stick around for a more detailed explanation.
-            This video includes examples, visual explanations, and a clear checklist for classification.
+            If you want the fast version, below is a short video introducing how to identify whether an ODE is homogeneous or nonhomogeneous. Otherwise stick around for a more detailed explanation.
+            This video includes examples, and a clear checklist for classification.
         </p>
 
         <!-- Embedded YouTube Video -->
@@ -188,8 +188,20 @@
         </div>
 
         <p>
-            More coming here!
-
+            As with everything, it is always good to look at examples to make sure we understand. I highly encourage anyone who decides to go into higher level
+            mathematics to get used to doing this type of thing to make sure you understand. Most people (myself included) have a hard time grasping abstract ideas
+            without examples, so gaining practice making your own examples is a good idea. Ok, now lets dive in with the practice, the equation
+            $$xy'' + x^2y = 0,$$
+            is homogeneous, as is,
+            $$y''+y = 0.$$
+            However, 
+            $$xy^{(3)}+y''+1 = 0,$$
+            is nonhomogenous because if we rewrite this equation in standard form
+            $$xy^{(3)}+y'' = -1,$$
+            it is clear that \(g(x) = -1 \neq 0\) in this case.
+            Also,
+            $$y'+y = \mbox{cos}(x),$$
+            is also nonhomogenous because \(g(x) = \mbox{cos}(x)\). 
         </p>
     </section>
 
