@@ -135,7 +135,8 @@
             The values of \(a_n\) are called the coefficients, and the number of "primes" (as in \(y'\) for example) represents the number of derivitives we are taking of \(y\) with respect to
             the independent variable (in this case \(x\)). It should be noted that there are other common ways of writing derivatives as well, perhaps the most common being \(\frac{dy}{dx}\), 
             again with \(y\) as the dependent variable and \(x\) as the independent variable. Another common one that we may run into is the "dot" notation, for example \(\ddot{x}\), in this
-            case we generally take \(x\) as the dependent variable and \(t\) as the independent variable. This is commonly found in physics related applications, and since I like applications, we 
+            case we generally take \(x\) as the dependent variable and \(t\) as the independent variable, and since there are 2 dots over the top, that means this is a second derivative of
+            \(x\) with respect to \(t\). This is commonly found in physics related applications, and since I like applications, we 
             will make use of it in this course. 
             If the coefficients are only functions of the independent variable, as they are in the above equation, then the ODE is called linear. 
             This still probably is a bit too abstract at the moment, so lets look at some examples to get a better understanding. The following equation:
@@ -143,8 +144,12 @@
             is a linear equation, because notice that \(y\) and all of it's derivatives only have coefficients that depend on \(x\) (in this case it is actually just the constant value 1 for the
             coefficients but this is still not considered a function of \(y\)), and also note that \(y\) and all of it's derivatives are also only linear. Let's turn this up a notch, the following 
             equation:
-            $$y'' + y = cos(x)+e^x,$$
+            $$y'' + y = \mbox{cos}(x)+e^x,$$
             is also linear. Even though there are nonlinear functions of the <em>independent</em> variable \(x\), the coefficients are linear and all of the terms containing \(y\) are also linear.
+            Additionally, 
+            $$y^{(4)}+y'' = e^x,$$
+            (taking the 4th derivative of \(y\) is the meaning of the (4) superscript), is also linear, again there is no multiplication of multiple \(y\) terms, nor are there
+            nonlinear functions of any \(y\) terms. 
             However,
             $$[y'']^2 + y = 0,$$
             is nonlinear, because the term containing \(y''\) is nonlinear. Similarly,
