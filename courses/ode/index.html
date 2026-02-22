@@ -194,7 +194,7 @@
         <div class="video-container">
             <iframe 
                 src="https://www.youtube.com/embed/"
-                title="Linear vs Nonlinear ODEs"
+                title="Homogeneous vs Nonhomogeneous ODEs"
                 frameborder="0"
                 allowfullscreen>
             </iframe>
@@ -268,14 +268,48 @@
         <h2>First order ODEs</h2>
 
         <p>
-            Amazing! We finally can move on from classification. Don't put all that terminology away though, as with most courses, we will build on the information that we have already learned. So
+            Amazing! We finally can move on from classification (well sort of anyway...). 
+            Don't put all that terminology away though, as with most courses, we will build on the information that we have already learned. So
             if you forget what a nonlinear, nonhomogeneous, second order ODE is later on, you are going to have a hard time understanding why the technique you tried to use didn't work out properly
             to solve a particular problem. And that is no fun. Also, ODEs are truly a foundational course for just about any mathematical science you can imagine, whether it be the majority of the
             engineering fields, or physics or chemistry, and when you get right down to it, biology too, at least when we model biological systems. We will stick with first order ODEs for a while 
             because a number of ideas from these types of ODEs carry over into the higher order ODEs. 
         </p>
         <p>
-            We are going to add in more terminology now, a first order ODE is called 
+            We are going to add in more terminology now, a first order ODE is called autonomous if the only the dependent variable is explicitely given in the equation, that is,
+            $$\frac{dy}{dx} = f(y).$$
+            Notice that the right hand of the equation only depends on the dependent variable \(y\), there is no mention of the dependent variable \(x\) other than in the derivative itself, this
+            is the definition of autonomous. Now we will see some examples, the first order ODE,
+            $$\frac{dy}{dx} = y^2,$$
+            is autonomous, notice also that it is nonlinear and homogeneous because if we write it in standard form, it becomes
+            $$\frac{dy}{dx} -y^2 = 0.$$
+            Also, the first order differential equation,
+            $$\dot{x} = \mbox{cos}(x)-1,$$
+            is autonomous, because the independent variable (in this case remember the independent variable is \(t\), anytime you see a dot over the top this implies that \(t\) is the independent 
+            variable) does not appear, however the above equation is also nonlinear, but it is nonhomogeneous, because when written in standard form
+            $$\dot{x}-\mbox{cos}(x) = -1.$$
+            Also,
+            $$y' = e^{-y}+3y,$$
+            is first order, autonomous, nonlinear and in this case homogeneous, try writing it in standard form to see this.
+            You may wonder why we do not always write differential equations in standard form, it will be abundantly clear soon, but I will stop for a moment to note that sometimes (or maybe even often)
+            it is convenient to write the ODE in other forms as we have been doing here. This is particularly true when dealing with solutions to autonomous ODEs. 
+        </p>
+        <p>
+            For nonautonomous ODEs we may write it as,
+            $$\frac{dy}{dx} = f(x,y).$$
+            Notice in this equation the function \(f\) will depend on <em>both</em> the independent and the dependent variable, or potentially only the independent one. 
+            So for example the first order ODE,
+            $$\frac{dy}{dx} = \mbox{cos}(x),$$
+            is nonautonomous, and it also linear, and nonhomogeneous.
+            Additionally,
+            $$\dot{x} = -t^2+\mbox{cos}(x),$$
+            is nonautonomous, because the independent variable (\(t\)) shows up in the equation, naturally this is a first order ODE, it is nonlinear and it is nonhomogeneous.
+            Now for a slightly tricky case, 
+            $$xy' = 0,$$
+            is also nonautonomous, you might yell at me on that one, because I wrote that the right hand side as \(f(x,y)\), but where is the \(x\) on the right hand side? Well notice that if I divide
+            both sides by \(x\) that the right hand side becomes \(\frac{0}{x}\), if we were careless we would just write that as \(0\) but that is actually not entirely correct, it is only true if we
+            explicitely rule that \(x \neq 0\), but recall that if \(x = 0\) this becomes \(\frac{0}{0}\) which is an indeterminant form. You can read up on indeterminant forms here if you have forgotten
+            about them.
         </p>
 
         <p>
@@ -287,7 +321,7 @@
         <div class="video-container">
             <iframe 
                 src="https://www.youtube.com/embed/"
-                title="Linear vs Nonlinear ODEs"
+                title="Autonomous ODEs"
                 frameborder="0"
                 allowfullscreen>
             </iframe>
