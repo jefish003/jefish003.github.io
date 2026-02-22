@@ -263,6 +263,21 @@
             $$t^2\dddot{x}+\mbox{cos}(t^8)\ddot{x}+ x = e^{-5t},$$
             is a third order ODE since the highest derivative term contains 3 dots. 
         </p>
+        <p>
+            Again it might seem simply by the way I wrote things above, but we have to be very careful to differentiate between the order of an ODE and polynomial terms that may make an ODE nonlinear. 
+            For example,        
+            $$x^2y'''+y = \mbox{sin}(x^4),$$
+            has order 3, since the highest derivative of \(y\) is the \(y'''\) term. However,
+            $$[y']^5+y^4=x^{10},$$
+            s first order (or order 1) since the highest derivative is the \(y'\) and the 5th power is only related to the nonlinearity of the differential equation. 
+            So it is quite important that we use caution in our notation to avoid confusion. For more practice,
+            $$[y^{(4)}]^2+\mbox{cos}(x^3)y' = 0,$$
+            is a 4th order ODE. We should also be comfortable with identifying the order of an ODE from other notations, for example,
+            $$\frac{d^2y}{dx^2}+xy=x^{0.25},$$
+            is a second order ODE, and
+            $$t^2\dddot{x}+\mbox{cos}(t^8)\ddot{x}+x = e^{-5t},$$
+            is a third order ODE, since the highest derivative term contains 3 dots. 
+        </p>
     </section>
         <section class="section">
         <h2 id="first-order-odes">First order ODEs</h2>
