@@ -260,7 +260,53 @@
             is a third order ODE since the highest derivative term contains 3 dots. 
         </p>
     </section>
+        <section class="section">
+        <h2>First order ODEs</h2>
 
+        <p>
+            Amazing! We finally can move on from classification. Don't put all that terminology away though, as with most courses, we will build on the information that we have already learned. So
+            if you forget what a nonlinear, nonhomogeneous, second order ODE is later on, you are going to have a hard time understanding why the technique you tried to use didn't work out properly
+            to solve a particular problem. And that is no fun. Also, ODEs are truly a foundational course for just about any mathematical science you can imagine, whether it be the majority of the
+            engineering fields, or physics or chemistry, and when you get right down to it, biology too, at least when we model biological systems. We will stick with first order ODEs for a while 
+            because a number of ideas from these types of ODEs carry over into the higher order ODEs. 
+        </p>
+        <p>
+            We are going to add in more terminology now, a first order ODE is called 
+        </p>
+
+        <p>
+            If you want the fast version, below is a short video introducing how to identify what the order of an ODE is see below. Otherwise stick around for a more detailed explanation.
+            This video includes examples of the order of an ODE.
+        </p>
+
+        <!-- Embedded YouTube Video -->
+        <div class="video-container">
+            <iframe 
+                src="https://www.youtube.com/embed/"
+                title="Linear vs Nonlinear ODEs"
+                frameborder="0"
+                allowfullscreen>
+            </iframe>
+        </div>
+
+        <p>
+            Again it might seem simply by the way I wrote things above, but we have to be very careful to differentiate between the order of an ODE and polynomial terms that may make an ODE nonlinear.
+            For example,
+            $$x^2y''' + y = \mbox{sin}(x^4),$$
+            has order 3, since the highest derivative of \(y\) is the \(y'''\) term.
+            However,
+            $$[y']^5+y^4 = x^10,$$
+            is first order (or order 1) since the highest derivative is the \(y'\) and the 5th power is only related to the <em>nonlinearity</em> of the differential equation. So it is quite important 
+            that we use caution in our notation to avoid confusion. For more practice,
+            $$[y^{(4)}]^2 + \mbox{cos}^3(x)y' = 0,$$
+            is a 4th order ODE. 
+            We should also be comfortable with identifying the order of an ODE from other notations, for example,
+            $$\frac{d^2y}{dx^2}+xy = x^{0.25},$$
+            is a second order ODE, and
+            $$t^2\dddot{x}+\mbox{cos}(t^8)\ddot{x}+ x = e^{-5t},$$
+            is a third order ODE since the highest derivative term contains 3 dots. 
+        </p>
+    </section>
 </div>
 
 <footer>
