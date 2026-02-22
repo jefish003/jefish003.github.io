@@ -100,7 +100,7 @@
 
     <!-- Linear ODEs Section -->
     <section class="section">
-        <h2>Limits</h2>
+        <h2 id="limits">Limits</h2>
 
         <p>
             We must begin with a discussion of what a limit is, why we care about it, and examples
@@ -124,7 +124,7 @@
       
     </section>
     <section class="section">
-        <h2>Derivatives</h2>
+        <h2 id="derivatives">Derivatives</h2>
 
         <p>
             Placeholder
@@ -135,7 +135,40 @@
 More to come!
         </p>
     </section>
+  <section class="section">
+        <h2 id="indeterminant-forms">Indeterminant Forms</h2>
 
+        <p>
+            In this section we will be rehashing limits. If you have forgotten about limits, I strongly suggest that you 
+            <a href="/courses/calculus/differential.html#limits">
+            click here
+            </a>
+            to remind yourself of how to perform them. 
+            It should be no surprise, from how this course has progressed thus far, that we will find ourselves interested with the behavior of functions as they approach certain values. However,
+            we may run into an issue in certain places, for example, suppose we are interested in the following rational function,
+            $$F(x) = \frac{x^2-1}{x-1},$$
+            and specifically we want to know the value of \(F(x)\) as \(x \rightarrow 0\), thus we should write this as 
+            $$\lim \limits_{x \rightarrow 1} F(x) = \lim \limits_{x \rightarrow 1} \frac{x^2-1}{x-1},$$
+            of course the problem is, that as we approach 1 from either the left or the right we end up with \(F(x) \rightarrow \frac{0}{0}\). The problem that we are running into here is that 
+            \(\frac{0}{0}\) is undefined. 
+        </p>
+
+        <p>
+            If you want the fast version, below is a short video introducing indeterminant forms.
+        </p>
+
+        <!-- Embedded YouTube Video -->
+        <div class="video-container">
+            <iframe 
+                src="https://www.youtube.com/embed/"
+                title="Limits"
+                frameborder="0"
+                allowfullscreen>
+            </iframe>
+        </div>
+
+      
+    </section>
 </div>
 
 <footer>
