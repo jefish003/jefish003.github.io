@@ -180,7 +180,9 @@ More to come!
             $$\lim \limits_{x \rightarrow 1} F(x) = \lim \limits_{x \rightarrow 1} \frac{x^2-1}{x-1},$$
             of course the problem is, that as we approach 1 from either the left or the right we end up with \(F(x) \rightarrow \frac{0}{0}\). The problem that we are running into here is that 
             \(\frac{0}{0}\) is undefined. This is one example of what is called an indeterminant form, \(\frac{\pm \infty}{\pm \infty}\) is another example, and there are a number of other
-            indeterminant forms as we will see through the examples.
+            indeterminant forms as we will see through the examples below. I want to take a moment to note how appropriate the name is, these forms are indeterminate because as we will see in the following
+            sections, we can't (necessarily) determine beforehand what the answer will be, for instance \(\frac{\infty}{\infty}\) could be 1 or it could be \(\infty\) or it could be any real number you can choose
+            depending on the functions involved!
         </p>
 
         <p>
@@ -257,11 +259,51 @@ More to come!
             Notice that there was no easy algebraic manipulation to get to this result, but straightforward application of l'Hospital's rule worked beautifully!
         </p>
           <p>
-            Place holder
+            OK, but I mentioned there were other indeterminate forms, specifically I already mentioned \(\frac{\pm \infty}{\pm \infty}\), so we will take a look at some examples there. Suppose for example, that
+            \(Q(x) = \frac{-3x^3-5x^2}{2x^3-1}\) and we wish to understand the behavior of this function as \(x \rightarrow \infty\) (this, by the way, is often a question asked in physics, what happens as I get "very
+              far away" from whatever pheonomena I am observing?) Notice the problem we have, if I let \(f(x) = -3x^3-5x^2\) then as \(x \rightarrow \infty, f(x) \rightarrow -\infty\) and similarly, if I let 
+              \(g(x) = 2x^3-1\) as \(x \rightarrow \infty, g(x) \rightarrow \infty\). So I have the indeterminate form \(\frac{-\infty}{\infty}\) to be specific. According to l'Hopital's rule,
+              $$\lim\limits_{x \rightarrow \infty}Q(x) = \lim\limits_{x \rightarrow \infty}\frac{-9x^2-10x}{6x^2},$$
+              after applying the power rule to both the numerator and the denominator. But this time notice that I have a problem, I still get the indeterminate form \(\frac{-\infty}{\infty}\), but notice that I am getting
+              somewhere, as the power has been reduced in each of \(f,g\). So, the natural thing to do here is to apply l'Hospital's rule again,
+              $$\lim\limits_{x \rightarrow \infty}Q(x) = \lim\limits_{x \rightarrow \infty}\frac{-18x-10}{12x},$$
+              but again we have the same problem, but we are much closer now. So apply the rule yet again,
+              $$\lim\limits_{x \rightarrow \infty}Q(x) = \lim\limits_{x \rightarrow \infty}\frac{-18}{12},$$
+              now that is NICE!. We see that the limit is \(\frac{-18}{12}= \frac{-3}{2}\). We should take a look at another example to flesh out our understanding. 
+              For example, imagine the function \(r(x) = \frac{x^3}{x^2}\) and imagine that we want to find the behavior as \(x \rightarrow \infty\). Well, we should be able to immediately identify that this is of the
+              form \(\frac{\infty}{\infty}\), so we will apply l'Hospital's rule:
+              $$\lim\limits_{x \rightarrow \infty}r(x) = \lim\limits_{x \rightarrow \infty}\frac{3x^2}{2x},$$
+              but we can see that leavies us with an indeterminate form still, so applying again,
+              $$\lim\limits_{x \rightarrow \infty}r(x) = \lim\limits_{x \rightarrow \infty}\frac{6x}{2},$$
+              but this gets us \(\frac{\infty}{2}\) which is NOT an indeterminate form, this is just \(\infty\). So we have found that \(\lim\limits_{x \rightarrow \infty}r(x) = \infty\). To link this to what I said in
+              the indeterminate forms section, the past 2 examples show why these forms are called indeterminate, it is because in both cases we had something of the form \(\frac{\pm \infty}{\pm \infty}\), and for one 
+              of them it turned out that this led to \(\frac{-3}{2}\) and in the other case it led to \(\infty\)! We will check out other indeterminate forms in the next section.
         </p>    
     </section>
     
-    
+        <section class="section">
+        <h2 id="indeterminate-products">Indeterminate Products</h2>
+
+        <p>
+            Coming Soon
+        </p>
+
+        <p>
+            If you want the fast version, below is a short video introducing indeterminate products.
+        </p>
+
+        <!-- Embedded YouTube Video -->
+        <div class="video-container">
+            <iframe 
+                src="https://www.youtube.com/embed/"
+                title="Limits"
+                frameborder="0"
+                allowfullscreen>
+            </iframe>
+        </div>
+
+      
+    </section>
     
 </div>
 
