@@ -143,6 +143,27 @@
 More to come!
         </p>
     </section>
+   <section class="section">
+        <h2 id="sinusoidal-functions">Derivatives of sinusoidal functions</h2>
+
+        <p>
+            Description of the the derivative for sinusoidal functions
+        </p>
+        <!-- Embedded YouTube Video -->
+        <div class="video-container">
+            <iframe 
+                src="https://www.youtube.com/embed/"
+                title="Power Rule"
+                frameborder="0"
+                allowfullscreen>
+            </iframe>
+        </div>
+
+        <p>
+More to come!
+        </p>
+    </section>
+    
   <section class="section">
         <h2 id="indeterminant-forms">Indeterminant Forms</h2>
 
@@ -200,24 +221,40 @@ More to come!
             forms), then
             $$\lim\limits_{x\rightarrow a}\frac{f(x)}{g(x)} = \lim\limits_{x\rightarrow a}\frac{f'(x)}{g'(x)},$$
             so long as the limit of the right hand side exists. In other words, the limit of ratio of the functions is the same as the limit of the ratio of each functions derivative. 
-            We can continue using our example from the last section,
+            We can continue using our example from the last section and verify that we get the same answer. Recall that 
+            <a href="/courses/calculus/differential/index.html#power-rule">
+                click here
+            </a>
+            from the power rule, if we let \(f(x) = x^2-1\), then 
+            $$f'(x) = 2x.$$
+            Similarly, using the power rule, since \(g(x) = x-1\) then \(g'(x) = 1\). Thus according to l'Hospital's rule, we have
+            $$\lim \limits_{x \rightarrow 1} \frac{x^2-1}{x-1} = \lim \limits_{x \rightarrow 1} \frac{2x}{1} = 2,$$
+            which is identically what we found above!
+            So now we should work on some examples which we can't simply manipulate algebraically, which shows the real power of l'Hospital's rule.
         </p>
 
         <p>
-            If you want the fast version, below is a short video introducing indeterminant forms.
+            If you want the fast version, below is a short video introducing l'Hospital's rule.
         </p>
 
         <!-- Embedded YouTube Video -->
         <div class="video-container">
             <iframe 
                 src="https://www.youtube.com/embed/"
-                title="Limits"
+                title="l'Hospital's rule"
                 frameborder="0"
                 allowfullscreen>
             </iframe>
         </div>
         <p>
-            Place holder
+            Suppose we have the function \(K(x) = \frac{\mbox{cos}(x)}{x-\frac{\pi}{2}}\) and we want to find the limit of this function as \(x \rightarrow \frac{\pi}{2}\). Notice we will run into
+            the \(\frac{0}{0}\) indeterminate form. Thus, recalling derivatives of 
+             <a href="/courses/calculus/differential/index.html#power-rule">
+            sinusoidal functions 
+             </a>
+            and the power rule, if we let \(f(x) = \mbox{cos}(x), f'(x) = -\mbox{sin}(x)\) and \(g(x) = x-\frac{\pi}{2}, g'(x) = 1\). Now taking the limit,
+            $$\lim\limits_{x \rightarrow \pi/2}\frac{\mbox{cos}(x)}{x-\frac{\pi}{2}} =\lim\limits_{x \rightarrow \pi/2} \frac{-\mbox{sin}(x)}{1} = -1.$$
+            Notice that there was no easy algebraic manipulation to get to this result, but straightforward application of l'Hospital's rule worked beautifully!
         </p>
           <p>
             Place holder
