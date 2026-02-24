@@ -124,12 +124,20 @@
       
     </section>
     <section class="section">
-        <h2 id="derivatives">Derivatives</h2>
+        <h2 id="power-rule">The Power Rule</h2>
 
         <p>
-            Placeholder
+            Description of the power rule!
         </p>
-
+        <!-- Embedded YouTube Video -->
+        <div class="video-container">
+            <iframe 
+                src="https://www.youtube.com/embed/"
+                title="Power Rule"
+                frameborder="0"
+                allowfullscreen>
+            </iframe>
+        </div>
 
         <p>
 More to come!
@@ -171,27 +179,28 @@ More to come!
             So how do we handle this problem of indeterminate forms? Well, we can handle it algebraically in some cases, the example given above is an ideal candidate for this. Notice that
             we can factor the numerator since it is the difference of two perfect squares, which will allow us to make a cancellation (we must be very cautious with these types of cancellation
             because for instance in this case it is <em>only valid</em> if \(x\neq1\), but we get "away" with that here because we are taking limits, not setting it equal to 1),
-            $$\frac{x^2-1}{x-1} = \frac{(x+1)(x-1)}({x-1)} = x+1,$$
+            $$\frac{x^2-1}{x-1} = \frac{(x+1)(x-1)}{(x-1)} = x+1,$$
             which is true, as noted above, for \(x \neq 1\). This is perfectly fine from a limit standpoint, we are only asking the behavior as \(x\) approaches 1. So if we take the limit here,
             $$\lim \limits_{x \rightarrow 1} x+1 = 2.$$
         </p>
           <p>
             This is nice, but as you probably guessed from my comment above "in some cases" that this method is not overly general. Indeed, in many cases using this type of trick is impossible. 
-            So instead, we will ask for a more general method, which I will discuss below called l'Hopital's rule. 
+            So instead, we will ask for a more general method, which I will discuss below called l'Hospital's rule. 
         </p>    
     </section>
     </section>
   <section class="section">
-        <h2 id="lhopitals-rule">l'Hopital's rule</h2>
+        <h2 id="lhospitals-rule">l'Hospital's rule</h2>
 
         <p>
-            I will start by stating l'Hopital's rule and then we will begin discussing applications. Suppose we have two differentiable functions, \(f\) and \(g\), and furthermore that \(g \neq 0\)
+            I will start by stating l'Hospital's rule and then we will begin discussing applications. Suppose we have two differentiable functions, \(f\) and \(g\), and furthermore that \(g \neq 0\)
             and \(f,g\) are both differentiable on some open interval \(I\) around \(a\) (though it may not contain \(a\) itself). Additionally suppose either, 
             \(\lim \limits_{x \rightarrow a}f(x)=0\) and \(\lim \limits_{x \rightarrow a}g(x)=0\) <em>or</em> 
             \(\lim \limits_{x \rightarrow a}f(x)=\pm \infty\) and \(\lim \limits_{x \rightarrow a}g(x)=\pm \infty\) (notice the ratio of these functions will be in common types of indeterminate
             forms), then
             $$\lim\limits_{x\rightarrow a}\frac{f(x)}{g(x)} = \lim\limits_{x\rightarrow a}\frac{f'(x)}{g'(x)},$$
             so long as the limit of the right hand side exists. In other words, the limit of ratio of the functions is the same as the limit of the ratio of each functions derivative. 
+            We can continue using our example from the last section,
         </p>
 
         <p>
