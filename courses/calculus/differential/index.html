@@ -150,7 +150,8 @@ More to come!
             and specifically we want to know the value of \(F(x)\) as \(x \rightarrow 0\), thus we should write this as 
             $$\lim \limits_{x \rightarrow 1} F(x) = \lim \limits_{x \rightarrow 1} \frac{x^2-1}{x-1},$$
             of course the problem is, that as we approach 1 from either the left or the right we end up with \(F(x) \rightarrow \frac{0}{0}\). The problem that we are running into here is that 
-            \(\frac{0}{0}\) is undefined. 
+            \(\frac{0}{0}\) is undefined. This is one example of what is called an indeterminant form, \(\frac{\infnty}{\infnty}\) is another example, and there are a number of other
+            indeterminant forms as we will see through the examples.
         </p>
 
         <p>
@@ -166,7 +167,14 @@ More to come!
                 allowfullscreen>
             </iframe>
         </div>
-
+        <p>
+            So how do we handle this problem of indeterminate forms? Well, we can handle it algebraically in some cases, the example given above is an ideal candidate for this. Notice that
+            we can factor the numerator since it is the difference of two perfect squares, which will allow us to make a cancellation (we must be very cautious with these types of cancellation
+            because for instance in this case it is <em>only valid</em> if \(x\neq1\), but we get "away" with that here because we are taking limits, not setting it equal to 1),
+            $$\frac{x^2-1}{x-1} = \frac{(x+1)(x-1)}({x-1)} = x+1,$$
+            which is true, as noted above, for \(x \neq 1\). This is perfectly fine from a limit standpoint, we are only asking the behavior as \(x\) approaches 1. So if we take the limit here,
+            $$\lim \limits_{x \rightarrow 1} x+1 = 2.$$
+        </p>
       
     </section>
 </div>
