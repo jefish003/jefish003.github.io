@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Library</title>
+
+    <style>
+        body {
+            font-family: Georgia, serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background: #fdfdfd;
+            color: #222;
+        }
+
+        header {
+            background: #2c3e50;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        h1, h2 {
+            font-weight: 600;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 2rem;
+        }
+
+        .course-card {
+            background: white;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 0 12px rgba(0,0,0,0.1);
+        }
+
+        .course-card h2 {
+            margin-top: 0;
+        }
+
+        .course-card a {
+            display: inline-block;
+            margin-top: 0.5rem;
+            color: #0066cc;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .course-card a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            color: #666;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Course Library</h1>
+    <p>A growing ecosystem of interconnected courses designed for research students.</p>
+</header>
+
+<div class="container">
+
+    <!-- ODE Course -->
+    <div class="course-card">
+        <h2>Ordinary Differential Equations</h2>
+        <p>
+            A foundational course introducing first- and second-order ODEs, linearity, 
+            homogeneity, separability, and solution techniques. This course provides 
+            the conceptual backbone for PDEs, dynamical systems, and operator theory.
+        </p>
+        <a href="/courses/ode/">Go to ODE Course →</a>
+    </div>
+
+    <!-- Probability & Statistics -->
+    <div class="course-card">
+        <h2>Probability and Statistics</h2>
+        <p>
+            An introduction to randomness, distributions, expectation, variance, 
+            independence, sampling, and inference. These ideas support data science, 
+            stochastic modeling, and uncertainty quantification.
+        </p>
+        <a href="/courses/probability/">Go to Probability & Statistics Course →</a>
+    </div>
+
+    <!-- Linear Algebra -->
+    <div class="course-card">
+        <h2>Linear Algebra</h2>
+        <p>
+            A structural view of vector spaces, linear transformations, eigenvalues, 
+            eigenvectors, and matrix decompositions. This course underpins nearly 
+            every other course in the ecosystem.
+        </p>
+        <a href="/courses/linear-algebra/">Go to Linear Algebra Course →</a>
+    </div>
+
+    <!-- PDEs -->
+    <div class="course-card">
+        <h2>Partial Differential Equations</h2>
+        <p>
+            A study of diffusion, waves, and potential theory through separation of 
+            variables, Fourier methods, and eigenfunction expansions. Strongly linked 
+            to ODEs and functional analysis.
+        </p>
+        <a href="/courses/pde/">Go to PDE Course →</a>
+    </div>
+
+    <!-- CFD -->
+    <div class="course-card">
+        <h2>Computational Fluid Dynamics</h2>
+        <p>
+            An applied course on discretization, stability, convergence, and numerical 
+            simulation of fluid flows. Builds on PDEs, linear algebra, and numerical analysis.
+        </p>
+        <a href="/courses/cfd/">Go to CFD Course →</a>
+    </div>
+
+    <!-- Functional Analysis -->
+    <div class="course-card">
+        <h2>Functional Analysis</h2>
+        <p>
+            A rigorous exploration of normed spaces, operators, spectra, and 
+            infinite-dimensional analysis. Essential for modern PDE theory, 
+            operator-theoretic modeling, and advanced research.
+        </p>
+        <a href="/courses/functional-analysis/">Go to Functional Analysis Course →</a>
+    </div>
+
+</div>
+
+<footer>
+    © 2026 Your Name — Course Development Project
+</footer>
+
+</body>
+</html>
