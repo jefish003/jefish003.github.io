@@ -150,7 +150,7 @@ More to come!
             and specifically we want to know the value of \(F(x)\) as \(x \rightarrow 0\), thus we should write this as 
             $$\lim \limits_{x \rightarrow 1} F(x) = \lim \limits_{x \rightarrow 1} \frac{x^2-1}{x-1},$$
             of course the problem is, that as we approach 1 from either the left or the right we end up with \(F(x) \rightarrow \frac{0}{0}\). The problem that we are running into here is that 
-            \(\frac{0}{0}\) is undefined. This is one example of what is called an indeterminant form, \(\frac{\infty}{\infty}\) is another example, and there are a number of other
+            \(\frac{0}{0}\) is undefined. This is one example of what is called an indeterminant form, \(\frac{\pm \infty}{\pm \infty}\) is another example, and there are a number of other
             indeterminant forms as we will see through the examples.
         </p>
 
@@ -175,8 +175,48 @@ More to come!
             which is true, as noted above, for \(x \neq 1\). This is perfectly fine from a limit standpoint, we are only asking the behavior as \(x\) approaches 1. So if we take the limit here,
             $$\lim \limits_{x \rightarrow 1} x+1 = 2.$$
         </p>
-      
+          <p>
+            This is nice, but as you probably guessed from my comment above "in some cases" that this method is not overly general. Indeed, in many cases using this type of trick is impossible. 
+            So instead, we will ask for a more general method, which I will discuss below called l'Hopital's rule. 
+        </p>    
     </section>
+    </section>
+  <section class="section">
+        <h2 id="lhopitals-rule">l'Hopital's rule</h2>
+
+        <p>
+            I will start by stating l'Hopital's rule and then we will begin discussing applications. Suppose we have two differentiable functions, \(f\) and \(g\), and furthermore that \(g \neq 0\)
+            and \(f,g\) are both differentiable on some open interval \(I\) around \(a\) (though it may not contain \(a\) itself). Additionally suppose either, 
+            \(\lim \limits_{x \rightarrow a}f(x)=0\) and \(\lim \limits_{x \rightarrow a}g(x)=0\) <em>or</em> 
+            \(\lim \limits_{x \rightarrow a}f(x)=\pm \infty\) and \(\lim \limits_{x \rightarrow a}g(x)=\pm \infty\) (notice the ratio of these functions will be in common types of indeterminate
+            forms), then
+            $$\lim\limits_{x\rightarrow a}\frac{f(x)}{g(x)} = \lim\limits_{x\rightarrow a}\frac{f'(x)}{g'(x)},$$
+            so long as the limit of the right hand side exists. In other words, the limit of ratio of the functions is the same as the limit of the ratio of each functions derivative. 
+        </p>
+
+        <p>
+            If you want the fast version, below is a short video introducing indeterminant forms.
+        </p>
+
+        <!-- Embedded YouTube Video -->
+        <div class="video-container">
+            <iframe 
+                src="https://www.youtube.com/embed/"
+                title="Limits"
+                frameborder="0"
+                allowfullscreen>
+            </iframe>
+        </div>
+        <p>
+            Place holder
+        </p>
+          <p>
+            Place holder
+        </p>    
+    </section>
+    
+    
+    
 </div>
 
 <footer>
