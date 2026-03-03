@@ -129,7 +129,7 @@
         <div class="video-container">
             <iframe 
                 src="https://www.youtube.com/embed/"
-                title="Normed spaces"
+                title="Introduction to sets"
                 frameborder="0"
                 allowfullscreen>
             </iframe>
@@ -158,6 +158,16 @@
             notice that \(E \cap C = \{\}\), that is there are no elements contained in both \(E\) and \(C\), such sets are called <em>disjoint</em>. The empty brackets are sometimes 
             referred to as the empty set, and a special symbol is given, \(\emptyset = \{\}\). 
         </p>
+
+        <div class="video-container">
+            <iframe 
+                src="https://www.youtube.com/embed/"
+                title="Set operations"
+                frameborder="0"
+                allowfullscreen>
+            </iframe>
+        </div>
+        
         <p>
             Another operation is set difference, which has a couple of typical representations, one is the normal subtraction sign, the other being \(\backslash\), and set difference represents 
             all of the elements that are in the first set that are <b>not</b> in the second set. For example, using our sets from above,
@@ -174,7 +184,8 @@
             and this operation is also <b>not</b> commutative as,
             $$D \times C = \{((2,1),(2,3),(2,5),(2,7),(6,1),(6,3),(6,5),(6,7),(7,1),(7,3),(7,5),(7,7)\}.$$
             It is important to note that, as is implied by the name ordered pair, the ordering matters here, that means that \((1,2) \neq (2,1)\), but even so it is clear from the above example that
-            \(C \times D \neq D \times C\). 
+            \(C \times D \neq D \times C\). If we take the Cartesian product of a set with itself, for example the set \(C\), then we will write a power to denote this, for instance,
+            $$ C \times C = C^2, C \times C \times C = C^3, ...$$
         </p>   
         <p>
             I will now introduce another common operation on a set, which is something called the <em>power set</em>, \(P\). The power set is the set of all subsets of a set. We need
@@ -218,6 +229,37 @@
             $$ B \Delta A = (\{9,11\})\cup (\{1,2,3,4\}) = \{1,2,3,4,9,11\},$$
             which shows that \(A \Delta B = B \Delta A\) (we will not prove this now, we will save that for when we have a solid grasp on proof itself later). 
         </p>  
+    </section>
+
+    </section>
+    <section class="section">
+        <h2>de Morgan's laws</h2>
+
+        <p>
+            We will state (without proof for now) important relations between sets and their complements, the first of de Morgan's laws states, given a collection of
+            sets \(A_\alpha\) indexed by \(\alpha\), we have that the following is true:
+            $$(\bigcup \limits_\alpha A_\alpha)^C = \bigcap \limits_\alpha A_\alpha^C.$$
+            That is, the complement of the union of many sets is the same as the intersection of the complements of those sets. This wording is a bit confusing, so it will 
+        </p>
+
+
+        <p>
+            Place holder
+        </p>
+
+        <div class="video-container">
+            <iframe 
+                src="https://www.youtube.com/embed/"
+                title="de Morgan's laws"
+                frameborder="0"
+                allowfullscreen>
+            </iframe>
+        </div>
+        
+        <p>
+            Place holder
+        </p>   
+    
     </section>
 
 </div>
