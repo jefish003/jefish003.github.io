@@ -177,7 +177,7 @@
             \(C \times D \neq D \times C\). 
         </p>   
         <p>
-            Before moving on, I will introduce another common operation on a set, which is something called the <em>power set</em>, \(P\). The power set is the set of all subsets of a set. We need
+            I will now introduce another common operation on a set, which is something called the <em>power set</em>, \(P\). The power set is the set of all subsets of a set. We need
             a definition here, a <em>subset</em> is a set that contains some (or all) of the  elements from the original set, and does not contain any elements from outside of that set. Therefore, if 
             we have a set \(G\) and a subset of \(G\) that for the purposes of illustration we will call \(S\), then the following statements must be simultaneously true,
             $$S \cup G = G,$$
@@ -187,8 +187,31 @@
             $$ S \subseteq G,$$
             since \(G\) is technically a subset of itself, and if \(S \neq G\) we will write,
             $$ S \subset G,$$
-            which means that \(S\) is a <em>proper</em> subset of \(G\). 
-        </p>   
+            which means that \(S\) is a <em>proper</em> subset of \(G\). For example,
+            $$F = \{2,6\}$$ 
+            is a proper subset of \(D\) (recall that \(D = \{2,6,7\}\), but 
+            $$H = \{2,8\}$$
+            is <b>not</b> a subset of \(D\), since \(8 \notin D\), where the \( \in \) means is an element of, and thus, \(\notin\) means is not an element of, so this should read as \(8\) is not an
+            element of \(D\). Now we need one last idea before finally defining the power set. It is <em>vacuously</em> true that \(\emptyset\) is a subset of <em>every</em> set, this is because
+            \(\emptyset\) contains no elements, thus all of its elements are by default inside of every set. Now armed with all of these ideas, we may finally see the power set in action, recall that
+            the power set is the set of <em>all</em> subsets of a particular set. For example, the power set of \(D\),
+            $$P(D) = \{\emptyset,2,6,7, \{2,6\}, \{2,7\}, \{6,7\}, \{2,6,7\}\}.$$
+            Notice that \(P(D)\) contains \(\emptyset\) and also contains \(D\) itself inside of it. This is true of every power set, it will always contain the empty set and the set itself.
+        </p>  
+        <p>
+            Now we will define yet another operation, called the complement. The complement in general needs two sets defined, the "outer" set, and a subset of that set. For this example, I am going
+            to remind you that we said above that \(A = \{1,2,3,4,5,6\}\). This will be our set, and our subset of \(A\) will be \(K = \{1,2,3\}\). Then the complement \(K_A^C\) in \(A\) is,
+            $$K^C = \{4,5,6\},$$
+            that is \(K_A^C\) contains all of the elements in \(A\) that are not in \(K\), or using our notation from above, \(K^C = A - K\). Note here the importance that \(K \subseteq A\), it must be
+            a subset of the set we are taking a complement in (and it does not have to be a proper subset, it is perfectly valid for the complement to be an empty set). We must make reference to the
+            outer set, however, in order to determine what the complement is. For instance, suppose we have another set \(L = \{1,2,3,4,5,6,7,8\}\), then the complement of \(K\) in \(L\) is,
+            $$K_L^C = L-K = \{4,5,6,7,8\}.$$
+            So if \(K\) is a subset of multiple defined sets, then we must say <em>which</em> set we are taking the complement in. 
+        </p>  
+        <p>
+            We will also occasionally run across something called the symmetric difference, which is given by the symbol \(\Delta\). Recall that the difference between two sets is not commutative,
+            we can produce a difference that is commutative by defining
+        </p>  
     </section>
 
 </div>
