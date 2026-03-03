@@ -210,7 +210,13 @@
         </p>  
         <p>
             We will also occasionally run across something called the symmetric difference, which is given by the symbol \(\Delta\). Recall that the difference between two sets is not commutative,
-            we can produce a difference that is commutative by defining
+            we can produce a difference that is commutative by defining the symmetric difference as follows, for a set \(A\) and \(B\),
+            $$A \Delta B = (A\backslash B) \cup (B\backslash A).$$
+            For the purposes of illustration, I will use \(B = \{5,6,9,11\}\), then the symmetric difference defined above is,
+            $$ A \Delta B = (\{1,2,3,4\}) \cup (\{9,11\}) = \{1,2,3,4,9,11\},$$
+            and just to show that this is in fact commutative,
+            $$ B \Delta A = (\{9,11\})\cup (\{1,2,3,4\}) = \{1,2,3,4,9,11\},$$
+            which shows that \(A \Delta B = B \Delta A\) (we will not prove this now, we will save that for when we have a solid grasp on proof itself later). 
         </p>  
     </section>
 
