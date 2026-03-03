@@ -165,7 +165,30 @@
             Note however that in general the ordering of the set difference matters, we can see this by taking \(D-C\),
             $$D \backslash C = \{2,6\} \neq C \backslash D,$$
             thus we say that the set difference operation is not commutative. 
-        </p>        
+        </p> 
+        <p>
+            The Cartesian product of a set, represented by the \(\times\) symbol, is also an important set operation that we run into frequently, 
+            and it represents all of the unique ordered pairs that we can make from the two sets (note that the
+            sets may both be the same set in the cartesian product). So for example,
+            $$C \times D  = \{(1,2),(1,6),(1,7),(3,2),(3,6),(3,7),(5,2),(5,6),(5,7),(7,2),(7,6),(7,7)\},$$
+            and this operation is also <b>not</b> commutative as,
+            $$D \times C = \{((2,1),(2,3),(2,5),(2,7),(6,1),(6,3),(6,5),(6,7),(7,1),(7,3),(7,5),(7,7)\}.$$
+            It is important to note that, as is implied by the name ordered pair, the ordering matters here, that means that \((1,2) \neq (2,1)\), but even so it is clear from the above example that
+            \(C \times D \neq D \times C\). 
+        </p>   
+        <p>
+            Before moving on, I will introduce another common operation on a set, which is something called the <em>power set</em>, \(P\). The power set is the set of all subsets of a set. We need
+            a definition here, a <em>subset</em> is a set that contains some (or all) of the  elements from the original set, and does not contain any elements from outside of that set. Therefore, if 
+            we have a set \(G\) and a subset of \(G\) that for the purposes of illustration we will call \(S\), then the following statements must be simultaneously true,
+            $$S \cup G = G,$$
+            and
+            $$S \cap G = S.$$
+            If those two statements are simultaneously true, then we may write,
+            $$ S \subseteq G,$$
+            since \(G\) is technically a subset of itself, and if \(S \neq G\) we will write,
+            $$ S \subset G,$$
+            which means that \(S\) is a <em>proper</em> subset of \(G\). 
+        </p>   
     </section>
 
 </div>
