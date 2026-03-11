@@ -158,7 +158,30 @@
 
 
         <p>
-More to come!
+            Now I scared you a bit in the beginning by jumping right in with operators, but if you don't remember (or never learned) what an operator <em>is</em> then now is probably a good time to teach you as we will
+            see operators quite a bit. An <strong>operator</strong> is a mapping between functions, that is when you <em>apply</em> an operator to a function, the result is another (or possibly the same in the case of
+            the identity operator) function. We will begin by diving into <em>linear</em> operators. A linear operator \(\mathcal{L}\) is an operator with the following property,
+            $$\mathcal{L}(u+v) = \mathcal{L}u + \mathcal{L}v$$ and the operator is called nonlinear otherwise. We will check a couple of examples now,
+            $$\mathcal{L}u = u_x+xu_y$$ 
+            is linear (try to figure out why this is true before I show you, it is always good to keep an active learning mind, rather than mindlessly following along, that may feel like learning but your brain is not
+            absorbing it if you don't push it to work hard on such problems). 
+            To prove the above is linear, note that,
+            $$\mathcal{L}u = u_x+xu_y, \mathcal{L}v = v_x+xv_y,$$
+            now we will find,
+            $$\mathcal{L}(u+v) = (u+v)_x + x(u+v)_y = u_x+v_x+xu_y+xv_y,$$
+            and finally we will add,
+            $$\mathcal{L}u + \mathcal{L}v = u_x+v_x+xu_y+xv_y,$$
+            which is the same as \(\mathcal{L}(u+v)\), therefore this is a linear operator. I will do another example now, and hopefully now that you have seen the process, you can work through this one before I show you
+            how to do it, 
+            $$\mathcal{L}u = u_x+uu_y,$$
+            is a nonlinear operator. To show this,
+            $$\mathcal{L}u = u_x+uu_y, \mathcal{L}v = v_x+vv_y,$$
+            but,
+            $$\mathcal{L}(u+v) = (u+v)_x + (u+v)(u+v)_y = u_x+v_x+uu_y+uv_y+vu_y+vv_y,$$
+            while,
+            $$\mathcal{L}u+\mathcal{L}v = u_x+uu_y + v_x+ vv_y.$$
+            Notice that the equation above is missing the "cross terms" from the \(\mathcal{L}(u+v)\) equation, and since these two do not equal to each other (remember the definition of linear operators) this operator is
+            nonlinear. 
         </p>
     </section>
 
