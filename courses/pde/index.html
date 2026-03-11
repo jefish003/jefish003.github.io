@@ -118,15 +118,28 @@
             is in the number of independent variables, so in an ordinary differential equation there is a single independent variable, however in partial differential equations there are \(n \geq 2\) independent variables.
             To start, we will define things in terms of <em>differential operators</em> 
             <a href="/courses/calculus/ode/index.html#differential-operators">
-            (click here to learn about differential operators).
+            (click here to learn about differential operators),
             </a>  
+            assuming we have a <em>vector</em> \(x \in U\) where \(U \subseteq \mathbb{R}^n\) and \(U\) is an open set, then
+            $$F(D^k u(x), ..., D u(x), u(x), x) = 0,$$
+            is called a kth-order differential equation, where
+            $$F:\mathbb{R}^{n^k} \times ... \times \mathbb{R}^{n} \times \mathbb{R} \times U \rightarrow \mathbb{R}.$$
+            Now if any of this notation is unfamiliar to you, such as the Cartesian product (\(\times\)) of sets 
+            <a href="/courses/calculus/proof/index.html#cartesian-product">
+            (click here to learn about Cartesian products),
+            </a>  
+            then it is definitely strongly suggested that you review that by clicking on the link. Note that there is a key difference between differential operators that operate on functions of a single independent 
+            variable, such as the ones from the link above, and the ones that operate on functions of multiple independent variables here, which is where the \(n^k\) dimensionality arises from in the first term of the
+            above equation. The difference is that in <em>general,</em> the ordering of the derivatives in a partial derivative matter, and since there are \(n^k\) different ways of arranging a partial derivative taken on
+            \(n\) independent variables, the dimensionality of the space should now make sense. However, often times if we make some common assumptions, the ordering does not matter and this point becomes moot, just 
+            keep in the back of you mind that there <em>are</em> cases where the order of the partial derivative matters. 
         </p>
 
         <!-- Embedded YouTube Video -->
         <div class="video-container">
             <iframe 
                 src="https://www.youtube.com/embed/"
-                title="Limits"
+                title="Intro PDEs"
                 frameborder="0"
                 allowfullscreen>
             </iframe>
