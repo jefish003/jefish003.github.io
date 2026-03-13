@@ -169,8 +169,9 @@
             An <strong>operator</strong> is a mapping between functions, that is when you <em>apply</em> an operator to a function, the result is another (or possibly the same in the case of
             the identity operator) function. We will begin by diving into <em>linear</em> operators. An example of an operator is \(\mathcal{L} = \frac{\partial d}{\partial x}\) or \(\frac{\partial d}{\partial y}+x 
             \frac{\partial d}{\partial x}\), both of which are examples of what we will be focused on here, differential operators. 
-            A linear operator \(\mathcal{L}\) is an operator with the following property,
-            $$\mathcal{L}(u+v) = \mathcal{L}u + \mathcal{L}v$$ and the operator is called nonlinear otherwise. We will check a couple of examples now,
+            A linear operator \(\mathcal{L}\) is an operator with the following two properties,
+            $$\mathcal{L}(u+v) = \mathcal{L}u + \mathcal{L}v, \mathcal{L}(cu) = c \mathcal{L}u$$
+            and the operator is called nonlinear otherwise. We will check a couple of examples now,
             $$\mathcal{L}u = u_x+xu_y$$ 
             is linear (try to figure out why this is true before I show you, it is always good to keep an active learning mind, rather than mindlessly following along, that may feel like learning but your brain is not
             absorbing it if you don't push it to work hard on such problems). 
@@ -180,7 +181,9 @@
             $$\mathcal{L}(u+v) = (u+v)_x + x(u+v)_y = u_x+v_x+xu_y+xv_y,$$
             and finally we will add,
             $$\mathcal{L}u + \mathcal{L}v = u_x+v_x+xu_y+xv_y,$$
-            which is the same as \(\mathcal{L}(u+v)\), therefore this is a linear operator. I will do another example now, and hopefully now that you have seen the process, you can work through this one before I show you
+            which is the same as \(\mathcal{L}(u+v)\), therefore this satisfies the first property of a linear operator. You may finish the proof by verifying the second property, it isn't 
+            too difficult. 
+            I will do another example now, and hopefully now that you have seen the process, you can work through this one before I show you
             how to do it, 
             $$\mathcal{L}u = u_x+uu_y,$$
             is a nonlinear operator. To show this,
