@@ -196,7 +196,35 @@
             nonlinear. 
         </p>
     </section>
-
+  <section class="section">
+        <h2 id="homogeneous">Linear Homogeneous PDEs</h2>
+        
+        <p>    
+            If you remember you ordinary differential equations, this part won't come as a surprise at all. A <strong>linear homogeneous</strong> is one in which we can write the equation as,
+            $$\mathcal{L}u = 0,$$
+            and it is called inhomogenous if,
+            $$\mathcal{L}u = g,$$
+            where the function of the \(n\) independent variables \(g(x_1,...,x_n) \neq 0\). As an example, the equation
+            $$\sin(xy^2)u_x - x^2u_y = \cos(x^2+y^3)$$
+            is an inhomogenoues linear equation. Wait this is linear? Yes, lets varify. We can actually combine both properties as follows (to save ourselves time), 
+            a PDE of 2 independent variables may be called linear if,
+            $$\mathcal{L}(c_1u+c_2v) = c_1\mathcal{L}u + c_2 \mathcal{L}v$$
+            so applying this to the equation above, note that,
+            $$c_1 \mathcal{L}u = c_1 \sin(xy^2)u_x -c_1x^2u_y, c_1 \mathcal{L}v =  c_2 \sin(xy^2)v_x -c_2x^2v_y$$
+            and
+            $$\mathcal{L}(c_1u+c_2v) = \sin(xy^2)(c_1u+c_2v)_x - x^2(c_1u+c_2v)_y = \sin(xy^2)c_1u_x+\sin(xy^2)c_2v_x - x^2c_1u_y - x^2c_2v_y.$$
+            We can see by rearranging the above equation we get the same thing as adding the two previous equations, which tells us this is indeed linear. Now note that there is no way to isolate the right hand side
+            of the original equation such that it gets absorbed into the operator. Because of that we must choose \(g(x,y) = \cos(x^2+^3)\), which gives us \(g(x,y) \neq 0\), meaning that the equation is inhomogeneous.
+        </p>
+      <p>
+          Now we can note an important fact about <em>linear</em> inhomogeneous equations (emphasis on the linear part here). Suppose we have a linear homogeneous equation, \(\mathcal{L}u = g\), then if there are two
+          solutions, say \(u_1,u_2\) to this equation, the difference in those solutions represents a solution to the homogeneous linear equation \(\mathcal{L}u = 0\). This is quite easy to prove, by using 
+          linearity to our advantage. Note that we stated \(\mathcal{L}u_1=g, \mathcal{L}u_2=g\). This means that, from linearity (note that I am choosing \(c_1 = 1, c_2 = -1\) in this case),
+          $$\mathcal{L}u_1 - \mathcal{L}u_2 = g - g \rightarrow \mathcal{L}(u_1-u_2) = 0.$$
+          I will note that we are making the assumption that \(g\) is sufficiently well behaved in the domain (no blowing up to infinity), but that is a rather mild condition to place on this. For now we will sweep 
+          such issues under the rug, but keep in mind that this doesn't work in every possible scenario, and we will have to adjust for "badly behaved" functions \(g\). 
+      </p>
+    </section>
 </div>
 
 <footer>
