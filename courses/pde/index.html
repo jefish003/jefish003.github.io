@@ -225,6 +225,44 @@
           such issues under the rug, but keep in mind that this doesn't work in every possible scenario, and we will have to adjust for "badly behaved" functions \(g\). 
       </p>
     </section>
+  <section class="section">
+        <h2 id="introduction-solutions-linear">Introduction to solutions of linear PDEs</h2>
+        
+        <p>    
+            Now we will briefly introduce the solutions to linear PDEs. Recall from the beginning that we said that the function \(u\) is <em>unknown,</em> and thus the solution will be finding the appropriate functions
+            \(u\) that are suitable to boundary and initial conditions. You may wonder why I say "solutions" and the reason is that in general there are multiple solutions. And furthermore, when the PDE is linear, we 
+            can put the solutions into a beautiful relationship to one another, and this again will not be a surprise to anyone who remembers ordinary differential equations. If \(u_1,...,u_n\) are all solutions to the
+            linear homogeneous PDE, \(\mathcal{L}u = 0\), then so is any linear combination of those solutions,
+            $$\sum \limits_{j=1}^n c_ju_j(x) =  c_1u_1(x)+ c_2u_2(x) + ... + c_nu_n(x),$$
+            where \(c_j\) are constants (that may be either real or complex numbers based on the scenario)
+            this is often referred to as the <em>superposition</em> principle (yes that old superposition term that gets thrown around in quantum mechanics). We should note that the \(c_j\) here are taken as constants,
+            but they can in principle be time dependent, though we won't deal with time-dependent coefficients, at least until much later. Now we will see an example of how the solution process goes, this won't work
+            in general, but it is illuminating about what to expect as we get to more general methods for solution. 
+        </p>
+      <p>
+         To begin, suppose that we have an unknown function \(u(x,y)\) which satisfies the following equation, \(u_{xx} = 0\). Note that this is a linear, homogeneous, second order (because of two derivatives) PDE. Since
+        it is homogeneous we can integrate 
+        <a href="/courses/calculus/integral/index.html#introduction-integration">
+            (click here to learn about derivatives),
+        </a>  
+          both sides (with respect to x) to find,
+          $$u_x = f(y).$$
+        Now you might protest, why isn't it just a constant? Why do we end up with a function of \(y\)? Well, you have to remember that \(u(x,y)\) is a function of <em>both</em> \(x\) and \(y\). To understand better, we
+        can work backwards, by supposing that we have some function \(u(x,y)\) that would satisfy \(u_{xx} = 0\), for instance if we chose \(u(x,y) = x + y^2\) then naturally
+          $$\frac{\partial u}{\partial x} = 1 \rightarrow \frac{\partial^2 u}{\partial x^2} = 0$$ as desired. In fact, we can put any other functions of <em>only</em> \(y\) in the place of \(y^2\) and get exactly the
+          same result. Now let's take it one step further so we can suss out the \(f(y)\) after a single integration that we get. Imagine that we have \(u(x,y) = x + xy^2\) for example. Notice that,
+          $$\frac{\partial u}{\partial x} = 1+y^2,$$
+          and it can obviously be argued that \(1+y^2\) is a function of \(y\)! So hopefully this illuminates why we found that after integration \(u_x = f(y)\). Now we need to integrate again to find our solution,
+          $$u(x,y) = xf(y) + g(y).$$
+          This is our general solution in this case, notice that if we go in the other direction and take the first derivative 
+        <a href="/courses/calculus/differential/index.html#introduction-derivatives">
+            (click here to learn about derivatives),
+        </a>  
+          with respect to \(x\) we get exactly what we would expect (since \(g(y)\) is a function of only \(y\) its derivative with respect to \(x\) is 0), \(u_x = f(y)\), so it seems we have found the consistency we
+          desire.
+      </p>
+    </section>
+    
 </div>
 
 <footer>
