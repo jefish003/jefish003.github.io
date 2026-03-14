@@ -259,7 +259,39 @@
             (click here to learn about derivatives),
         </a>  
           with respect to \(x\) we get exactly what we would expect (since \(g(y)\) is a function of only \(y\) its derivative with respect to \(x\) is 0), \(u_x = f(y)\), so it seems we have found the consistency we
-          desire.
+          desire. 
+      </p>
+      <p>
+          Now we can do another example, \(u(x,y)\) where, 
+          $$u_xx-u=0.$$ 
+          Note that this is a linear, second order, homogeneous PDE. Again, we can lean on our understanding on ordinary differential equations for this. We can guess the solution here, we need a 
+          function that when we take it's derivative (with respect to \(x\)) twice it is equal to itself. I can quickly see two such functions \(a(x) = e^x,b(x) = e^{-x}\),
+          (notice that constants multiplying the \(x\) term in the exponent will NOT work) but how do we account for 
+          the \(y\) term in the \(u(x,y)\)? Well for one thing, we might notice that due to the fact this is a partial derivative with respect to \(x\) only, we can actually put any function of \(y\)
+          in the exponent, because by the chain rule
+                  <a href="/courses/calculus/differential/index.html#chain-rule">
+            (click here to learn about chain rule),
+        </a>        
+          we can see that \(\frac{\partial}{\partial x}e^{x+f(y)} = e^{x+f(y)}\). But also notice that, again because the partial derivative is only being taken with respect to \(x\) that if I 
+          multiply either function \(a(x),b(x)\) by a function of \(y\), it gets treated as a constant when taking the derivative, thus in general the solution becomes,
+          $$u(x,y) = f(y)e^{x}+g(y)e^{-x}.$$
+          Now you might protest, why did you not include the function in the exponent? Well, sneakily I did, because if \(f(y) = e^{k(y)}\) then note by the rules of exponents the \(k(y)\) will end
+          up as an exponent (summed with the \(x\) term). 
+      </p>
+      <p>
+          For posterity, we should do another example, again we will assume (as we will for much of the discussion that follows) that \(u(x,y)\) is a function of two independent variables.
+          $$u_{xy} = 0,$$
+          will be our example. Now notice how this is different than before (we will assume for now the solution does not blow up to infinity over the domain we are interested in), we are taking 
+          the partial derivative with respect to one variable and then the other, and so long as both \(u_{xy}, u_{yx}\) are continuous on the domain of interest we may switch the order freely by
+     <a href="/courses/calculus/differential/index.html#clairaut-theorem">
+            Clairaut's Theorem.
+        </a>   
+       Again we can hazard a guess at the solution (don't worry, as I mentioned we <strong>will</strong> learn more general methods of solution soon enough), clearly for this to be 0 after 
+          partial differentiation with respect to both \(x\) and \(y\) there <strong>cannot</strong> be a function of \(x\) multiplying a function of \(y\), since the product rule would ruin this
+          becoming zero, so the easiest way is to have,
+          $$u(x,y) = f(x) + g(y),$$
+          because taking the derivative with respect to \(x\) takes the \(g(y)\) term to 0 and then taking the derivative with respect to \(y\) takes the term \(g(x)\) to 0 (or vice-versa by Clairaut's
+          theorem). 
       </p>
     </section>
     
