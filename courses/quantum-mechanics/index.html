@@ -118,7 +118,19 @@
         <a href="/courses/pde/">
             (check out the pde course),
         </a> 
+            guides how the wavefunction changes in time and space. So what the heck is this wave function? Well, unfortunately this in some sense remains one of the mysteries in quantum mechanics,
+            at least philosophically speaking. While we can't say exactly what it <em>is</em>, we can say what it <em>does,</em> and it remains an extremely important part of making quantum
+            mechanics an accurate theory. As I mentioned above, the wave function allows us to calculate probabilities. In fact,
+            $$\int \limits_{a}^b |\Psi(x,t)|^2 dx,$$
+            gives us the probability of finding the particle of interest (say an electron for example) between \(x = a\) and \(x = b\) in one spatial dimension. Notice however that we have to
+            square the "length" of the wave function (you might wonder why we need the absolute value sign here when we are squaring, well that is because \(\Psi\) is a <em>complex valued</em>
+            function). So the wave function itself does not measure the probabilities, rather the area under it's square (hence the need for the integral above) does. This is referred to as the
+            statistical interpretation, and it has been extremely effective at giving us accurate probabilities of observing events. It is so effective in fact, that for a long period of time,
+            most people working on quantum mechanics didn't bother asking those philosophical questions about the wave function and what it means and the "indeterminacy" that arises from the
+            statistical interpretation. That period of time was the "shut up and calculate" era of quantum mechanics. Thankfully there is now a very robust discussion about these philosophical
+            questions, but no explanation has emerged as the one true explanation. We will discuss these details as the course moves along.
         </p>
+        
 
         <!-- Embedded YouTube Video -->
         <div class="video-container">
@@ -130,6 +142,20 @@
             </iframe>
         </div>
 
+        <p>
+            Since we are discussing the statistical interpretation, we should note that it is natural to expect that the particle in question must exist <em>somewhere</em> in space, and this 
+            means that,
+            $$\int \limits_{-\infty}^\infty |\Psi(x,t)|^2 = 1.$$
+            To restate, if we look everywhere in space, between negative and positive infinity, there is a probability of \(100%\) of finding the particle. 
+            Now, it may be useful to review your understanding of linear operators, 
+        <a href="/courses/pde/index.html#homogenous">
+            (linear homogeneous PDEs),
+        </a> 
+            to recall that if you multiply an solution (the solution to Schrodinger's equation <em>is</em> the wave function \(\Psi(x,t)\)) by an arbitrary constant (in this case it can be
+            a complex constant, not just real) \(A\), then this is also a solution. That is \(A\PSi(x,t)\) is also a solution, and the trick here, for this solution to be physically meaningful,
+            (assuming things such as energy conservation, conservation of probability etc.) is to choose that constant \(A\), so that,
+            $$\int \limits_{-\infty}^\infty |A\Psi(x,t)|^2 = 1.$$
+        </p>
       
     </section>
     <section class="section">
