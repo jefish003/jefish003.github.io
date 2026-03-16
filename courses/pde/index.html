@@ -318,7 +318,9 @@
         <p>    
             Again anyone who has taken ordinary differential equations will recall, when we have a linear differential equation, we can break it into a homogeneous part and a inhomogeneous part.
             Thus, we can first solve the corresponding <em>homogeneous</em> equation to find the solution \(u_h\) and a <em>particular</em> solution, for the inhomogeneous part \(u_p\), and the
-            general solution then becomes \(u = u_h+u_p\). 
+            general solution then becomes \(u = u_h+u_p\). This is easy to see, using the linearity of the operator (obviously use caution, this only works when the operator <em>is</em> linear)
+            $$\mathcal{L}u = \mathcal{L}(u_h+u_p) = \mathcal{L}u_h + \mathcal{L}u_p = 0 + g,$$
+            where the \(0\) comes from the homogeneous part and the \(g\) comes from the particular (inhomogeneous) part. 
         </p>
 
  </section>
