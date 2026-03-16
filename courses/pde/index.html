@@ -263,7 +263,7 @@
       </p>
       <p>
           Now we can do another example, \(u(x,y)\) where, 
-          $$u_xx-u=0.$$ 
+          $$u_{xx}-u=0.$$ 
           Note that this is a linear, second order, homogeneous PDE. Again, we can lean on our understanding on ordinary differential equations for this. We can guess the solution here, we need a 
           function that when we take it's derivative (with respect to \(x\)) twice it is equal to itself. I can quickly see two such functions \(a(x) = e^x,b(x) = e^{-x}\),
           (notice that constants multiplying the \(x\) term in the exponent will NOT work) but how do we account for 
@@ -292,6 +292,23 @@
           $$u(x,y) = f(x) + g(y),$$
           because taking the derivative with respect to \(x\) takes the \(g(y)\) term to 0 and then taking the derivative with respect to \(y\) takes the term \(g(x)\) to 0 (or vice-versa by Clairaut's
           theorem). 
+      </p>
+      <p>
+          We will do another example for good measure. Verify by direct substitution that
+          $$u_n(x,y) = \sin(nx)\sinh(ny)$$
+          is a solution of 
+          $$u_{xx}+u_{yy} = 0$$
+          for every \(n>0\). Well this is simple enough to do, but it is good practice (this is a way you can check if the solution you have come up with is actually a solution to the PDE). We will start with
+          \(u_x\),
+          $$u_x = n\cos(nx)\sinh(ny)$$
+          by the chain rule (i.e. \(f'(g(x))\) where \(f(x) = \sin(x), g(x) = nx\) thus \(f'(x) = \cos(x), g'(x) = n\) and by the chain rule \(f'(g(x))g'(x) = \cos(x)n\)), and the fact that the term with only a \(y\)
+          in it is treated as a constant when taking the derivative with respect to \(x\). Similarly,
+          $$u_{xx} = -n^2\sin(nx)\sinh(ny).$$
+          Now this is where it might get tricky, remember that \(\cosh(x)\) behaves differently than \(\cos(x)\) when you take it's derivative (no negative sign pops up in the \(\cosh(x)\) case when taking derivatives)
+          $$u_y = n\sin(nx)\cosh(ny), u_{yy} = n^2\sin(nx)\sinh(ny)$$
+          and thus
+          $$u_{xx}+u_{yy} = 0,$$
+          regardless of the value of \(n\) since \(u_{xx}=-u_{yy}\).
       </p>
     </section>
     
