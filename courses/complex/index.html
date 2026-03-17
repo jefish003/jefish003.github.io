@@ -175,7 +175,15 @@
             but note that in the complex numbers \(1 = (1,0), i = (0,1)\) and by our wrong definition of multiplication, \((1*0, 0*1) = (0,0)\) which again is not what we want! How do we get what
             we want? If we define multiplication as follows,
             $$z_1z_2 = (x_1+y_1i)(x_2+y_2i) = x_1x_2+x_1y_2i+x_2y_1i+y_1y_2i^2 = x_1x_2+x_1y_2i+x_2y_1i-y_1y_2,$$
-            where we note in the last step that \(i^2 = -1\). 
+            where we note in the last step that \(i^2 = -1\). What this means in our ordered pair notation is that,
+            $$z_1z_2 = (x_1x_2 -y_1y_2, x_1y_2 + x_2y_1).$$
+            Now we should test this out on the examples I gave before to make sure this makes sense, for instance if \(z_1 = z_2 = i\) (that is \(z_1z_2= i^2 = -1\)), then,
+            $$z_1z_2 = (0*0 - 1*1, 0*1+0*1) = (-1,0),$$
+            which is exactly what we expect! Now we should try \(1*i = i\), 
+            $$z_1z_2 = (1*0-0*1, 1*1+0*0) = (0,1),$$
+            again exactly as expected! We can obviously include more sophisticated examples, for instance let \(z_1 = (1,1), z_2 = (3,5)\), then,
+            $$z_1z_2 = (1*3-1*5, 1*5+3*1) = (-2,8).$$
+            
         </p>
     </section>
 
