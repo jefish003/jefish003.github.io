@@ -145,12 +145,37 @@
         <h2 id="complex-algebra">Complex algebra</h2>
 
         <p>
-            Placeholder
+            We will now introduce the algebra of complex numbers, as it will be important as we move forward. We generally think of a complex number (often represented as \(z\)), as an ordered
+            pair (like a point in the plane), that is \(z = (x,y)\) for \(x,y \in \mathbb{R}\). Another way you will commonly see them written is, \(z = x+yi\) for real numbers \(x,y\),
+            and for the number \(i = \sqrt{-1}\). The ordered pair formulation helps us understand complex numbers geometrically in the plane. This is a popular way of understanding things because
+            this is generally how our understanding of complex numbers progressed historically. An important property that we have is that,
+            \((x,y) = (u,v)\) if and only if (we will denote if and only if with iff from now on), \(x = u, \ \mbox{and} \ y = v\).  
         </p>
 
-
         <p>
-More to come!
+            Now we would like to actually perform algebra with complex numbers. Since the complex numbers in most cases (not all, for instance they do not form an ordered field, while the
+            real numbers do) 
+            behave like real numbers, we should formulate addition and multiplication of complex numbers. Let \(z_1 = (x_1,y_1), z_2 = (x_2,y_2)\) then,
+            $$z_1+z_2 = (x_1+x_2, y_1+y_2).$$
+            This is easy enough to prove with our other notation,
+            \(z_1 = x_1+y_1 i, z_2 = x_2 + y_2 i\), thus
+            $$z_1 + z_2 = x_1 + y_1 i + x_2 + y_2i = (x_1+x_2) + (y_1 + y_2)i,$$
+            which quite obviously is the same as we noted above in the ordered pair notation. For some this may be easier to grasp with examples, so let \(z_1 = (1,-5), z_2 = (-2,-3)\),
+            then,
+            $$z_1 + z_2 = (1+(-2), -5+(-3)) = (-1,-8).$$
+            Since subtraction is defined similarly, 
+            $$z_1 - z_2 = (1-(-2), -5 -(-3)) = (3,-2).$$
+        </p>
+        <p>
+            For multiplication of complex numbers, it is probably tempting to try and define it as \(z_1z_2 = (x_1x_2, y_1,y_2)\) but this is quite clearly just plain wrong. You should think
+            about this for a moment before reading my answer as to why it is "quite clearly just plain wrong". The reason is that there are a couple of related glaring problems with defining
+            things this way. The first, is we know that \(i = \sqrt{-1}\), so naturally, \(i^2 = \sqrt{-1}^2 = -1\), which is a real number. We can write \(i\) in our notation as \((0,1)\). So,
+            if we defined multiplication as we did above we would find that \((0*0,1*1)\) which gives \((0,1)\), but this is definitely not what we want, because \(i^2 = (-1,0)\). Another easy
+            way to see this fails, is that we know that 1 multiplying anything should give the number itself back. This extends to the complex numbers as well, so we should find that \(1*i = i\),
+            but note that in the complex numbers \(1 = (1,0), i = (0,1)\) and by our wrong definition of multiplication, \((1*0, 0*1) = (0,0)\) which again is not what we want! How do we get what
+            we want? If we define multiplication as follows,
+            $$z_1z_2 = (x_1+y_1i)(x_2+y_2i) = x_1x_2+x_1y_2i+x_2y_1i+y_1y_2i^2 = x_1x_2+x_1y_2i+x_2y_1i-y_1y_2,$$
+            where we note in the last step that \(i^2 = -1\). 
         </p>
     </section>
 
