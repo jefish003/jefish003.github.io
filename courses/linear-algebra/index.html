@@ -123,7 +123,7 @@
       
     </section>
     <section class="section">
-        <h2>Vector Spaces</h2>
+        <h2 id="vector-spaces">Vector Spaces</h2>
 
         <p>
             Suppose we have a set \(V\) of vectors. Additionally, suppose that we have an operation, called vector addition such that
@@ -141,7 +141,16 @@
                 <li>\((c+d)\mathbf{x} = c\mathbf{x}+d\mathbf{x}\)</li>
                 <li>\(c(\mathbf{x}+\mathbf{y}) = c\mathbf{x}+c\mathbf{y}\)</li>
             </ul>
-        </p>
+            An example of a vector space is the set \(\mathcal{R}^n\) of all  \(n\)-tuples of real numbers with component wise addition and
+            multiplication by scalars. That is, if we let \(\mathbf{x} = (x_1,...,x_n), \mathbf{y} = (y_1,...,y_n),\), then we have 
+            \(\mathbf{x}+\mathbf{y} = (x_1+y_1,...,x_n+y_n)\)
+            and for scalar \(c\), \(c\mathbf{x} = (cx_1,...,cx_n)\). To verify that this is indeed a vector space, you should verify that each of the properties is in fact
+            met, for instance the property \(\mathbf{x}+\mathbf{y} = \mathbf{y}+\mathbf{x}\) is satisfied because we know that for any two real numbers
+            \(x,y\) that \(x+y = y+x\) and thus since in our example space \(\mathbf{x} = (x_1,...,x_n), \mathbf{y} = (y_1,...,y_n),\) we have 
+            \(\mathbf{x}+\mathbf{y} =(x_1+y_1,...,x_n+y_n), \(\mathbf{y}+\mathbf{x} =(y_1+x_1,...,y_n+x_n)\). From the property of real numbers we mentioned above
+            it must be true that \( (x_1+y_1,...,x_n+y_n)= (y_1+x_1,...,y_n+x_n)\), since \(x_i+y_i = y_i+x_i \ \forall i\) given that \(x_i,y_i\) are real numbers.
+        
+    </p>
 
 
         <p>
