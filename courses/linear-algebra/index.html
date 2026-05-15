@@ -150,9 +150,18 @@
             cars and people entered the gated area? Well, naturally, we would add the cars to the cars and the people to the people to find
             the totals, so in vector format \(v_{\mbox{friend}} = \begin{bmatrix}20 \\ 32 \end{bmatrix}\) and \(v_{\mbox{you}} = \begin{bmatrix}15 \\ 40 \end{bmatrix}\)
             and so the total is \(v_{\mbox{total}} = v_{\mbox{friend}} + v_{\mbox{you}} = \begin{bmatrix}20 \\ 32 \end{bmatrix} + \begin{bmatrix}15 \\ 40 \end{bmatrix} = \begin{bmatrix}20+15 \\ 32+40 \end{bmatrix} = \begin{bmatrix}35 \\ 72 \end{bmatrix}\).
-            
+            Notice that vector addition works exactly as we would hope, the components add together, this is because it obviously wouldn't make much sense
+            to have number of cars adding to number people, but adding cars to number of cars and people to number of people makes sense. In some way this
+            highlights the essence of a vector, it is a collection of <em>different</em> things that can be represented by numbers. In our example above, the 
+            numbers would be counting (also known as natural) numbers, but a vector can contain any type of numbers that makes sense for the situation, including
+            real numbers and even complex numbers as appropriate. Most of the time, we will be working with vectors whose components can be real numbers in this 
+            course (and for many computations, we will make things "simpler" by restricting ourselves to integers). 
         
         </p>
+        <p>
+            Another operation that will be of interest is scalar multiplication. 
+            
+            </p>
 
         <p>
             If you want the fast version, below is a short video introducing vector operations.
@@ -175,6 +184,7 @@
         <h2 id="vector-spaces">Vector Spaces</h2>
 
         <p>
+            We will now move into more abstract mathematics.
             Suppose we have a set \(V\) of vectors. Additionally, suppose that we have an operation, called vector addition such that
             if we have 2 vectors, \(\mathbf{x}, \mathbf{y}\) then the sum \(\mathbf{x}+\mathbf{y}\) (assuming of course they are the
             same size) is also a vector. Suppose further that we have an operation, called scalar multiplication, such that for some
