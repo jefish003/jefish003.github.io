@@ -116,7 +116,8 @@
             Note that occassionally we may also write vectors in this format \(v^T = (c, p)\), though this is less common.
             The first component in \(v\) (also the first component of \(v^T\)) is \(c\) and the second component is \(p\).
             This example vector is a two dimensional vector. For now we will stick to 2 and 3 dimensional vectors for 
-            our examples, but there can be an arbitrary number of dimensions for a vector. 
+            our examples, but there can be an arbitrary number of dimensions for a vector. Now that we have an idea of 
+            what a vector is, we will take a look at what operations we can perform on vectors. 
         </p>
 
         <p>
@@ -127,7 +128,7 @@
         <div class="video-container">
             <iframe 
                 src="https://www.youtube.com/embed/"
-                title="Limits"
+                title="Introduction to Vectors"
                 frameborder="0"
                 allowfullscreen>
             </iframe>
@@ -135,6 +136,41 @@
 
       
     </section>
+
+    <section class="section">
+        <h2 id="vector-operations">Vector Operations</h2>
+
+        <p>
+            In the previous section we discovered what a vector is, but what useful things can you do with vectors? To see this, we will
+            continue with the example from the last section. Recall that \(v = \begin{bmatrix}c \\ p\end{bmatrix}\). Now imagine that you
+            and a friend are trying to keep count of the total number of cars, and the total number of people entering a gated area with
+            two different entrances, and that one entrance cannot be seen while sitting at the other. So you and your friend decide to
+            split up, with one of you counting cars and people at one entrance and the other counting at the other entrance. Suppose 
+            your friend counts 20 cars and 32 people at that entrance, and you count 15 cars and 40 people at your entrance. How many total
+            cars and people entered the gated area? Well, naturally, we would add the cars to the cars and the people to the people to find
+            the totals, so in vector format \(v_{\mbox{friend}} = \begin{bmatrix}20 \\ 32 \end{bmatrix}\) and \(v_{\mbox{you}} = \begin{bmatrix}15 \\ 40 \end{bmatrix}\)
+            and so the total is \(v_{\mbox{total}} = v_{\mbox{friend}} + v_{\mbox{you}} = \begin{bmatrix}20 \\ 32 \end{bmatrix} + \begin{bmatrix}15 \\ 40 \end{bmatrix} = \begin{bmatrix}20+15 \\ 32+40 \end{bmatrix} = \begin{bmatrix}35 \\ 72 \end{bmatrix}\).
+            
+        
+        </p>
+
+        <p>
+            If you want the fast version, below is a short video introducing vector operations.
+        </p>
+
+        <!-- Embedded YouTube Video -->
+        <div class="video-container">
+            <iframe 
+                src="https://www.youtube.com/embed/"
+                title="Introduction to Vectors"
+                frameborder="0"
+                allowfullscreen>
+            </iframe>
+        </div>
+
+      
+    </section>
+    
     <section class="section">
         <h2 id="vector-spaces">Vector Spaces</h2>
 
