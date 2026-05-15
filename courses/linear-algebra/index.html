@@ -99,15 +99,28 @@
 
     <!-- Linear ODEs Section -->
     <section class="section">
-        <h2>Vectors</h2>
+        <h2 id="vectors">Introduction to Vectors</h2>
 
         <p>
             We must begin with a discussion of what a vector is, why we care about it, and examples
-            of when it is useful. 
+            of when it is useful. A <em>vector</em>, at least one of finite length, is a collection of 
+            numbers which are called <em>components</em>. The components generally represent different 
+            variables, for example if we wanted to count the number of cars and the number of people in
+            the cars, it wouldn't make sense to mix those two numbers together, so instead we separate those
+            into components. Vectors are the collection of these components, and they can be written in several
+            ways, for instance a common way is to write a vector \(v\) as, \(v = \begin{bmatrix} c \\ p \end{bmatrix},
+            where in this example I am using \(c\) to represent the number of cars and \(p\) to represent the number of
+            people. When a vector is written like this it is called a <em>column</em> vector. We can also write the 
+            vector as a row, \(v^T = [c, p]\), where the \(T\) in the superscript here means the <em>transpose</em>. For
+            vectors the transpose takes a column vector to a row vector, and it takes a row vector to a column vector. 
+            Note that occassionally we may also write vectors in this format \(v^T = (c, p)\), though this is less common.
+            The first component in \(v\) (also the first component of \(v^T\)) is \(c\) and the second component is \(p\).
+            This example vector is a two dimensional vector. For now we will stick to 2 and 3 dimensional vectors for 
+            our examples, but there can be an arbitrary number of dimensions for a vector. 
         </p>
 
         <p>
-            If you want the fast version, below is a short video introducing limits.
+            If you want the fast version, below is a short video introducing vectors.
         </p>
 
         <!-- Embedded YouTube Video -->
