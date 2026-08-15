@@ -272,7 +272,21 @@ Now notice something about the function. Clearly it has a value at \(x = 1\), an
         <h2 id="power-rule">The Power Rule</h2>
 
         <p>
-            Description of the power rule!
+            Recall the definition of a derivative, \(f'(x) = \lim \limits_{h \rightarrow 0} \frac{f(x+h)-f(x)}{h}\). We are often interested in finding the derivatives of
+            polynomial functions, that is functions \(P(x)\) where \(P(x) = a_0x^n + a_1x^{n-1} + ... + a_{n-1}x+a_n, n \in \{1,2,3,...,\}\), where \(a_0, a_1, ..., a_n\) are 
+            constants, and for the purposes of our discussion for now we will assume they are real numbers. So if our function \(f(x)\) is
+            a polynomial function, then by the rules of limits, we may find the separate derivatives of each term of the polynomial and sum them together to find the complete
+            derivative of the entire function. That is we can find the derivative of \(a_0x^n\) first, then find the derivative of \(a_1x^{n-1}\) and so on, and then add them
+            all together to find the derivative. This works because the derivative is simply a limit, and limits of functions obey the rule that the limit of a sum is the same
+            as the sum of the limits of those functions (provided the number of functions is finite, which is true of polynomials once we fix \(n\)). So, in general, we will be 
+            interested in finding the derivative of \(a_0x^n\), and for simplicity, we will begin by assuming \(a_0 =1\) for now (you should be able to verify later that even
+            if the constant is not 1, it is very simple to deal with in the derivative in the sense that you can simply take the derivative of the function and then multiply it
+            by the constant). Finally, since it will be useful for the discussion that follows if we include a description of the binomial theorem.
+        </p>
+        <p>
+            We will note that \((x+h)^2 = x^2+2xh+h^2\) if we multiply out the terms. Now if we multiply that by another \((x+h)\) so that we can get 
+            \((x+h)^3 = (x^2+2xh+h^2)(x+h) = x^3+2x^2h+xh^2 + x^2h+2xh^2+h^3 = x^3+3x^2h+3xh^2+h^3\). Just for fun, lets go another step further, and then I will discuss the 
+            binomial theorem in full. \((x+h)^4 = (x^3+3x^2h+3xh^2+h^3)(x+h) = x^4+3x^3h+3x^2h^2+xh^3+x^3h+3x^2h^2+3xh^3+h^4 = x^4+4x^3h+6x^2h^2+4xh^3+h^4\)
         </p>
         <!-- Embedded YouTube Video -->
         <div class="video-container">
