@@ -284,9 +284,20 @@ Now notice something about the function. Clearly it has a value at \(x = 1\), an
             by the constant). Finally, since it will be useful for the discussion that follows if we include a description of the binomial theorem.
         </p>
         <p>
-            We will note that \((x+h)^2 = x^2+2xh+h^2\) if we multiply out the terms. Now if we multiply that by another \((x+h)\) so that we can get 
-            \((x+h)^3 = (x^2+2xh+h^2)(x+h) = x^3+2x^2h+xh^2 + x^2h+2xh^2+h^3 = x^3+3x^2h+3xh^2+h^3\). Just for fun, lets go another step further, and then I will discuss the 
-            binomial theorem in full. \((x+h)^4 = (x^3+3x^2h+3xh^2+h^3)(x+h) = x^4+3x^3h+3x^2h^2+xh^3+x^3h+3x^2h^2+3xh^3+h^4 = x^4+4x^3h+6x^2h^2+4xh^3+h^4\)
+            We will note that 
+            $$(x+h)^2 = x^2+2xh+h^2$$ 
+            if we multiply out the terms. Now if we multiply that by another \((x+h)\) so that we can get 
+            $$(x+h)^3 = (x^2+2xh+h^2)(x+h) = x^3+2x^2h+xh^2 + x^2h+2xh^2+h^3 = x^3+3x^2h+3xh^2+h^3.$$ 
+            Just for fun, lets go another step further, and then I will discuss the 
+            binomial theorem in full. 
+            $$(x+h)^4 = (x^3+3x^2h+3xh^2+h^3)(x+h) = x^4+3x^3h+3x^2h^2+xh^3+x^3h+3x^2h^2+3xh^3+h^4 = x^4+4x^3h+6x^2h^2+4xh^3+h^4.$$
+            We should take note of a few things that are happening as we increase the \(n\) in \((x+h)^n\). First if we look at the coeficient of the second term (with the terms ordered
+            from the highest power of \(x\) to the lowest power), it is clear that this coeficient increases exactly linearly in \(n\), for example when \(n = 2\) the coeficient is \(2\),
+            as we get the second term being \(2xh\), or when \(n = 3\) the coefficient is \(3\) for \(3x^2h\), similarly for \(n = 4\). Next, notice when ordered this way, the coefficients
+            of the first and last term are always 1. What about the coefficients in between? This is a bit more challenging to show since we only went up to \(n = 4\), but you can verify 
+            if you wish by going to higher order that these coefficients show a particular pattern as well, and this is where the binomial theorem comes from. The binomial theorem states
+            the following: 
+            $$(x+h)^n = x^n + nx^{n-1}h+\frac{n(n-1)}{2}x^{n-2}h^2 + ... + \binom{n}{k}x^{n-k}h^k+..>+nxh^{n-1}+h^n,$$ where \(\binom{n}{k} = \frac{n(n-1)\cdot \cdot \cdot (n-k+1)}{k!}\).
         </p>
         <!-- Embedded YouTube Video -->
         <div class="video-container">
