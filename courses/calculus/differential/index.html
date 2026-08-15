@@ -320,9 +320,9 @@ Now notice something about the function. Clearly it has a value at \(x = 1\), an
             we can think of this function as the sum of two functions \(f(x) = g(x) + k(x)\) where \(g(x) = 3x^3\) and \(k(x) = 2x\). This is a good time to show two important rules that arise in the limit
             definition of the derivative. The first one, is that any function that can be written \(f(x) = g(x) + k(x)\) has a derivative that can be written \(f'(x) = g'(x) + k'(x)\). To see this, start
             with the limit definition,
-            $$\lim \limits_{x \rightarrow 0} \frac{f(x+h) - f(x)}{h} = \lim \limits_{x \rightarrow 0} \frac{g(x+h) - g(x)+ k(x+h) - k(x)}{h} = \lim \limits_{x \rightarrow 0} \frac{g(x+h) - g(x)}{h} + \frac{k(x+h) - k(x)}{h}$$
+            $$\lim \limits_{h \rightarrow 0} \frac{f(x+h) - f(x)}{h} = \lim \limits_{h \rightarrow 0} \frac{g(x+h) - g(x)+ k(x+h) - k(x)}{h} = \lim \limits_{h \rightarrow 0} \frac{g(x+h) - g(x)}{h} + \frac{k(x+h) - k(x)}{h}$$
             and by the rules of limits this means that
-            $$\lim \limits_{x \rightarrow 0} \frac{g(x+h) - g(x)}{h} + \frac{k(x+h) - k(x)}{h} = \lim \limits_{x \rightarrow 0} \frac{g(x+h) - g(x)}{h}+ \lim \limits_{x \rightarrow 0} \frac{k(x+h) - k(x)}{h},$$
+            $$\lim \limits_{h \rightarrow 0} \frac{g(x+h) - g(x)}{h} + \frac{k(x+h) - k(x)}{h} = \lim \limits_{h \rightarrow 0} \frac{g(x+h) - g(x)}{h}+ \lim \limits_{h \rightarrow 0} \frac{k(x+h) - k(x)}{h},$$
             which by definition is \(g'(x) +k'(x)\). The second fact we need is that the derivative a function multiplied by a constant is the same as the constant multiplied by the derivative of that function. 
             
         </p>
