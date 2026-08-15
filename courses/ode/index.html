@@ -294,7 +294,7 @@
         <p>
             We are going to add in more terminology now, a first order ODE is called autonomous if the only the dependent variable is explicitely given in the equation, that is,
             $$\frac{dy}{dx} = f(y).$$
-            Notice that the right hand of the equation only depends on the dependent variable \(y\), there is no mention of the dependent variable \(x\) other than in the derivative itself, this
+            Notice that the right hand of the equation only depends on the dependent variable \(y\), there is no mention of the independent variable \(x\) other than in the derivative itself, this
             is the definition of autonomous. Now we will see some examples, the first order ODE,
             $$\frac{dy}{dx} = y^2,$$
             is autonomous, notice also that it is nonlinear and homogeneous because if we write it in standard form, it becomes
@@ -327,7 +327,26 @@
             explicitely rule that \(x \neq 0\), but recall that if \(x = 0\) this becomes \(\frac{0}{0}\) which is an indeterminant form. You can read up on indeterminant forms if you
             <a href="/courses/calculus/differential/index.html#indeterminant-forms">
             click here.
-            </a>            
+            </a>
+        </p>
+        <p>
+            But we should be interested now in actually solving these things! We will start with an example 
+            $$ \frac{dy}{dx} = 2xy $$, before showing you how to find a solution itself, let me start with giving you 
+            the solution and allowing you to verify that it is in fact a solution. I propose that the solution is
+            $$y(x) = Ce^{x^2}$$. To verify that this is true, we must ensure that the left hand side is equal to the the
+            right hand side of the equation, so first if \(y(x) = Ce^{x^2}\) we must find \(\frac{dy}{dx}\). Taking the
+            derivative here will require our knowledge of the derivative of \(e^x\) and we must also apply the
+                        <a href="/courses/calculus/differential/index.html#chain-rule">
+            chain rule (click here to remind yourself of the chain rule).
+            </a>
+            If we let \(h(x) = x^2\) then \(h'(x) = 2x\) by the 
+                                    <a href="/courses/calculus/differential/index.html#power-rule">
+            power rule (click here to remind yourself of the power rule).
+            </a>
+            and using this we can apply the chain rule as mentioned, then \(\frac{dy}{dx} = C(2x)e^{x^2}\). Now on
+            the right hand side, we must simply substitute in \(y(x) = Ce^{x^2}\), and if we do so we will find we 
+            get the exact same thing as the left hand side, thus this solution is in fact the solution to the first
+            order, linear, nonautonomous differential equation that we started with. 
         </p>
 
         <p>
