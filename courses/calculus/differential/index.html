@@ -312,7 +312,19 @@ Now notice something about the function. Clearly it has a value at \(x = 1\), an
             Now that we have the useful result, we should work on examples putting it to use. First I will start off simple, I want to find the derivative of \(f(x) = x^2\). According to the power rule
             the derivative (with \(n = 2\)) should be \(f'(x) = 2x\). We can verify this is correct by substituting directly into the limit, 
             $$\lim \limits_{h \rightarrow 0} \frac{x^2 + 2xh + h^2 - x^2}{h} = \lim \limits_{h \rightarrow 0} \frac{2xh + h^2}{h} = \lim \limits_{h \rightarrow 0} 2x + h = 2x$$, which gives us the same
-            answer as the power rule. 
+            answer as the power rule. You should challenge yourself and verify that the derivative of \(f(x) = x^3\), is \(f'(x) = 3x^2\) as shown by both the power rule and the limit definition of the
+            derivative. 
+        </p>
+        <p>
+            Now I want to do some examples of more complicated polynomials (the polynomial above only had a single term in it). For example, we will find the derivative of \(f(x) = 3x^3+2x\). Notice that 
+            we can think of this function as the sum of two functions \(f(x) = g(x) + k(x)\) where \(g(x) = 3x^3\) and \(k(x) = 2x\). This is a good time to show two important rules that arise in the limit
+            definition of the derivative. The first one, is that any function that can be written \(f(x) = g(x) + k(x)\) has a derivative that can be written \(f'(x) = g'(x) + k'(x)\). To see this, start
+            with the limit definition,
+            $$\lim \limits_{x \rightarrow 0} \frac{f(x+h) - f(x)}{h} = \lim \limits_{x \rightarrow 0} \frac{g(x+h) - g(x)+ k(x+h) - k(x)}{h} = \lim \limits_{x \rightarrow 0} \frac{g(x+h) - g(x)}{h} + \frac{k(x+h) - k(x)}{h}$$
+            and by the rules of limits this means that
+            $$\lim \limits_{x \rightarrow 0} \frac{g(x+h) - g(x)}{h} + \frac{k(x+h) - k(x)}{h} = \lim \limits_{x \rightarrow 0} \frac{g(x+h) - g(x)}{h}+ \lim \limits_{x \rightarrow 0} \frac{k(x+h) - k(x)}{h},$$
+            which by definition is \(g'(x) +k'(x)\). The second fact we need is that the derivative a function multiplied by a constant is the same as the constant multiplied by the derivative of that function. 
+            
         </p>
         <!-- Embedded YouTube Video -->
         <div class="video-container">
