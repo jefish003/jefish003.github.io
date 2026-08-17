@@ -315,17 +315,7 @@ Now notice something about the function. Clearly it has a value at \(x = 1\), an
             answer as the power rule. You should challenge yourself and verify that the derivative of \(f(x) = x^3\), is \(f'(x) = 3x^2\) as shown by both the power rule and the limit definition of the
             derivative. 
         </p>
-        <p>
-            Now I want to do some examples of more complicated polynomials (the polynomial above only had a single term in it). For example, we will find the derivative of \(f(x) = 3x^3+2x\). Notice that 
-            we can think of this function as the sum of two functions \(f(x) = g(x) + k(x)\) where \(g(x) = 3x^3\) and \(k(x) = 2x\). This is a good time to show two important rules that arise in the limit
-            definition of the derivative. The first one, is that any function that can be written \(f(x) = g(x) + k(x)\) has a derivative that can be written \(f'(x) = g'(x) + k'(x)\). To see this, start
-            with the limit definition,
-            $$\lim \limits_{h \rightarrow 0} \frac{f(x+h) - f(x)}{h} = \lim \limits_{h \rightarrow 0} \frac{g(x+h) - g(x)+ k(x+h) - k(x)}{h} = \lim \limits_{h \rightarrow 0} \frac{g(x+h) - g(x)}{h} + \frac{k(x+h) - k(x)}{h}$$
-            and by the rules of limits this means that
-            $$\lim \limits_{h \rightarrow 0} \frac{g(x+h) - g(x)}{h} + \frac{k(x+h) - k(x)}{h} = \lim \limits_{h \rightarrow 0} \frac{g(x+h) - g(x)}{h}+ \lim \limits_{h \rightarrow 0} \frac{k(x+h) - k(x)}{h},$$
-            which by definition is \(g'(x) +k'(x)\). The second fact we need is that the derivative a function multiplied by a constant is the same as the constant multiplied by the derivative of that function. 
-            
-        </p>
+
         <!-- Embedded YouTube Video -->
         <div class="video-container">
             <iframe 
@@ -341,6 +331,71 @@ More to come!
         </p>
     </section>
 
+   <section class="section">
+        <h2 id="sum-rule">Sum Rule For Derivatives</h2>
+
+        <p>
+            Now I want to do some examples of more complicated polynomials (the polynomial above only had a single term in it). For example, we will find the derivative of \(f(x) = 3x^3+2x\).
+            But to do this we will need a couple of new rules, first is the sum rule of derivatives. Notice that 
+            we can think of this function as the sum of two functions \(f(x) = g(x) + k(x)\) where \(g(x) = 3x^3\) and \(k(x) = 2x\). This is a good time to show two important rules that arise in the limit
+            definition of the derivative. The first one, is that any function that can be written \(f(x) = g(x) + k(x)\) has a derivative that can be written \(f'(x) = g'(x) + k'(x)\). To see this, start
+            with the limit definition,
+            $$\lim \limits_{h \rightarrow 0} \frac{f(x+h) - f(x)}{h} = \lim \limits_{h \rightarrow 0} \frac{g(x+h) - g(x)+ k(x+h) - k(x)}{h} = \lim \limits_{h \rightarrow 0} \frac{g(x+h) - g(x)}{h} + \frac{k(x+h) - k(x)}{h}$$
+            and by the rules of limits this means that
+            $$\lim \limits_{h \rightarrow 0} \frac{g(x+h) - g(x)}{h} + \frac{k(x+h) - k(x)}{h} = \lim \limits_{h \rightarrow 0} \frac{g(x+h) - g(x)}{h}+ \lim \limits_{h \rightarrow 0} \frac{k(x+h) - k(x)}{h},$$
+            which by definition is \(g'(x) +k'(x)\). The second fact we need is that the derivative a function multiplied by a constant is the same as the constant multiplied by the derivative of that function. 
+            
+        </p>
+        <!-- Embedded YouTube Video -->
+        <div class="video-container">
+            <iframe 
+                src="https://www.youtube.com/embed/"
+                title="Sum Rule For Derivatives"
+                frameborder="0"
+                allowfullscreen>
+            </iframe>
+        </div>
+
+        <p>
+Now we can move on to the constant multiple rule. 
+        </p>
+    </section>
+   <section class="section">
+        <h2 id="constant-multiple-rule">The Constant Multiple Rule</h2>
+
+        <p>
+            Suppose I have a function with a constant multiple in it (polynomials often have constants multiplying different powers of the independent variable for example). 
+            I will represent it as \(g(x) = cf(x)\) where \(c\) is the constant. Then, by the limit definition of the derivative,
+            $$\frac{dg}{dx} = \lim \limits_{h \rightarrow 0} \frac{g(x+h)-g(x)}{h}.$$
+            Now note that we said \(g(x) = cf(x)\), so,
+            $$\frac{dg}{dx} = \lim \limits_{h \rightarrow 0} \frac{cf(x+h)-cf(x)}{h} = \lim \limits_{h \rightarrow 0} c\frac{f(x+h)-f(x)}{h} = c\lim \limits_{h \rightarrow 0} \frac{f(x+h)-f(x)}{h},$$
+            where the last equal sign arises from the general rules for limits. Notice the simple rule here that arises, if I have a constant multiplying a function, then the derivative is just the
+            constant times the derivative of the function. An amazingly simple rule!
+        </p>
+        <!-- Embedded YouTube Video -->
+        <div class="video-container">
+            <iframe 
+                src="https://www.youtube.com/embed/"
+                title="Constant Multiple Rule"
+                frameborder="0"
+                allowfullscreen>
+            </iframe>
+        </div>
+
+        <p>
+Now we are ready to take the derivative of the polynomials, by combining the power rule, the sum rule and the constant multiple rule. To remind you of the example, suppose \(f(x) = 3x^3+2x\).
+            By the sum rule, we can separate this into two functions, with \(g(x) = 3x^3, k(x) = 2x\), take their derivatives and add them together. That is \(f'(x) = g'(x)+k'(x)\). So we
+            will first find \(g'(x)\). Now we can use the constant multiple rule, if we let \(l(x) = x^3,\) then \(g(x) = 3l(x)\), and thus \(g'(x) = 3l'(x) = 3(3)x^2 = 9x^2\), where we have
+            applied the power rule in the middle step. Similarly, let \(m(x) = x\), then, \(k(x) = 2m(x)\), and since \(m'(x) = 1\) by the power rule, we have \(k'(x) = 2\).
+        </p>
+       <p>
+           I will make a final note here of warning, you will notice how powerful each of these rules are, especially when combined, as they make the computation of the derivative much 
+           easier than having to go back and use the limit definition of the derivative every time. This is great for computation, however, it allows people to forget entirely where the
+           rules came from. My suggestion is that every time you use these rules, try and make sure you remember that all of the rules are inherited from limits and the limit definition
+           of the derivative. As it turns out, limits are the most important part of calculus, and yet few people remember them after a calculus class!
+       </p>
+    </section>  
+    
    <section class="section">
         <h2 id="chain-rule">The Chain Rule</h2>
 
