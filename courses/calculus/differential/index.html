@@ -443,7 +443,32 @@ More to come!
         <h2 id="chain-rule">The Chain Rule</h2>
 
         <p>
-            Description of the chain rule!
+            It will benefit us to remind ourselves what it means to be differentiable here. For a function to be differentiable at a point, the limit in the limit definition
+            of the derivative must exist and be finite. So for the remainder (and this is an important point, since what follows will not work if there is any point in the
+            domain of interest where the function is not differentiable) of this section we will assume all functions are differentiable across the domains of interest (yes, 
+            there will be MULTIPLE domains). Suppose we have the composition of two functions, say \(f\) and \(g\), so that we have \(f(g(x))\). We may be interested in finding
+            the derivative of this composition, we want to find \(f'(x)\). If we assume that \(g\) is differentiable with respect to \(x\) across the 
+            domain of \(x\) and that \(f\) is differentiable with respect to \(g(x)\) across the domain of \(g(x)\), then we can use a simple "trick" to find the derivative . 
+            Note that, by the limit definition of the derivative,
+            $$\frac{d}{dx}f(g(x)) = \lim \limits_{\Delta x \rightarrow 0} \frac{\Delta f}{\Delta x},$$
+            note here we have slightly shifted notation for convenience, we can assume \(\Delta f = f(x+h)-f(x), \Delta x = (x+h)-x = h\). Then we will simply multiply by \(1\), 
+            noting that \(\frac{\Delta g}{\Delta g} = 1\) assuming \(\Delta g \neq 0\). 
+            Thus,
+            $$\frac{d}{dx}f(g(x))  = \lim \limits_{\Delta x \rightarrow 0} \frac{\Delta f}{\Delta x}\frac{\Delta g}{\Delta g} = \lim \limits_{\Delta x \rightarrow 0} \frac{\Delta f}{\Delta g}\frac{\Delta g}{\Delta x}.$$
+            Now, using another rule we know about limits, namely that the limit of a multiplication is the same as the multiplication of the limits, we can rewrite this as,
+            $$\frac{d}{dx}f(g(x))  = \Big(\lim \limits_{\Delta x \rightarrow 0} \frac{\Delta f}{\Delta g}\Big)\Big(\lim \limits_{\Delta x \rightarrow 0}\frac{\Delta g}{\Delta x}\Big).$$
+            The last part in our proof of the chain rule requires a bit of a conceptual explanation. Since we are assuming \(g(x)\) is differentiable with respect to \(x\), this 
+            means it must be continuous with respect to \(x\) (please do note that the converse is NOT true, a function that is continuous at a point is NOT necessarily differentiable
+            at that point, and this will be a key distinction). Since \(g(x)\) is continuous then it MUST be true that \(\Delta g \rightarrow 0 \ \mbox{as,} \ \Delta x \rightarrow 0\). If 
+            this wasn't true then \(g(x)\) would have to be discontinuous because \(g(x)\) would have to take on a different value depending on which way \(x\) tended to \(0\). Phew, since
+            we have now established (again we needed to assume differentiability!) that \(\Delta g \rightarrow 0 \ \mbox{as,} \ \Delta x \rightarrow 0\), we can replace in the relevant
+            portion \(\Delta x\) with \(\Delta g\), thus,
+            $$\frac{d}{dx}f(g(x))  = \Big(\lim \limits_{\Delta g \rightarrow 0} \frac{\Delta k}{\Delta g}\Big)\Big(\lim \limits_{\Delta x \rightarrow 0}\frac{\Delta g}{\Delta x}\Big).$$       
+            This leaves us with the final result of the chain rule, which states that,
+            $$\frac{d}{dx}f(g(x))  = f'(g(x))g'(x).$$
+            Now this result may actually be one of the most important results we have, often times functions can be represented quite easily as compositions of multiple functions,
+            and we can have instances with repeated (nested) usage of the chain rule. The chain rule is even used in neural networks, which is what allows "back-propogation" a key
+            detail that makes neural networks work well. Now we should give a couple of examples to demonstrate the usefulness of the chain rule. 
         </p>
         <!-- Embedded YouTube Video -->
         <div class="video-container">
@@ -456,7 +481,11 @@ More to come!
         </div>
 
         <p>
-More to come!
+Suppose I have the function \(k(x) = \sqrt{3x^3}\) and I want to find it's derivative. Clearly this function can be written with \(f(x) = \sqrt{x}, g(x) = 3x^3\), thus if we let 
+            \(k(x) = f(g(x))\), we can see that we have the composition of two functions. Using the chain rule, to find \(k'(x)\) we must find \(f'(g(x))\) and separately find
+            \(g'(x)\) and multiply them together. To find \(f'(g(x))\) we will note again that \(g'(x) = 3x^3\), and note that \(f'(x) = \frac{1}{2}x^{\frac{-1}{2}} = \frac{1}{2}\frac{1}{\sqrt{x}}\),
+            thus \(f'(g(x)) = frac{1}{2}\frac{1}{\sqrt{3x^3}}\) using the power rule,  and note that \(g'(x) = 9x^2\) using the constant multiple rule and the power rule together. So finally,
+            $$k'(x) = f'(g(x))g'(x) = frac{1}{2}\frac{9x^2}{\sqrt{3x^3}}$$
         </p>
     </section>  
     
