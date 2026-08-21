@@ -286,7 +286,7 @@
         </p>
     </section>
         <section class="section">
-        <h2 id="first-order-odes">First order ODEs</h2>
+        <h2 id="first-order-odes">Linear First order ODEs</h2>
 
         <p>
             Amazing! We finally can move on from classification (well sort of anyway...). 
@@ -368,8 +368,54 @@
                 allowfullscreen>
             </iframe>
         </div>
+        <p>
+            But it will be important for us to know how to solve linear first order ODE's directly, without needing to be provided the solution up front. As we will see, there is a general
+            method for solution, however, it is often useful to determine whether or not the linear first order ODE is <em>separable</em>.
+        </p>
+    </section>
+
+    <section class="section">
+        <h2 id="separable-equations">Seperable Equations</h2>
+
+        <p>
+            This is perhaps the simplest imaginable case of an ODE. If we imagine the linear, first order differential equation to look like this:
+            $$\frac{dy}{dx} = f(x,y),$$
+            and furthermore, the function \(f(x,y)\) takes a form 
+            $$f(x,y) = g(x)h(y),$$
+            then this is a separable equation. To see why this is so useful, it will help to include an example or two, so for example,
+            $$\frac{dy}{dx} = 2xy$$
+            is separable, as we may choose \(f(x,y) = g(x)h(y)\) with \(g(x) = 2x\) and \(h(y) = y\). (Note we could have stuck the constant on either function, it makes no difference in this case). 
+            The reason this is so powerful, is it allows us to separate the differential equation into two separate pieces that can then be integrated (hence the term separable). In our example,
+            $$\frac{dy}{dx} = 2xy \implies \frac{dy}{y} = 2x dx,$$
+            and now we may integrate both sides of the equation to find,
+            $$ln(y)+C_1 = x^2 + C_2 \implies ln(y) = x^2 + (C_2-C_1) \implies y = e^{x^2+(C_2-C_1)} \implies y = Ce^{x^2},$$
+            where in the last step we let \(e^{C_2-C_1} = C\) since this is simply a constant anyway. Notice that we came up with a solution that we have already verified to be a solution in an earlier
+            section. 
+        </p>
+        <p>
+            More to come!
+        </p>
+        <p>
+            More to come!         
+        </p>
+
+        <p>
+            More to come!
+        </p>
+
+        <!-- Embedded YouTube Video -->
+        <div class="video-container">
+            <iframe 
+                src="https://www.youtube.com/embed/"
+                title="Differential Operators"
+                frameborder="0"
+                allowfullscreen>
+            </iframe>
+        </div>
 
     </section>
+
+    
         <section class="section">
         <h2 id="differential-operators">Differential Operators</h2>
 
