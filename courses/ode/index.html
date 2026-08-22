@@ -380,7 +380,7 @@
         <p>
             This is perhaps the simplest imaginable case of an ODE. If we imagine the linear, first order differential equation to look like this:
             $$\frac{dy}{dx} = f(x,y),$$
-            and furthermore, the function \(f(x,y)\) takes a form 
+            and furthermore, the function \(f(x,y)\) (which is a function of both the independent and dependent variables) takes a form 
             $$f(x,y) = g(x)h(y),$$
             then this is a separable equation. To see why this is so useful, it will help to include an example or two, so for example,
             $$\frac{dy}{dx} = 2xy$$
@@ -388,19 +388,9 @@
             The reason this is so powerful, is it allows us to separate the differential equation into two separate pieces that can then be integrated (hence the term separable). In our example,
             $$\frac{dy}{dx} = 2xy \implies \frac{dy}{y} = 2x dx,$$
             and now we may integrate both sides of the equation to find,
-            $$ln(y)+C_1 = x^2 + C_2 \implies ln(y) = x^2 + (C_2-C_1) \implies y = e^{x^2+(C_2-C_1)} \implies y = Ce^{x^2},$$
+            $$\int \frac{dy}{y} = \int 2x dx \implies ln(y)+C_1 = x^2 + C_2 \implies ln(y) = x^2 + (C_2-C_1) \implies y = e^{x^2+(C_2-C_1)} \implies y = Ce^{x^2},$$
             where in the last step we let \(e^{C_2-C_1} = C\) since this is simply a constant anyway. Notice that we came up with a solution that we have already verified to be a solution in an earlier
             section. 
-        </p>
-        <p>
-            More to come!
-        </p>
-        <p>
-            More to come!         
-        </p>
-
-        <p>
-            More to come!
         </p>
 
         <!-- Embedded YouTube Video -->
@@ -412,7 +402,15 @@
                 allowfullscreen>
             </iframe>
         </div>
-
+<p>
+    Now we will do another example. Suppose we have the following differential equation,
+    $$\frac{dy}{dx} = \frac{x}{y}.$$
+    This equation is valid anywhere that \(x \neq 0\) (so the range does not include \(0\)). 
+    Thus for the solution, we will note that this is in fact separable, we can let \(g(x) = x, h(y) = \frac{1}{y}\) and we can see that \(f(x,y) = g(x)h(y)\) so this fits the definition of separable. 
+    To find the solution, we separate the variables onto either side of the equation as before,
+    $$y dy = x dx \implies \int y dy = \int x dx \implies \frac{y^2}{2} + C_1 = \frac{x^2}{2}+C_2 \implies y^2 = x^2 + (2C_2 - 2C_1) \implies y(x) = \sqrt{x^2+C},$$
+    where \(C = 2C_2-2C_1\) is a constant. 
+</p>
     </section>
 
     
