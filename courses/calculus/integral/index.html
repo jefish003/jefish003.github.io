@@ -122,6 +122,43 @@
 
       
     </section>
+        <section class="section">
+        <h2 id="antiderivatives">Antiderivatives</h2>
+
+        <p>
+            Assuming that you are landing here already knowing about derivatives, as well as rules such as the power rule and chain rule, a natural question that arises is the following: 
+            what if you want to "undo" the derivative? This is what is explored in the topic of antiderivatives. Later we will dive deeper into the theoretical foundations of a topic called
+            integration which almost by happenstance has a direct link to antidifferention, but for now we will focus on the antiderivative. So what exactly is the antiderivative? 
+            It is easiest to work by example here, suppose we have the following function,
+            $$f(x) = x^3,$$
+            and we wish to find its derivative. Clearly we may use the 
+             <a href="/courses/calculus/differential/index.html#power-rule">
+            power rule,
+            </a>
+            and we arrive at,
+            $$g(x) = f'(x) = 3x^2.$$
+            Nothing too surprising at this point. But now, what if we want to go the other way? Clearly we need a way to take \(g(x)\) back to \(f(x)\) (at least on some interval where both \(g(x)\) and \(f(x)\) exist).
+            Clearly if you hand us the function \(3x^2\), from our knowledge of the power rule we can easily work backwards to figure out how to "undo" the derivative that has been taken, and we from the power rule could
+            find a rule for going in the opposite direction, something like \(\frac{1}{n+1}x^{n+1}\) seems like it would work. However there is a slight issue with this, because it turns out that the derivative is 
+            not <em>unique</em>. For instance, note that the following functions all have the same derivative, \(f(x) = x^3, k(x) = x^3+10, l(x) = x^3-3\). In other words, if I add an arbitrary constant to my function,
+            it does not change the derivative. So the derivative is unique only up to an additive constant. So now I can fully propose my rule to find the antiderivative for power rule like derivatives, if
+            I let \(g(x) = f'(x)\) then, 
+            \(f(x) = \frac{1}{n+1}x^{n+1}+C\) where \(C\) is an additive constant. 
+        </p>
+
+        <div class="video-container">
+            <iframe 
+                src="https://www.youtube.com/embed/"
+                title="Limits"
+                frameborder="0"
+                allowfullscreen>
+            </iframe>
+        </div>
+
+        <p>
+More to come!
+        </p>
+    </section>
     <section class="section">
         <h2 id="introduction-integration">Introduction to integration</h2>
 
