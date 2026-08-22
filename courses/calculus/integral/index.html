@@ -221,11 +221,36 @@ More to come!
              <a href="/courses/calculus/integral/index.html#definite-integral">
             the definite integral.
             </a>      
-            Specifically we will need to recall the following property, 
-            $$ \int \limits_{a}^c f(x)dx+ \int \limits_{c}^{b}f(x)dx = \int \limits_{a}^{b}f(x)dx.$$
+            Specifically we will need to recall the following properties, 
+            $$ \int \limits_{a}^c f(x)dx+ \int \limits_{c}^{b}f(x)dx = \int \limits_{a}^{b}f(x)dx,$$
+                and,
+                $$m(b-a) \leq \int \limits_{a}^b f(x)dx \leq M(b-a),$$
+                so long as \(m \leq f(x) \leq M\) for \(a \leq x \leq b\). 
             Now for the proof, if we let \(x\) and \(x+h\) be on the open interval \((a,b)\), then
             $$g(x+h)-g(x) = \int \limits_{a}^{x+h} f(t)dt - \int \limits_{a}^x f(t)dt = \Big(\int \limits_{a}^x f(t) dt+ \int \limits_{x}^{x+h} f(t) dt \Big) - \int \limits_{a}^{x} f(t) dt = \int \limits_{x}^{x+h}f(t)dt.$$
-            Note that the portion in parenthesis was a result of the property noted above. 
+            Note that the portion in parenthesis was a result of the first property noted above. Thus we can see that for \(h \neq 0\),
+                $$\frac{g(x+h)-g(x)}{h} = \frac{1}{h}\int \limits_{x}^{x+h}f(t)dt.$$
+            Since we are assuming that \(f\), and for simplicity we will assume \(h>0\) is continuous on the closed interval \([x, x+h]\), by the 
+                <a href="/courses/calculus/differential/index.html#extreme-value-theorem">
+            extreme value theorem</a>, 
+            there are numbers \(u,v \in [x,x+h]\) such that \(f(u) = m, f(v)=M\) where \(m\) is the absolute minimum value of \(f\) and \(M\) is the absolute maximum on the interval
+            \([x,x+h]\). Using the second property of integrals we listed above (in this section), we can see that,
+            $$mh \leq \int \limits_{x}^{x+h}f(t)dt \leq Mh,$$
+            and from extreme value theorem,
+            $$f(u)h \leq \int \limits_{x}^{x+h}f(t)dt \leq f(v)h.$$
+            Dividing through by \(h\) (recall that we are assuming \(h>0\)), 
+            $$f(u) \leq \frac{1}{h}\int \limits_{x}^{x+h}f(t)dt \leq f(v).$$
+            Using the equality established above, we may rewrite this as,
+            $$f(u) \leq \frac{g(x+h)-g(x)}{h}\leq f(v).$$
+            Note, we can follow this same line of logic for \(h<0\), so this holds for any (real) \(h \neq 0\).
+            If we take the limit of the above expression as \(h \rightarrow 0\) we will find that since \(f\) is continuous, then \(u,v \rightarrow x\) because \(u,v\) lie in between \(x\) and \(x+h\)
+            and we find the expression,
+            $$f(x) \leq g'(x) \leq f(x),$$
+            (Note I used the limit above) and whenever something is upper and lower bounded by the same value that implies equality (by the 
+              <a href="/courses/calculus/differential/index.html#squeeze-theorem">
+            squeeze theorem</a>)  
+            $$g'(x) = f(x).$$
+                  
         </p>
         
         <div class="video-container">
