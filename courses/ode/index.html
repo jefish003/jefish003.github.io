@@ -408,8 +408,9 @@
     This equation is valid anywhere that \(x \neq 0\) (so the range does not include \(0\)). 
     Thus for the solution, we will note that this is in fact separable, we can let \(g(x) = x, h(y) = \frac{1}{y}\) and we can see that \(f(x,y) = g(x)h(y)\) so this fits the definition of separable. 
     To find the solution, we separate the variables onto either side of the equation as before,
-    $$y dy = x dx \implies \int y dy = \int x dx \implies \frac{y^2}{2} + C_1 = \frac{x^2}{2}+C_2 \implies y^2 = x^2 + (2C_2 - 2C_1) \implies y(x) = \sqrt{x^2+C},$$
-    where \(C = 2C_2-2C_1\) is a constant. 
+    $$y dy = x dx \implies \int y dy = \int x dx \implies \frac{y^2}{2} + C_1 = \frac{x^2}{2}+C_2 \implies y^2 = x^2 + (2C_2 - 2C_1).$$
+    Now from here we have to note that there are two <em>branches</em> to the solution for \(y(x)\), a positive branch and a negative one (remember \(y=0\) is NOT a valid option). So if \(y(x)>0, \ \mbox{then} \ y(x) = \sqrt{x^2+C}\)
+    and if \(y(x)<0, \ \mbox{then} \ y(x) = -\sqrt{x^2+C}\), where \(C = 2C_2-2C_1\). 
 </p>
     </section>
 
