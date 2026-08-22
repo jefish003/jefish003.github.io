@@ -181,6 +181,29 @@ More to come!
     </section>
 
     <section class="section">
+        <h2 id="definite-integral">The Definite Integral</h2>
+
+        <p>
+            Placeholder
+        </p>
+        
+        <div class="video-container">
+            <iframe 
+                src="https://www.youtube.com/embed/"
+                title="The Definite Integral"
+                frameborder="0"
+                allowfullscreen>
+            </iframe>
+        </div>
+
+        <p>
+More to come!
+        </p>
+    </section>
+
+
+    
+    <section class="section">
         <h2 id="fundamental-theorem-calculus">The Fundamental Theorem Of Calculus</h2>
 
         <p>
@@ -194,8 +217,15 @@ More to come!
             Fundamental theorem of calculus part 1: Suppose we have an equation of the form,
             $$g(x) = \int \limits_a^x f(t) dt,$$
             and furthermore that \(f\) is continuous across some interval \([a,b]\) and finally that \(x \in [a,b]\). Then \(g(x)\) is an antiderivative of \(f\), that is \(g'(x) = f(x)\) for \(a < x < b\). 
-            For any fixed value \(x\), since \(g(x)\) depends only on \(x\), \(g(x)\) will also be a fixed 
-            value. 
+            For any fixed value \(x\), since \(g(x)\) depends only on \(x\), \(g(x)\) will also be a fixed value. To prove this, we will need to recall a property of the definite integral 
+             <a href="/courses/calculus/integral/index.html#definite-integral">
+            the definite integral.
+            </a>      
+            Specifically we will need to recall the following property, 
+            $$ \int \limits_{a}^c+ \int \limits_{c}^{b} = \int \limits_{a}^{b}.$$
+            Now for the proof, if we let \(x\) and \(x+h\) be on the open interval \((a,b)\), then
+            $$g(x+h)-g(x) = \int \limits_{a}^{x+h} f(t)dt - \int \limits_{a}^x f(t)dt = \Big(\int \limits_{a}^x f(t) dt+ \int \limits_{x}^{x+h} f(t) dt \Big) - \int \limits_{a}^{x} f(t) dt = \int \limits_{x}^{x+h}f(t)dt.$$
+            Note that the portion in parenthesis was a result of the property noted above. 
         </p>
         
         <div class="video-container">
