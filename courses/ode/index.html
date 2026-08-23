@@ -499,10 +499,6 @@
             where we recall that \(\mu(x) = e^{\int P(x)dx}\) and for this case we choose \(C = -C_1\). 
             
         </p>
-        <p>
-            More to come!         
-        </p>
-
         <!-- Embedded YouTube Video -->
         <div class="video-container">
             <iframe 
@@ -514,7 +510,24 @@
         </div>
 
          <p>
-            More to come!
+            We will do some examples using the integrating factor method to demonstrate its power. Suppose we have the following differential equation,
+             $$\frac{dy}{dx}-y-\frac{11}{8}e^{\frac{-x}{3}}=0.$$
+             Note that this currently is not written in the standard form, so first we will rewrite it as follows,
+             $$\frac{dy}{dx}-y = \frac{11}{8}e^{\frac{-x}{3}},$$
+             this makes it clearer that \(P(x) = -1, Q(x) = \frac{11}{8}e^{\frac{-x}{3}}\). Now we can apply the integrating factor method, first we will note that,
+             $$\mu(x) = e^{\int P(x) dx} = e^{\int (-1)dx} = e^{-x}.$$
+             This means that from what we derived above that,
+             $$y(x) = Ce^{x} + e^{x}\int e^{-x}\frac{11}{8}e^{\frac{-x}{3}}dx =  Ce^{x} + e^{x}\frac{11}{8}\int e^{\frac{-4x}{3}}dx.$$
+             We will note that, 
+             $$\int e^{\frac{-4x}{3}}dx = \frac{e^{\frac{-4x}{3}}}{\frac{-4}{3}} = \frac{-3}{4}e^{\frac{-4x}{3}}.$$
+             Thus,
+             $$y(x) = Ce^x+ e^x\Big(\frac{11}{8}\frac{-3}{4}e^{\frac{-4x}{3}}\Big) = Ce^x + \frac{-33}{32}e^{\frac{-x}{3}}.$$
+             This gives the general solution, however, suppose I also gave the following initial condition for this problem, 
+             $$y(0) = -1.$$
+             With this initial condition, I can also find the exact value of $$C$$. Substituting in \(y=-1\), when \(x = 0\), we find,
+             $$y(0) = Ce^{0}+ \frac{-33}{32}e^{\frac{-0}{3}}= -1 \implies C + \frac{-33}{32} = -1 \implies C = \frac{33}{32}- \frac{32}{32} \implies C = \frac{1}{32}.$$
+             So substituting in our value for \(C\) in this case, we get the solution (for this particular initial condition) of,
+             $$y(x) = \frac{1}{32}e^x +\frac{-33}{32}e^{\frac{-x}{3}}.$$
         </p>                 
 
     </section>  
