@@ -417,6 +417,49 @@ Now we are ready to take the derivative of the polynomials, by combining the pow
        </p>
     </section>  
 
+       <section class="section">
+        <h2 id="natrual-logarithmic-derivative">Derivative of the natural log</h2>
+
+        <p>
+            Description of the the derivative for the natural log
+        </p>
+        <!-- Embedded YouTube Video -->
+        <div class="video-container">
+            <iframe 
+                src="https://www.youtube.com/embed/"
+                title="Natural Logarithmic Derivative"
+                frameborder="0"
+                allowfullscreen>
+            </iframe>
+        </div>
+
+        <p>
+More to come!
+        </p>
+    </section>
+
+    
+   <section class="section">
+        <h2 id="sinusoidal-functions">Derivatives of sinusoidal functions</h2>
+
+        <p>
+            Description of the the derivative for sinusoidal functions
+        </p>
+        <!-- Embedded YouTube Video -->
+        <div class="video-container">
+            <iframe 
+                src="https://www.youtube.com/embed/"
+                title="Power Rule"
+                frameborder="0"
+                allowfullscreen>
+            </iframe>
+        </div>
+
+        <p>
+More to come!
+        </p>
+    </section>
+
   <section class="section">
         <h2 id="product-rule">The Product Rule</h2>
 
@@ -447,8 +490,37 @@ Now we are ready to take the derivative of the polynomials, by combining the pow
         </div>
 
         <p>
-           Now we should get some examples of actually using the product rule to our advantage. 
+           Now we should get some examples of actually using the product rule to our advantage. For example, suppose we have the function \(f(x) = \ln(x)x^2\). Let \(g(x) = \ln(x), k(x) = x^2\) We know from the
+                        <a href="/courses/calculus/differential/index.html#natural-logarithmic-derivative">
+            natural logarithmic derivative rule,
+            </a>
+            that \(g'(x) = \frac{1}{x}\) and from the 
+            <a href="/courses/calculus/differential/index.html#power-rule">
+            power rule,
+            </a>
+            \(k'(x) = 2x\). So from the product rule the derivative is,
+            $$f'(x) = g'(x)k(x)+k'(x)g(x) = \frac{1}{x}(x^2)+(2x)\ln(x) = x+2x\ln(x).$$
         </p>
+      <p>
+          For another example, consider \(f(x) = \ln(x)\cos(x).\) We will let \(g(x) = \ln(x), k(x) = \cos(x)\). Then,
+          $$g'(x) = \frac{1}{x}, k'(x) = -sin(x),$$
+          where we found the derivative of \(k(x)\) using one of the 
+                      <a href="/courses/calculus/differential/index.html#sinusoidal-functions">
+            sinusoidal function rules.
+            </a>
+          Thus, applying the product rule we find that,
+          $$f'(x) = g'(x)k(x)+k'(x)g(x) = \frac{1}{x}(\cos(x)) - \sin(x)\ln(x).$$
+      </p>
+<p>
+    We should note that we have given the special case of when we have the product of two functions only. However, in general, we can find the derivatives of products with more than two functions
+    by repeated application of the product rule. For instance, suppose we have a function \(f(x)\) which can be written as \(f(x) = g(x)k(x)l(x)\). Then note that \(f(x) = [g(x)k(x)]l(x).\)
+    So this looks like the product of a product, we can apply the product rule twice.
+    $$f'(x) = [g'(x)k(x) + k'(x)g(x)]l(x) + [g(x)k(x)]l'(x) = g'(x)k(x)l(x) + k'(x)g(x)l(x) + g(x)k(x)l'(x).$$
+    Notice that we applied the product rule to the object in the square brackets first to find the derivative of \(g(x)k(x)\) and then applied the product rule to the outer portion (or however you want
+    to look at it). For example, suppose we have, \(f(x) = x^2\ln(x)\cos(x).\) Then the derivative is,
+    $$f'(x) = g'(x)k(x)l(x) + k'(x)g(x)l(x) + g(x)k(x)l'(x) = (2x)\ln(x)\cos(x) + (\frac{1}{x})x^2\cos(x) + x^2\ln(x)(-\sin(x)) = (2x)\ln(x)\cos(x)+x\cos(x)-x^2\ln(x)\sin(x).$$
+</p>
+      
     </section>  
 
       <section class="section">
@@ -523,48 +595,6 @@ Suppose I have the function \(k(x) = \sqrt{3x^3}\) and I want to find it's deriv
         </p>
     </section>  
 
-   <section class="section">
-        <h2 id="natrual-logarithmic-derivative">Derivative of the natural log</h2>
-
-        <p>
-            Description of the the derivative for the natural log
-        </p>
-        <!-- Embedded YouTube Video -->
-        <div class="video-container">
-            <iframe 
-                src="https://www.youtube.com/embed/"
-                title="Natural Logarithmic Derivative"
-                frameborder="0"
-                allowfullscreen>
-            </iframe>
-        </div>
-
-        <p>
-More to come!
-        </p>
-    </section>
-
-    
-   <section class="section">
-        <h2 id="sinusoidal-functions">Derivatives of sinusoidal functions</h2>
-
-        <p>
-            Description of the the derivative for sinusoidal functions
-        </p>
-        <!-- Embedded YouTube Video -->
-        <div class="video-container">
-            <iframe 
-                src="https://www.youtube.com/embed/"
-                title="Power Rule"
-                frameborder="0"
-                allowfullscreen>
-            </iframe>
-        </div>
-
-        <p>
-More to come!
-        </p>
-    </section>
     
   <section class="section">
         <h2 id="indeterminant-forms">Indeterminant Forms</h2>
