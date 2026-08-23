@@ -481,6 +481,23 @@
            While this link to exact equations is important, and can be used directly from the exact equations, I would also like to focus on the power of the integrating factor outside of just exact equations.
             So taking a step back, we can also write the linear first order ODE equation, after multiplication by the integrating factor as,
             $$\mu(x)\frac{dy}{dx}+\mu(x)P(x)y = \mu(x)Q(x).$$
+            Now, noting what we discussed above, that \(\mu(x)P(x) = \mu'(x)\), or in other notation, \(\mu(x)P(x) = \frac{d\mu}{dx}\), the above equation can be rewritten as,
+            $$\mu(x) \frac{dy}{dx}+ y(x)\frac{d\mu}{dx}=\mu(x)Q(x) \implies \frac{d}{dx}[\mu dy+y(x) d\mu] = \mu(x)Q(x).$$
+            Now recall from the 
+                        <a href="/courses/calculus/differential/index.html#product-rule">
+             product rule,
+            </a>
+            that if we have the following derivative \(\frac{d}{dx}[y(x)\mu(x)]\), then the result of the derivative is \(\frac{dy}{dx}\mu(x) + \frac{d\mu}{dx}y(x)\). Notice that in the above equation the term 
+            on the left hand side of the equal sign looks exactly like the result of the product rule, therefore we can replace it with the initial form of the product rule (because of the equality)
+            $$\frac{d}{dx}[y(x)\mu(x)] = \mu(x)Q(x).$$
+            And we may integrate both sides with respect to \(dx\) (and note for the left hand side that we will use the 
+              <a href="/courses/calculus/integral/index.html#fundamental-theorem-calculus">
+            fundamental theorem of calculus
+            </a>),
+            to find,
+            $$y(x)\mu(x)+C_1 = \int \mu(x)Q(x)dx \implies y(x) = Ce^{-\int P(x)dx}+e^{-\int P(x)dx}\int \mu(x)Q(x)dx,$$
+            where we recall that \(\mu(x) = e^{\int P(x)dx}\) and for this case we choose \(C = -C_1\). 
+            
         </p>
         <p>
             More to come!         
@@ -490,7 +507,7 @@
         <div class="video-container">
             <iframe 
                 src="https://www.youtube.com/embed/"
-                title="Exact Equations"
+                title="Integrating Factor"
                 frameborder="0"
                 allowfullscreen>
             </iframe>
