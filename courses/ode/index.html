@@ -421,6 +421,86 @@
 </p>
     </section>
 
+          <section class="section">
+        <h2 id="exact-equations">Exact Equations</h2>
+
+        <p>
+            Time to learn about exact equations! More to come!
+        </p>
+        <p>
+            More to come!
+        </p>
+        <p>
+            More to come!         
+        </p>
+
+        <p>
+            More to come!
+        </p>
+
+        <!-- Embedded YouTube Video -->
+        <div class="video-container">
+            <iframe 
+                src="https://www.youtube.com/embed/"
+                title="Exact Equations"
+                frameborder="0"
+                allowfullscreen>
+            </iframe>
+        </div>
+
+    </section>  
+
+              <section class="section">
+        <h2 id="integrating-factor">Integrating Factor</h2>
+
+        <p>
+            Following on from the previous section about 
+                                    <a href="/courses/ode/index.html#exact-equations">
+            exact equations,
+            </a>
+            we can actually take a non-exact linear ODE and turn it into an exact linear ODE. The standard way of doing this is via something called an <em>integrating factor.</em> This
+            is a very powerful technique and is a general way to solve first order linear ODEs. We will start by writing the first order linear ODE in standard form,
+            $$\frac{dy}{dx}+P(x)y = Q(x).$$
+            Notice that in this case, the coefficients are not necessarily constants, they can be a function (i.e. \(P(x)\)) of the dependent variable. We can rewrite this equation in the following
+            way,
+            $$[P(x)y-Q(x)]dx +dy = 0.$$
+            This equation is NOT exact, however it can be made exact via multiplication by a special factor, called the integrating factor \(\mu(x)\). It looks like the following,
+            $$\mu(x) = e^{\int P(x)dx}.$$
+            So now, if we multiply both sides of the linear first order ODE by the integrating factor, we have,
+            $$[\mu(x)P(x)y-\mu(x)Q(x)]dx + \mu(x)dy = 0,$$
+            and we will note that \(\mu(x)P(x) = \mu'(x)\) (which can be easily shown via the                         
+            <a href="/courses/calculus/differential/index.html#chain-rule">
+            chain rule,
+            </a>
+            and the
+                                    <a href="/courses/calculus/integral/index.html#fundamental-theorem-calculus">
+            fundamental theorem of calculus
+            </a>).
+        </p>
+        <p>
+           While this link to exact equations is important, and can be used directly from the exact equations, I would also like to focus on the power of the integrating factor outside of just exact equations.
+            So taking a step back, we can also write the linear first order ODE equation, after multiplication by the integrating factor as,
+            $$\mu(x)\frac{dy}{dx}+\mu(x)P(x)y = \mu(x)Q(x).$$
+        </p>
+        <p>
+            More to come!         
+        </p>
+
+        <!-- Embedded YouTube Video -->
+        <div class="video-container">
+            <iframe 
+                src="https://www.youtube.com/embed/"
+                title="Exact Equations"
+                frameborder="0"
+                allowfullscreen>
+            </iframe>
+        </div>
+
+         <p>
+            More to come!
+        </p>                 
+
+    </section>  
     
         <section class="section">
         <h2 id="differential-operators">Differential Operators</h2>
