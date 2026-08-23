@@ -421,7 +421,20 @@ Now we are ready to take the derivative of the polynomials, by combining the pow
         <h2 id="product-rule">The Product Rule</h2>
 
         <p>
-            Description of the product rule!
+            Suppose now that I have a function that can be written as the product of two functions, that is, \(f(x) = g(x)k(x)\). Now if I want to find the derivative of this function \(f'(x)\), 
+            by the limit definition of the derivative I have,
+            $$f'(x) = \lim \limits{h\rightarrow 0}\frac{f(x+h)-f(x)}{h} = \lim \limits_{h \rightarrow 0}\frac{g(x+h)k(x+h) - g(x)k(x)}{h}.$$
+            Now we will use a common "trick" in mathematics, which is a clever addition by \(0\), so we will add and subtract the following \(g(x)k(x+h)\) (since we are adding the term and subtracting it, 
+            that works out to the same thing as adding by \(0\)), and we get,
+            $$f'(x) = \lim \limits_{h \rightarrow 0}\frac{g(x+h)k(x+h)-g(x)k(x+h)+g(x)k(x+h)  - g(x)k(x)}{h}.$$
+            Now we can reorganize, and use the rules of limits, namely that \(\lim \limits_{x \rightarrow a}g(x)+k(x) = \lim \limits_{x \rightarrow a}g(x) + \lim \limits_{x\rightarrow a}k(x)\), 
+            we find,
+            $$f'(x) = \lim \limits_{h \rightarrow 0} k(x+h)\frac{[g(x+h)-g(x)]}{h} + \lim \limits_{h \rightarrow 0}g(x) \frac{[k(x+h)-k(x)]}{h},$$
+            and using another rule of limits (namely \(\lim \limits_{x \rightarrow a}g(x)k(x) = \Big(\lim \limits_{x \rightarrow a} g(x)\Big)\Big(\lim \limits_{x \rightarrow a} k(x) \Big)\)),
+            $$f'(x) = \Big(\lim \limits_{h \rightarrow 0}k(x+h)\Big)\Big(\lim \limits_{h \rightarrow 0}\frac{[g(x+h)-g(x)]}{h}\Big) + \Big(\lim \limits_{h \rightarrow 0}g(x)\Big)\Big(\lim \limits_{h \rightarrow 0}\frac{[k(x+h)-k(x)]}{h}\Big).$$
+            Now note that by our assumptions \(k(x)\) will be continuous at \(x\) (otherwise this is not differentiable to begin with, so \(\lim \limits_{h \rightarrow 0}k(x+h) = k(x)\) and since there is no \(h\) at all in \(g(x)\),
+            \(\lim \limits_{h \rightarrow 0}g(x) = g(x)\), this leaves us with,
+            $$f'(x) = k(x)g'(x)+g(x)k'(x).$$
         </p>
         <!-- Embedded YouTube Video -->
         <div class="video-container">
@@ -434,7 +447,7 @@ Now we are ready to take the derivative of the polynomials, by combining the pow
         </div>
 
         <p>
-More to come!
+           Now we should get some examples of actually using the product rule to our advantage. 
         </p>
     </section>  
 
