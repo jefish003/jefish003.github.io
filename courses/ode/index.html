@@ -528,7 +528,24 @@
              $$y(0) = Ce^{0}+ \frac{-33}{32}e^{\frac{-0}{3}}= -1 \implies C + \frac{-33}{32} = -1 \implies C = \frac{33}{32}- \frac{32}{32} \implies C = \frac{1}{32}.$$
              So substituting in our value for \(C\) in this case, we get the solution (for this particular initial condition) of,
              $$y(x) = \frac{1}{32}e^x +\frac{-33}{32}e^{\frac{-x}{3}}.$$
-        </p>                 
+        </p>
+
+        <p>
+            For another example, solve the initial value problem,
+            $$ty'+2y = 4t^2,$$
+            $$y(1) = 2.$$
+            Notice in this example that \(t\) is the independent variable and \(y\) is the dependent variable. The first thing we will need to do is to write this in a standard form,
+            thus,
+            $$y' + 2 \frac{y}{t} = 4t.$$
+            Now we can see that \(P(t) = \frac{2}{t}, Q(t) = 4t.\) Using the integrating factor method, 
+            $$\mu(t) = e^{\int P(t) dt} = e^{2\ln(t)} = e^{\ln(t^2)} = t^2.$$
+            Thus recalling from the integrating factor method,
+            $$y(t)\mu(t) + C_1 = \int \mu(t)Q(t)dt \implies y(t)t^2 + C_1 = \int t^2(4t)dt \implies y(t)\mu(t) + C_1 = t^4 + C_2 \implies y(t) = t^2 + \frac{C}{t^2}.$$
+            Note that \(C = C_2-C_1\) in this case and in the last step I substituted in \(\mu(t) = t^2\). Now, since \(y(1) = 2\),
+            $$y(1) = 1^2 + \frac{C}{1^2} = 2 \implies 1+C = 2 \implies C = 1,$$
+            which means the solution to this initial value problem is,
+            $$y(t) = t^2 + \frac{1}{t^2}.$$
+        </p>
 
     </section>  
     
