@@ -567,10 +567,17 @@
             Notice that we require that the differential equation be homogeneous here. If the ODE is nonhomogeneous, then we must account for the nonhomogeneous term by adding a <em>particular</em> solution,
             that is in complete generality the solution to a second order linear differential equation is,
             $$y(x) = c_1y_1(x)+c_2y_2(x)+y_p(x),$$
-            where \(y_p(x)\) is the particular solution associated with the nonhomogeneous part. 
+            where \(y_p(x)\) is the particular solution associated with the nonhomogeneous part. As another note about the solution of a second order linear DOE, the general solution can thus be broken up into two pieces, the first piece
+            we generally call the homogeneous part \(y_h(x) = c_1y_1(x)+c_2y_2(x)\) and the particular solution \(y_p(x)\) as noted above. The homogeneous part has the property that, so long as the coefficients of the second order linear
+            ODE are continuous on the open interval in question, the solution forms a <em>linearly independent</em> pair. Two functions are said to be <em>linearly independent</em> if the are NOT linearly dependent. Two functions are said
+            to be linearly dependent if one of the functions is a constant multiple of the other. In other words, if I have \(f_1(x) = Cf_2(x)\), then these two functions are linearly dependent. This leads us to a beautiful fact about linear
+            ODEs in general (it carries over to higher orders as well), when the order is 2 or larger, we can find the solutions to the homogeneous part, for order 2 say \(y_1(x), y_2(x)\) then we can always find the general solution by making 
+            a linear combination of them,
+            $$y(x) = c_1y_1(x)+c_2y_2(x),$$
+            this is known as <em>the principle of superposition.</em>
         </p>
         <p>
-            More to come!         
+            Much like we did       
         </p>
 
         <p>
@@ -581,7 +588,7 @@
         <div class="video-container">
             <iframe 
                 src="https://www.youtube.com/embed/"
-                title="Differential Operators"
+                title="Introduction to Second Order ODEs"
                 frameborder="0"
                 allowfullscreen>
             </iframe>
