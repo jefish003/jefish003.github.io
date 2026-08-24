@@ -561,7 +561,13 @@
         </p>
         <p>
             Notice here how the initial condition has changed from the first order case. In the first order case, to uniquely identify the solution we only needed a single initial condition \(y(a) = b\), now 
-            we need information both about the initial "position" \(y(a) = b_0\) but also about its "velocity" \(y'(a) = b_1\) to uniquely identify its solution. 
+            we need information both about the initial "position" \(y(a) = b_0\) but also about its "velocity" \(y'(a) = b_1\) to uniquely identify its solution. In general, if the ODE is linear, 
+            then we can write the solution of the second order homogeneous linear ODE as,
+            $$y(x) = c_1y_1(x)+c_2y_2(x).$$
+            Notice that we require that the differential equation be homogeneous here. If the ODE is nonhomogeneous, then we must account for the nonhomogeneous term by adding a <em>particular</em> solution,
+            that is in complete generality the solution to a second order linear differential equation is,
+            $$y(x) = c_1y_1(x)+c_2y_2(x)+y_p(x),$$
+            where \(y_p(x)\) is the particular solution associated with the nonhomogeneous part. 
         </p>
         <p>
             More to come!         
