@@ -633,7 +633,7 @@
         </div>
 
         <p>
-            For another example, show that \(y_1(x) = \cos(3x), y_2(x) = sin(3x)\) are solutions to 
+            For another example, show that \(y_1(x) = \cos(3x), y_2(x) = \sin(3x)\) are solutions to 
             $$y'' + 9y = 0,$$
             and find the general solution. Up to this point we haven't noted how to check if two solutions are linearly independent, and yet,
             as noted before, in most of the cases we will see for linear second order equations the solutions are in fact linearly independent. So first,
@@ -645,7 +645,17 @@
             y_1(x) / y_2(x) //
             y'_1(x) / y'_2(x).
             \end{bmatrix}$$
-            
+            So to find the Wronskian in this case, note that \(y'_1(x) = -3\sin(3x), y'_2(x) = 3\cos(3x)\) which is from                                                
+            <a href="/courses/calculus/differential/index.html#sinusoidal-functions">
+             the sinusoidal functions rules,
+            </a> 
+            and thus, 
+            $$y_1(x)y'_2(x)-y'_1(x)y_2(x) = 3\cos(3x)^2 -(-3\sin(3x)^2) = 3\cos(3x)^2+3\sin(3x)^2 = 3(\cos(3x)^2+\sin(3x)^2) = 3.$$
+            If the Wronskian is NOT equal to \(0\), then we may say that the solutions in this case ARE linearly independent, and as 
+            we can see in this example, they are in fact linearly independent. Now we will verify that they are solutions,
+            we must find \(y''_1(x)\) but we already found \(y'_1(x) = -3\sin(3x)\), so \(y''_1(x) = -9\cos(3x)\), similarly we find that \(y''_2(x) = - 9\sin(3x)\). 
+            Substituting in \(y_1(x)\) and its derivatives, we see,
+            $$-9 \cos(3x)$$
         </p>
             
     </section>
