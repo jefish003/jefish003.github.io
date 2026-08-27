@@ -698,7 +698,21 @@
             $$y(x) = c_1e^{2x}+c_2e^{-2x}.$$
         </p>
         <p>
-            More to come!         
+            As another example, let 
+            $$y'' - 4y'+5y = 0,$$
+            be the differential equation, with,
+            $$y(0) = 1, y'(0) = 5,$$
+            as the initial condition. Note that we may use the characteristic equation method since this is a constant coefficient (or time invariant) system.
+            Thus allowing \(y = e^{rx},\) we arrive at the characteristic equation,
+            $$r^2-4r+5 = 0 \implies (r-2)^2+1 = 0,$$ 
+            where we used the method completion of the square. We can see if we subtract the \(1\) over and take the square root, we get \(r-2 = \pm \sqrt{-1}\) and noting that
+            \(\sqrt{-1} = i\), this means we have, \(r = 2 \pm i\). Substituting this, we find that
+            $$y = c_1e^{(2+i)x}+c_2e^{(2-i)x} = e^{2x}(c_1 \cos(x)+c_2\sin(x)).$$
+            In the last part we used Euler's identity, which maps the exponential of \(i\) to sine and cosine. Now we may apply the initial condition to find,
+            $$y(0) = c_1 = 1, y'(0) = 2c_1+c_2 = 5 \implies c_2 = 3.$$
+            Thus the general solution is,
+            $$y(x) e^{2x}(\cos(x)+3\sin(x)).$$
+            
         </p>
 
         <p>
