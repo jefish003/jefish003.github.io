@@ -716,7 +716,18 @@
         </p>
 
         <p>
-            More to come!
+            As another example, solve,
+            $$y''-4y'+4y = 0.$$
+            Since this linear second order homogeneous ODE has constant coefficients, we may find the characteristic equation, which is, \(r^2-4r+4 =0.)
+            This means that, \((r-2)(r-2) = 0 \implies r = 2.\)
+            Notice however in this case we have repeated roots, the root \(2\) shows up twice. You might be tempted to say the solution is, 
+            $$y(x) = c_1e^{2x},$$
+            however we know this cannot be the case, since this is a second order equation. In this situation, we may find the other term in the solution by multiplying by the
+            first term in the solution by \(x\) (or for higher order ODEs we might need to multiply by higher powers of \(x\) in this scenario). This interestingly (you can verify
+            with the Wronskian), creates a set of linearly independent solutions.
+            So, the solution in this case is,
+            $$y(x) = c_1e^{2x}+c_2xe^{2x}.$$ 
+            You can verify this solution by substituting it into the differential equation (I encourage you to do so for more practice). 
         </p>
 
         <!-- Embedded YouTube Video -->
