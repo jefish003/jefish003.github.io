@@ -664,13 +664,38 @@
     </section>
 
             <section class="section">
-        <h2 id="constant-coefficients">Second Order Equations With Constant Coefficients</h2>
+        <h2 id="constant-coefficients">Second Order Homogeneous Equations With Constant Coefficients</h2>
 
         <p>
-            Time to learn about constant coefficients (time invariant equations) More to come!
+            When we have a linear second order differential equation,
+            $$y''+ p(x)y' + q(x)y = f(x),$$
+            and furthermore, \(p(x) = a_1, q(x) = a_0\) where, \(a_0,a_1\) are constants, then we call such a differential equation a constant coefficient differential equation.
+            In engineering, since the independent variable often involves time, this is also called time invariant. In this case, we are able to look for a single solution by
+            using the <em>characteristic equation</em>. We will note that, 
+            $$\frac{d^k}{dx^k}e^{rx} = r^ke^{rk}.$$
+            Because of this, we know for a differential equation with constant coefficients, we can search for an equation that has a solution of the form, 
+            $$y(x) = e^{rx}$$. Doing so greatly simplifies our problem, as we will see, however it must be reemphasized that this will ONLY work if we have constant coefficients,
+            and we can find in this case that,
+            $$ay''+by'+cy = 0 \implies ar^2+br+c = 0,$$
+            since, \(y'' = r^2e^{rx}, y' = re^{rx}, y = e^{rx}\), and substituting in we may verify that we can divide through by \(e^{rx}\) arriving at the result above.
+            This "trick" turns the differential equation into an algebraic one (we will rely on such a trick by using the Laplace transform later as well). Now you may ask,
+            how does finding \(r\) help, don't we need two solutions to form a general solution for the second order, linear, homogeneous differential equation? The answer is
+            yes we do, however notice that the equation has an \(r^2\) term in it, thus the solution to this algebraic equation will have two solutions in most cases (we will
+            discuss how to handle the case when \(r = 0\) or repeated roots, shortly). The equation we discovered,
+            $$ar^2+br+c = 0,$$
+            is called the <em>characteristic equation</em> or the <em>auxiliary equation.</em>. We will now do a couple of examples to drive home the point.
+            
         </p>
         <p>
-            More to come!
+         Suppose we would like to find the solution to the following differential equation,
+            $$y''-4y = 0.$$
+            Then, as above, we may assume the solution (again since this is a differential equation with constant coefficients) looks like \(y = e^{rx}\), and substituting this 
+            in we should find,
+            $$r^2e^{rx}- 4e^{rx} = 0 \implies r^2 - 4 = 0,$$
+            where the second equation is the characteristic equation. From this, we can easily solve,
+            $$r^2 = 4 \implies r = \pm 2.$$
+            This means, the solution looks like,
+            $$y(x) = c_1e^{2x}+c_2e^{-2x}.$$
         </p>
         <p>
             More to come!         
