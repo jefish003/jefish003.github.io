@@ -785,7 +785,19 @@
             $$r = \frac{-3 \pm \sqrt{9-4(1)(4)}}{2(1)} \implies r = \frac{3}{2} \pm \frac{\sqrt{-7}}{2} \implies r = \frac{3}{2} \pm \frac{1}{2}\sqrt{7}i.$$
             From this we can find the homogeneous solution,
             $$y_h(x) = e^{\frac{3}{2}x}(c_1\cos(\frac{1}{2}\sqrt{7}x)+c_2\sin(\frac{1}{2}\sqrt{7}x)).$$ 
-            
+            And for the particular solution we will guess the solution is of the form,
+            $$y_p(x) = Ax+B,$$
+            since,
+            $$f(x) = 3x+2.$$
+            Note that, \(y_p'(x) = A, y_p''(x) = 0\)
+            Substituting the guess of a particular solution into the differential equation yields,
+            $$0 + 3(A)+4(Ax+B) = 3x+2 \implies 3A+4Ax+4B = 3x+2,$$
+            we can see by inspection of the right and left hand sides that it must be true that \(4A = 3 \implies A = \frac{3}{4}\) additionally, and again by 
+            inspection, \(3A+4B = 2 \implies 3(\frac{3}{4})+4B = 2 \implies 4B = -\frac{1}{4} \ implies B = -\frac{1}{16}\). Thus my particular solution is,
+            $$y_p(x) = \frac{3}{4}x-\frac{1}{16},$$
+            which means that,
+            $$y(x) = y_h(x)+y_p(x) = e^{\frac{3}{2}x}(c_1\cos(\frac{1}{2}\sqrt{7}x)+c_2\sin(\frac{1}{2}\sqrt{7}x))+\frac{3}{4}x-\frac{1}{16}.$$
+        
         </p>
         <p>
             More to come!         
