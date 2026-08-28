@@ -857,6 +857,20 @@
                 
             </p>
 
+            <p>
+                Now we must handle the case of potential duplication, much in the same way we had to handle the case of repeated roots previously.
+                Suppose we have the following differential equation,
+                $$y'' - y' - 2y = e^{2x}.$$
+                In this case we can see that the characteristic equation is \(r^2-r-2 = 0 \implies r = 2, r = -1\). Thus the homogeneous solution is, 
+                $$y(x) = c_1e^{2x}+c_2e^{-x}.$$
+                Now we would normally want to guess a particular solution of the form, 
+                $$y_p(x) = Ae^{2x},$$
+                but notice that we already have \(e^{2x}\) in the homogeneous solution. Since we want a linearly independent solution, we will multiply by \(x\) (which helps us find a
+                linearly independent solution similar to the solution we already have)giving a guess of,
+                $$y_p(x) = Axe^{2x}.$$
+                Thus, \(y_p'(x) = 2Axe^{2x} +Ae^{2x}, y_p''(x) = 4Axe^{2x}+ 2Ae^{2x} + 2Ae^{2x} = 4Axe^{2x}+4Ae^{2x}.\)
+                Substituting in we find, 
+            </p>
             
     </section>
 
