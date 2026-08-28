@@ -827,7 +827,35 @@
             
         </p>
 
-            
+            <p>
+                As another example, solve the following initial value problem,
+                $$y''-3y'+2y = 3e^{-x}-10\cos(3x),$$
+                with \(y(0) = 1, y'(0) = 2.\) It is important to note that this is a constant coefficient linear equation. 
+                First to solve this problem, we must solve the homogeneous equation, so we can see the characteristic equation of the homogeneous problem is given by,
+                $$r^2-3r+2 = 0,$$
+                which implies that \(r = 1, r = 2\). So the homogenous (also called complementary) solution is, 
+                $$y_h(x) = c_1e^x + c_2e^{2x}.$$
+                Now note that the nonhomogeneous part, \(f(x) = 3e^{-x}-10\cos(3x)\). Since these are two types of functions we mentioned before, but that are added together,
+                we can assume their solution looks like each part added together, that is our guess for a solution is,
+                $$y_p(x) = Ae^{-x} + B\cos(3x)+C\sin(3x).$$
+                Thus, \(y_p'(x) = -Ae^{-x} - 3B\sin(3x)+3C\cos(3x), y_p''(x) = Ae^{-x}-9B\cos(3x)-9C\sin(3x).\) Substituting this back into the differential equation yields,
+                $$6Ae^{-x} + (-7B-9C)\cos(3x)+(9B-7C)\sin(3x) = 3e^{-x}-10\cos(3x).$$
+                By inspection, we see immediately that \(6A = 3 \implies A = \frac{1}{2}.\) Additionally, note that since there is no sine term on the right hand side, that implies
+                that the coefficient on the left hand side must be \(0\), that is \(9B-7C = 0 \implies B = \frac{7}{9}C.\) Finally, we note that \((-7B-9C) = -10 \implies -7(\frac{7}{9}C)-9C = -10.\)
+                From here we can see that,
+                $$\frac{-130}{9}C = -10 \implies C = \frac{90}{130} = \frac{9}{13},$$
+                which means that \(B = \frac{7}{9}(\frac{9}{13}) = \frac{7}{13}.\)
+                So we can write the full solution now as, 
+                $$y(x) = c_1e^x + c_2e^{2x}+\frac{1}{2}e^{-x} + \frac{7}{13}\cos(3x) + \frac{9}{13}\sin(3x),$$
+                and applying the initial condition,
+                $$c_1+c_2+\frac{1}{2}+ \frac{7}{13} = 1 \implies c_1 = -\frac{1}{26}-c_2,$$
+                and since \(y'(x) = c_1e^x + 2c_2e^{2x}-\frac{1}{2}e^{-x}-\frac{21}{13}\sin(3x) + \frac{27}{13}\cos(3x)\),
+                $$c_1+2c_2-\frac{1}{2} + \frac{27}{13} = 2 \implies (-\frac{1}{26}-c_2) + 2c_2 = \frac{11}{26} \implies c_2 = \frac{12}{26} = \frac{6}{13}.$$
+                This allows us to find \(c_1 = -\frac{1}{26}-\frac{12}{26} = -\frac{13}{26} = -\frac{1}{2}.\)
+                So the solution becomes,
+                $$y(x) = \frac{1}{2}e^x + \frac{6}{13}e^{2x}+\frac{1}{2}e^{-x} + \frac{7}{13}\cos(3x) + \frac{9}{13}\sin(3x)$$
+                
+            </p>
 
             
     </section>
