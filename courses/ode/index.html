@@ -752,6 +752,59 @@
                 
     </section>
 
+
+        <section class="section">
+        <h2 id="undetermined-coefficients">Method Of Undetermined Coefficients </h2>
+
+        <p>
+            So now you should be asking yourself, ok, we have a way to find the solution of a constant coefficient homogeneous second order ODE, but what if that same type of
+            differential equation is nonhomogeneous? It turns out, it depends on the type of input (also known as forcing) function \(f(x)\). In some special cases, there is a fast
+            method for obtaining the particular solution, when the homogeneous solution is known in the case of constant coefficients (NOTE this method only works for constant coefficients).
+            This method is known as the method of undetermined coefficients. As an example, suppose the term \(f(x)\) in the differential equation,
+            $$y'' + p(x)y'+q(x)y = f(x),$$
+            is a polynomial function. Since the derivative of a polynomial is another polynomial, it is reasonable to expect that the particular solution may itself be polynomial. Similarly,
+            if,
+            $$f(x) = a\cos(kx)+b\sin(kx),$$
+            we may also reasonably expect (since the derivative of \(\sin\) has a \(\cos\) in it and vice versa) that the particular solution will be of the form,
+            $$A\cos(kx)+ B \sin(kx).$$ So the method of undetermined coefficients in this case is used to guess the form of the solution, and then find the proper coefficients
+            to make complete the solution. This works on some types of functions \(f(x)\), but certainly not all.
+        </p>
+        <p>
+            As an example, suppose we have the differential equation,
+            $$y''+3y'+4y = 3x+2,$$
+            and thus \(f(x) = 3x+2\). The first thing we will need to do to find the general solution, is to find the homogeneous solution. Since the coefficients are constant, we
+            can use
+             <a href="/courses/ode/index.html#constant-coefficients">
+            the characteristic equation,
+            </a>
+            to find a solution to the homogeneous equation,
+            $$y''+3y'+4y = 0.$$
+            The characteristic equation is,
+            $$r^2+3r+4 = 0,$$
+            and using the quadratic equation,
+            $$r = \frac{-3 \pm \sqrt{9-4(1)(4)}}{2(1)} \implies r = \frac{3}{2} \pm \frac{\sqrt{-7}}{2} \implies r = \frac{3}{2} \pm \frac{1}{2}\sqrt{7}i.$$
+            From this we can find the homogeneous solution,
+            $$y_h(x) = e^{\frac{3}{2}x}(c_1\cos(\frac{1}{2}\sqrt{7}x)+c_2\sin(\frac{1}{2}\sqrt{7}x)).$$ 
+            
+        </p>
+        <p>
+            More to come!         
+        </p>
+
+
+        <!-- Embedded YouTube Video -->
+        <div class="video-container">
+            <iframe 
+                src="https://www.youtube.com/embed/"
+                title="Undetermined Coefficients"
+                frameborder="0"
+                allowfullscreen>
+            </iframe>
+        </div>
+
+    </section>
+
+
     
                 <section class="section">
         <h2 id="variation-of-parameters">Second Order Equations With Variation Of Parameters</h2>
@@ -813,34 +866,6 @@
     </section>
     
 
-        <section class="section">
-        <h2 id="undetermined-coefficients">Method Of Undetermined Coefficients </h2>
-
-        <p>
-            Time to learn about differential operators! More to come!
-        </p>
-        <p>
-            More to come!
-        </p>
-        <p>
-            More to come!         
-        </p>
-
-        <p>
-            More to come!
-        </p>
-
-        <!-- Embedded YouTube Video -->
-        <div class="video-container">
-            <iframe 
-                src="https://www.youtube.com/embed/"
-                title="Undetermined Coefficients"
-                frameborder="0"
-                allowfullscreen>
-            </iframe>
-        </div>
-
-    </section>
 
         <section class="section">
         <h2 id="higher-order">Higher Order Linear ODEs</h2>
