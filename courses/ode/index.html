@@ -642,7 +642,7 @@
             $$W[y_1,y_2](x) = y_1(x)y'_2(x)-y'_1(x)y_2(x) = |K|,$$ 
             where,
             $$K = \begin{bmatrix}
-            y_1(x) & y_2(x) //
+            y_1(x) & y_2(x) \\
             y'_1(x) & y'_2(x).
             \end{bmatrix}$$
             So to find the Wronskian in this case, note that \(y'_1(x) = -3\sin(3x), y'_2(x) = 3\cos(3x)\) which is from                                                
@@ -880,7 +880,35 @@
         <h2 id="variation-of-parameters">Second Order Equations With Variation Of Parameters</h2>
 
         <p>
-            Time to learn about constant coefficients More to come!
+            We may seek to find solutions, even in the case where the linear second order equation does NOT have constant coefficients. A method which allows us to do so, at least
+            so long as we already know the homogeneous solution, is called the method of <em>variation of parameters.</em>
+            We already know that the solution of the second order linear ODE,
+            $$y''+p(x)y'+q(x)y = f(x),$$
+            will break into two parts, the homogeneous part \(y_h(x) = c_1y_1(x)+c_2y_2(x)\), which solves,
+            $$y''+p(x)y'+q(x)y = 0,$$
+            and the particular solution, \(y_p(x)\) which is related to \(f(x)\). In variation of parameters, we will suppose the equation of the particular solution takes the form,
+            $$y_p(x) = v_1(x)y_1(x)+v_2(x)y_2(x),$$
+            where \(y_1(x),y_2(x)\) come from the homogeneous solution. Now, via the 
+            <a href="/courses/calculus/differential/index.html#product-rule">
+             product rule,
+            </a> 
+            we can see that,
+            $$y_p' = (v_1'y_1+v_2'y_2)+(v_1y_1'+v_2y_2').$$
+            We can avoid second order derivatives in the unknown functions, \(v_1,v_2\) by imposing the following requirement for the functions,
+            $$v_1'y_1+v_2'y_2 = 0.$$
+            Thus, with this requirement,
+            $$y_p' = v_1y_1'+v_2y_2',$$
+            and,
+            $$y_p'' = v_1'y_1'+v_1y_1''+v_2'y_2'+v_2y_2''.$$
+            We can now substitute \(y_p'', y_p', y_p\) into the second order linear ODE provided above to find (after some algebraic manipulation),
+            $$f = v_1'y_1'+v_2'y_2'.$$
+            Thus we are left with 2 equations,
+            $$y_1v_1'+y_2v_2' = 0,$$
+            and,
+            $$y_1'v_1'+y_2'v_2' = f.$$
+            Finally, we can use these two equations, to help us solve for the linear system, to find that,
+            $$v_1'(x) = \frac{-f(x)y_2(x)}{W[y_1,y_2](x)}, v_2'(x) = \frac{f_(x)y_1(x)}{W[y_1,y_2](x),}
+            where \(W\) is the Wronskian we discussed earlier.
         </p>
         <p>
             More to come!
