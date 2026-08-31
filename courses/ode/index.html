@@ -947,7 +947,40 @@
         </div>
 
 <p>
-    
+    Now we will do another example. Find the particular solution of, 
+    $$y''+y = \tan(x)+3x-1.$$
+    Note that we have already found the particular solution when the right hand side was \(\tan(x)\), and we will now take advantage of the fact that we know that we will
+    have a linear superposition in the solution. So, we will not have to find the solution for the \(\tan(x)\) portion again, it will just be added to the rest of the particular
+    solution. So applying the variation of parameters,
+    $$v_1 = \int [-3x+1]\sin(x)dx = \int -3x\sin(x)dx + \int \sin(x) dx,$$
+    since as we already noted in the earlier problem, the Wronskian in this case is just \(1\). 
+    We can see the first integral on the right hand side can be evaluated using
+            <a href="/courses/calculus/differential/index.html#integration-by-parts">
+             integration by parts,
+            </a> 
+    by letting \(u = 3x, du = 3 dx, dv = \sin(x), v = -\cos(x)\), and the second integral is simple, this evaluates to,
+    $$v_1(x) = 3x\cos(x)-3\sin(x)-\cos(x),$$
+    and note that this means that (setting the constants to \(0\)),
+    $$v_1(x)y_1(x) = 3x\cos^2(x) - 3\sin(x)\cos(x) - \cos^2(x).$$
+    Similarly, for \(v_2\),
+    $$v_2 = \int [3x-1]\cos(x)dx = \int 3x\cos(x)dx - \int \cos(x)dx,$$
+    and again for the first integral we will use, 
+            <a href="/courses/calculus/differential/index.html#integration-by-parts">
+             integration by parts,
+            </a> 
+    and the second integral is again simple to evaluate, thus we find that,
+    $$v_2(x) = 3x\sin(x)+3\cos(x)-\sin(x) \implies v_2(x)y_2(x) = 3x\sin^2(x) + 3\sin(x)\cos(x)-\sin^2(x),$$
+    and adding \(v_1y_1+v_2y_2\), yields (again setting all the constants to \(0\)),
+    $$v_1y_1+v_2y_2 = 3x\cos^2(x) - 3\sin(x)\cos(x) - \cos^2(x)+ 3x\sin^2(x) + 3\sin(x)\cos(x)-\sin^2(x).$$
+    Using the identity \(\cos^2(x)+\sin^2(x) = 1\) this evaluates to,
+    $$y_q(x) = v_1y_1+v_2y_2 =3x - 1.$$
+    Now since we already know that, 
+    $$y_r(x) = -\ln|\sec(x)+\tan(x)|\cos(x),$$
+    from the last problem we can get the full particular solution,
+    $$y_p(x) = y_q+y_r = 3x - 1-\ln|\sec(x)+\tan(x)|\cos(x),$$
+    and thus the complete solution is,
+    $$y(x) = y_h(x)+y_p(x) = c_1\cos(x)+c_2\sin(x)+ 3x - 1-\ln|\sec(x)+\tan(x)|\cos(x).$$
+
 </p>
                     
     </section>
