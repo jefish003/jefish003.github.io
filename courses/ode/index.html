@@ -907,18 +907,33 @@
             and,
             $$y_1'v_1'+y_2'v_2' = f.$$
             Finally, we can use these two equations, to help us solve for the linear system, to find that,
-            $$v_1'(x) = \frac{-f(x)y_2(x)}{W[y_1,y_2](x)}, v_2'(x) = \frac{f_(x)y_1(x)}{W[y_1,y_2](x),}
-            where \(W\) is the Wronskian we discussed earlier.
+            $$v_1'(x) = \frac{-f(x)y_2(x)}{W[y_1,y_2](x)}, v_2'(x) = \frac{f_(x)y_1(x)}{W[y_1,y_2](x),}$$
+            where \(W\) is the Wronskian we discussed earlier. Thus we can find,
+            $$v_1(x) = \int \frac{-f(x)y_2(x)}{W[y_1,y_2](x)}dx, v_2(x) = \int \frac{f(x)y_1(x)}{W[y_1,y_2](x)}dx.$$
         </p>
         <p>
-            More to come!
-        </p>
-        <p>
-            More to come!         
-        </p>
-
-        <p>
-            More to come!
+            As an example, suppose we want to find the solution to the differential equation,
+            $$y'' + y = \tan(x),$$
+            on \((-\pi/2, \pi/2)\).  Since the coefficients are constant (and this is a linear second order ODE), we know that the characteristic equation of the homogeneous equation is,
+            $$r^2 +1 = 0 \implies r = \pm i.$$
+            From this the homogeneous solution is, 
+            $$y_h(x) = c_1\cos(x) + c_2\sin(x),$$
+            thus \(y_1(x) = \cos(x), y_2(x) = \sin(x)\). Now we will suppose that our particular solution is,
+            $$y_p(x) = v_1(x)\cos(x) + v_2(x)\sin(x).$$
+            Now if we recall the Wronskian in the second order case is given by,
+            $$W[y_1,y_2](x) = y_1y_2'-y_2y_1',$$
+            we see that, 
+            $$W(x) = \cos(x)\cos(x) + \sin(x)\sin(x) = \cos^2(x)+\sin^2(x) = 1.$$
+            Thus, using, 
+            $$v_1(x) = \int \frac{-f(x)y_2(x)}{W[y_1,y_2](x)}dx, v_2(x) = \int \frac{f(x)y_1(x)}{W[y_1,y_2](x)}dx,$$
+            we see that,
+            $$v_1(x) = \int \frac{-\tan(x)\sin(x)}{1}dx = \int\frac{-\sin^2(x)}{\cos(x)}dx = -\int \frac{1-\cos^2(x)}{\cos(x)}dx = \int (\cos(x)-\sec(x))dx = \sin(x) - \ln|\sec(x)+\tan(x)|+C_1.$$
+            And,
+            $$v_2(x) = \int \frac{\tan(x)\cos(x)}{1} dx = \int \sin(x) dx = -\cos(x)+C_2.$$
+            Now we can use these functions to find the particular solution, and since we only need a single particular solution, we will set the constants to \(0\).
+            $$y_p(x) = v_1(x)y_1(x) + v_2(x)y_2(x) = (\sin(x) - \ln|\sec(x)+\tan(x)|)\cos(x) + (-\cos(x)\sin(x)) = -\ln|\sec(x)+\tan(x)|\cos(x).$$
+            So the complete solution becomes,
+            $$y(x) = y_h(x)+y_p(x) = c_1\cos(x)+c_2\sin(x)-\ln|\sec(x)+\tan(x)|\cos(x).$$
         </p>
 
         <!-- Embedded YouTube Video -->
@@ -931,6 +946,10 @@
             </iframe>
         </div>
 
+<p>
+    
+</p>
+                    
     </section>
 
 
