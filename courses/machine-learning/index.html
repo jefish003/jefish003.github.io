@@ -97,9 +97,88 @@
         </p>
     </section>
 
-    <!-- Linear ODEs Section -->
+     <section class="section">
+        <h2 id="consistent-estimators">Consistent Estimators</h2>
+
+        <p>
+            We should start by a discussion of what we might view as desireable properties of estimators. There is no "general" way to choose the "best" model, and thus we
+            must instead rely on heuristics. So now we will begin a discussion of some properties we might like an "ideal" estimator to have, though as we will find, these
+            desireable properties cannot all be met by a single estimator. 
+        </p>
+
+        <p>
+            An estimator is said to be <em>consistent</em> if that estimator eventually recovers the true parameters of the model that generated the data when the sample size 
+            goes to infinity. That is, 
+            $$\hat{\theta}(\mathcal{D}) \rightarrow \theta^*, \ \mbox{as} \ |\mathcal{D}| \rightarrow \infty,$$
+            where \(\mathcal{D}\) is the data. Or expressed in terms of probability, we can say, for every \(\epsilon > 0\), 
+            $$P(|\hat{\theta}_m - \theta|>\epsilon) \rightarrow 0, \ \mbox{as} \ m \rightarrow 0,$$
+            where \(m\) is the number of data points. 
+        </p>
+
+        <!-- Embedded YouTube Video -->
+        <div class="video-container">
+            <iframe 
+                src="https://www.youtube.com/embed/"
+                title="Consistent Estimators"
+                frameborder="0"
+                allowfullscreen>
+            </iframe>
+        </div>
+
+      
+    </section>   
+
+     <section class="section">
+        <h2 id="unbiased-estimators">Unbiased Estimators</h2>
+
+        <p>
+            Unbiased Estimators
+        </p>
+
+        <p>
+            If you want the fast version, below is a short video introducing limits.
+        </p>
+
+        <!-- Embedded YouTube Video -->
+        <div class="video-container">
+            <iframe 
+                src="https://www.youtube.com/embed/"
+                title="Unbiased Estimators"
+                frameborder="0"
+                allowfullscreen>
+            </iframe>
+        </div>
+
+      
+    </section>   
+
+     <section class="section">
+        <h2 id="minimum-variance-estimators">Minimum Variance Estimators</h2>
+
+        <p>
+            Minimum Variance Estimators
+        </p>
+
+        <p>
+            If you want the fast version, below is a short video introducing limits.
+        </p>
+
+        <!-- Embedded YouTube Video -->
+        <div class="video-container">
+            <iframe 
+                src="https://www.youtube.com/embed/"
+                title="Minimum Variance Estimators"
+                frameborder="0"
+                allowfullscreen>
+            </iframe>
+        </div>
+
+      
+    </section>   
+
+    
     <section class="section">
-        <h2>Limits</h2>
+        <h2 id="bias-variance">Bias-Variance Tradeoff</h2>
 
         <p>
             We must begin with a discussion of what a limit is, why we care about it, and examples
@@ -114,7 +193,7 @@
         <div class="video-container">
             <iframe 
                 src="https://www.youtube.com/embed/"
-                title="Limits"
+                title="Bias-Variance Tradeoff"
                 frameborder="0"
                 allowfullscreen>
             </iframe>
@@ -122,18 +201,32 @@
 
       
     </section>
-    <section class="section">
-        <h2>Derivatives</h2>
+
+     <section class="section">
+        <h2 id="empirical-risk-minimization">Empirical Risk Minimization</h2>
 
         <p>
-            Placeholder
+            We must begin with a discussion of what a limit is, why we care about it, and examples
+            of when it is useful. 
         </p>
-
 
         <p>
-More to come!
+            If you want the fast version, below is a short video introducing limits.
         </p>
-    </section>
+
+        <!-- Embedded YouTube Video -->
+        <div class="video-container">
+            <iframe 
+                src="https://www.youtube.com/embed/"
+                title="Empirical Risk Minimization"
+                frameborder="0"
+                allowfullscreen>
+            </iframe>
+        </div>
+
+      
+    </section>   
+
 
 </div>
 
