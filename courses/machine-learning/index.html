@@ -98,6 +98,30 @@
     </section>
 
      <section class="section">
+        <h2 id="maximum-likelihood-estimation">Maximum Likelihood Estimation</h2>
+
+        <p>
+            We will begin by stating the maximum likelihood principle. Consider a set of \(m\) samples \(\mathbb{X} = \{\mathbf{x}^{(1)},...,\mathbf{x}^{(m)}\}\)
+            which are drawn independently from an unknown distribution \(p(\mathbf{x})\). We will let the model \(\hat{p}(\mathbf{x};\mathbf{\theta})\) be a family of distributions
+            over the space which is indexed by the parameters \(\mathbf{\theta}\). The maximum likelihood estimator for \(\mathbf{\theta)\) can then be 
+        </p>
+
+
+        <!-- Embedded YouTube Video -->
+        <div class="video-container">
+            <iframe 
+                src="https://www.youtube.com/embed/"
+                title="Maximum Likelihood Estimation"
+                frameborder="0"
+                allowfullscreen>
+            </iframe>
+        </div>
+
+      
+    </section>   
+
+    
+     <section class="section">
         <h2 id="consistent-estimators">Consistent Estimators</h2>
 
         <p>
@@ -112,7 +136,7 @@
             $$\hat{\theta}(\mathcal{D}) \rightarrow \theta^*, \ \mbox{as} \ |\mathcal{D}| \rightarrow \infty,$$
             where \(\mathcal{D}\) is the data. Or expressed in terms of probability, we can say, for every \(\epsilon > 0\), 
             $$P(|\hat{\theta}_m - \theta|>\epsilon) \rightarrow 0, \ \mbox{as} \ m \rightarrow 0,$$
-            where \(m\) is the number of data points. 
+            where \(m\) is the number of data points (for "weak consistency", we can get a stronger version of consistency if we allow convergence <em>almost surely</em>). 
         </p>
 
         <!-- Embedded YouTube Video -->
