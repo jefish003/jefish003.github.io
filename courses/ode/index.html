@@ -1032,8 +1032,17 @@
             
 <p>
     Given a function \(f(t)\) defined for all \(t \geq 0,\) the <em>Laplace transform</em> of \(f\) is the function \(F\) defined as follows:
-    $$F(s) = \mathcal{L}\{f(t)\} = \int \limits_{0}{\infty}e^{-st}f(t)dt$$
-    for all values of \(s\) for which the improper integral converges. 
+    $$F(s) = \mathcal{L}\{f(t)\} = \int \limits_{0}^{\infty}e^{-st}f(t)dt$$
+    for all values of \(s\) for which the improper integral converges. We will recall that the improper integral defined as,
+    $$\int \limits_{a}^{\infty}g(t)dt = \lim \limits_{b \rightarrow \infty}\int \limits_{a}^{b}g(t)dt$$
+    converges if the limit exists, otherwise it diverges. Now we will do some examples.
+</p>
+<p>
+    Let \(f(t) = 1\) for \(t \geq 0\), then the Laplace transform is,
+    $$\mathcal{L}\{1\} = \int \limits_{0}^{\infty} e^{-st}dt = \Big[-\frac{1}{s}e^{-st}\Big]_{0}^\infty = \lim \limits_{b \rightarrow \infty}\Big[-\frac{1}{s}e^{-bs}+\frac{1}{s}\Big],$$
+    and thus,
+    $$\mathcal{L} = \frac{1}{s}$$
+    for \(s>0\). 
 </p>
 
             
