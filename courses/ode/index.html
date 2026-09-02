@@ -1130,7 +1130,57 @@
             
     </section>
     
+ <section class="section">
+        <h2 id="ivps-laplace-transform">IVPs and the Laplace Transform</h2>
 
+        <p>
+            One might naturally ask, how can I apply the Laplace Transform in the case where I have an initial value problem (IVP)? Well as it turns out, I can nicely transform
+            the problem in this scenario as well. Starting from,
+            $$a \ddot{x}(t) +  b \dot{x}(t) + cx(t) = f(t),$$
+            from the linearity of the Laplace transform I know that,
+            $$a \mathcal{L}\{\ddot{x}(t)\}+b \mathcal{L}\{\dot{x}(t)\} + c \mathcal{L}\{x(t)\} = \mathcal{L}\{f(t)\}.$$
+            For a piecewise smooth function (thus the derivative is piecewise continuous) we have that,
+            $$\mathcal{L}\{\dot{f}(t)\} = s\mathcal{L}\{f(t)\} - f(0) = sF(s)-f(0).$$
+            We will note, we can find higher order derivatives by applying this formulation as many times as needed, in the second order case we will find that,
+            $$\mathcal{L}\{\ddot{f}(t)\} = s^2F(s)-sf(0)-f'(0).$$
+            
+        </p>
+        
+        <!-- Embedded YouTube Video -->
+        <div class="video-container">
+            <iframe 
+                src="https://www.youtube.com/embed/"
+                title="Differential Operators"
+                frameborder="0"
+                allowfullscreen>
+            </iframe>
+        </div>
+
+<p>
+    Now for an example using this, solve,
+    $$\ddot{x}-\dot{x}-6x = 0, \ x(0) = 2, \ \dot{x}(0) = -1.$$
+    Note that, 
+    $$\mathcal{L}\{\dot{x}(t)\} = s\mathcal{L}\{x(t)\}-x(0) = sX(s)-2,$$
+    and
+    $$\mathcal{L}\{\ddot{x}(t)\} = s^2\mathcal{L}\{x(t)\}-sx(0)-\dot{x}(0) = s^2X(s)-2s+1.$$
+    Now these two pieces may be substituted into the original differential equation,
+    $$[s^2X(s)-2s+1]-[sX(s)-2]-6[X(s)] = 0 \implies (s^2-s-6)X(s) - 2s+3 = 0 \implies X(s) = \frac{2s-3}{s^2-s-6}.$$
+    We may simplify the denominator,
+    $$X(s) = \frac{2s-3}{(s-3)(s+2)}.$$
+    And now we may use the method of partial fractions to solve this, thus,
+    $$\frac{2s-3}{(s-3)(s+2)} = \frac{A}{s-3}+\frac{B}{s+2},$$
+    which simplifies to,
+    $$2s-3 = A(s+2)+B(s-3).$$
+    Substituting \(s=3\) in allows us to cancel one of the terms and we find that \(5A = 3 \implies A = \frac{3}{5}\). Similarly we may substitute in
+    \(s = -2\) and we find that \(-5B = -7 \implies B = \frac{7}{5}.\)
+    So now we have successfully split this into two pieces,
+    $$X(s) = \mathcal{L}\{x(t)\} = \frac{\frac{3}{5}}{s-3}+\frac{\frac{7}{5}}{s+2}$$
+    and by noting that \(\mathcal{L}\{e^{at} = \frac{1}{s-a}\}\) and rewriting \(X(s) = \frac{3}{5}\frac{1}{s-3}+\frac{7}{5}\frac{1}{s+2}\) we find that,
+    $$x(t) = \frac{3}{5}e^{3t}+\frac{7}{5}e^{-2t}.$$
+
+</p>
+     
+    </section>
     
         <section class="section">
         <h2 id="differential-operators">Differential Operators</h2>
