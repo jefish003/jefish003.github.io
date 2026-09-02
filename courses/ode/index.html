@@ -1116,6 +1116,18 @@
             </iframe>
         </div>
 
+<p>
+    One may naturally ask, what if we move the point where the step function jumps up to \(1\)? That is, we will define a shifted unit step function as follows,
+            $$u_a(t) = 
+            \begin{cases} 
+            0 & \text{if } t < a \\ 
+            1 & \text{if } t \geq a.
+            \end{cases}$$
+    Well in this case, 
+    $$\mathcal{L}\{u_a(t)\} = \int \limits_0^{\infty}e^{-st}u_a(t)dt = \int \limits_{a}^{\infty}e^{-st}dt = \lim \limits_{b \rightarrow \infty}\Big[-\frac{e^{-st}}{s}\Big]_a^b =$$
+                                 $$\frac{e^{-as}}{s}, \ (s>0), \ (a>0).$$
+</p>
+            
     </section>
     
 
