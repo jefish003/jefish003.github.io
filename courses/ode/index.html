@@ -1061,7 +1061,7 @@
         <p>
             We can form Laplace transforms of functions relatively easily as we saw with the examples above. However, another property of the Laplace tranform makes it 
             particularly useful. Namely, the fact that the Laplace transform obey's linearity. To be more precise, the Laplace transform has the following property,
-            $$\mathcal{L}\{af(t)+bg(t)\} = a \mathcal{L}\{f(t)\}+ b\mathcal{g(t)\}.$$
+            $$\mathcal{L}\{af(t)+bg(t)\} = a \mathcal{L}\{f(t)\}+ b\mathcal{L}\{g(t)\}.$$
             This property can be easily proved,
             $$\mathcal{L}\{af(t)+bg(t)\} = \int \limits_{0}^{\infty}e^{-st}[af(t)+bg(t)]dt =$$
             $$ \lim \limits_{c\rightarrow \infty} \int \limits_{0}^{c}e^{-st}[af(t)+bg(t)]dt = $$
@@ -1080,6 +1080,12 @@
             </iframe>
         </div>
 
+<p>
+    Now we can use this to our advantage. For instance, recall that \(\cosh(kt) = \frac{e^{kt}+e^{-kt}}{2}\). Since we know that the Laplace transform obeys linearity, this means that,
+    $$\mathcal{L}\{\cosh(kt)\} = \frac{1}{2}\mathcal{L}\{e^{kt}\} + \frac{1}{2}\mathcal{L}\{e^{-kt}\} = \frac{1}{2}\Big(\frac{1}{s-k}+\frac{1}{s+k}\Big) =$$
+    $$ \frac{s}{s^2-k^2}.$$
+</p>
+            
     </section>
 
         <section class="section">
