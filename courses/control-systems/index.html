@@ -177,12 +177,14 @@
             the principle of superposition). The natural response relates to how the system dissipates or aquires energy. We will be interested in systems where the
             natural response approaches a <em>fixed point</em>, (often we will simply assume the fixed point is at \(0\) for simplicity and any system can be 
             translated to make this true). Such a system is stable. For the purposes of this course we will not consider the system stable (or call it <em>instable</em>) if it grows or oscillates
-            (growth is always considered unstable, but in some non control theoretic contexts oscillations can be considered stable if one approaches a <em>limit cycle</em>
-            as time goes to \(\infty\)). In a control system, oscillations can be devastating, take for example the crash of an F-22 prototype jet which happened due to 
+            (growth is always considered unstable, but in some control theoretic contexts oscillations can be considered stable if one approaches a <em>limit cycle</em>
+            as time goes to \(\infty\) rather than having growing oscillations). In a control system, oscillations can be devastating, take for example the crash of an F-22 prototype jet which happened due to 
             something called "Pilot Induced Oscillations" (see the following link: 
             <a href="https://www.1001crash.com/telechvideo-video-F22_crash-lg-2-f-22-prototype-crashes-due-pilot-induced-oscillations.html">
             PIO </a>
-            )
+            ). In this example, there was a small time delay between the control signal and the output. The delay was enough that the pilot thought that they had not
+            pushed on the control stick hard enough, so the pilot tried to push harder, causing a more violent oscillatory response, which caused the pilot to try to
+            overcorrect in the opposite direction leading to larger oscillations and eventually to the crash. 
         </p>
     </section>
 
