@@ -1255,6 +1255,24 @@
                 $$G(s) = \frac{Y(s)}{U(s)} = \frac{bs+k}{ms^2+bs+k}$$ 
                 and we would need to know the initial conditions to evaluate this system further. 
             </p>
+            
+            <p>
+             Now suppose we have the following differential equation, 
+                $$\dot{y} + 2y = x(t),$$
+                and suppose that we use the unit step function for \(x(t)\), that is \(x(t) = u(t)\). Now we would like to find the full system response directly from the
+                transfer function (NOTE, unless initial conditions are supplied we will always assume \(0\) for the initial conditions). Then, first we will find the transfer function, which is,
+                $$(s+2)Y(s) = X(s) \implies G(s) = \frac{Y(s)}{X(s)} = \frac{1}{s+2}.$$
+                We know from the beginning of this section that the solution will look like \(G(s)X(s)\) if we have \(0\) initial conditions so, 
+                $$Y(s) = G(s)X(s) = \Big(\frac{1}{s+2}\Big) \Big(\frac{1}{s}\Big),$$
+                since the unit step function has a Laplace transform of \(\frac{1}{s}\). Thus, we will evaluate using partial fractions,
+                $$\frac{1}{s(s+2)} = \frac{A}{s}+\frac{B}{s+2} \implies 1 = A(s+2)+B(s).$$
+                We can see that choosing \(s = 0\) means that \(1 = 2A \implies A = \frac{1}{2}\). Similarly, choosing \(s = -2\), we find that \(1 = -2B\) \implies \(B = \frac{-1}{2}\).
+                Thus we find that,
+                $$Y(s) = \frac{1}{2}\frac{1}{s} -\frac{1}{2}\frac{1}{s+2},$$
+                and inverting the Laplace transform, we thus find,
+                $$y(t) = \frac{1}{2}-\frac{1}{2}e^{-2t}.$$
+                
+            </p>
 
     </section>
 
