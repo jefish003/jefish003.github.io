@@ -157,7 +157,11 @@
         <p>
             As we should now understand from our introduction to differential equations, the steady-state response of the system should resemble the input. Recall for example,
             in the method of undetermined coefficients, we guessed that the particular solution looked like the input. This is the exact reason, the steady-state should in
-            fact look like the input, at least for linear time invariant systems. 
+            fact look like the input, at least for linear time invariant systems. We must consider the transient response, since, as already noted, the transient response
+            relates to the comfort or realistic constraints for the system. Too large a transient response could cause biological problems for human riders of an elevator
+            (too large of an acceleration), and too small of a transient response could cause the elevator to take an unbearably long amount of time to operate, as an example.
+            Similarly, the steady state error remains an important consideration, if the elevator stopped halfway in between floors, that would be too large of an error
+            to make it usable. 
         </p>
 
         <!-- Embedded YouTube Video -->
@@ -185,6 +189,35 @@
             ). In this example, there was a small time delay between the control signal and the output. The delay was enough that the pilot thought that they had not
             pushed on the control stick hard enough, so the pilot tried to push harder, causing a more violent oscillatory response, which caused the pilot to try to
             overcorrect in the opposite direction leading to larger oscillations and eventually to the crash. 
+        </p>
+    </section>
+
+
+    <section class="section">
+        <h2 id="other-considerations-control">Other Considerations for Control Systems</h2>
+
+        <p>
+            As already noted above, when designing a control system, one must account for the transient response, the steady-state error and the stability of the system.
+            However, there are a number of other practical things that must be accounted for as well, for example hardware selection, one must account for the correct
+            pieces and measurement devices (for closed loop control) to create the control system. Another consideration is the financial cost of creating the system. If
+            the system becomes overly expensive, there may not be any customers to purchase the control system, so there often needs to be trade offs to account for cost.
+            Another consideration is the robustness of the design (this is often called structural stability in dynamical systems)
+            , if your design system is sensitive to small parameter changes then it is not very robust and will likely face challenges once it moves into the real world. 
+        </p>
+
+        <!-- Embedded YouTube Video -->
+        <div class="video-container">
+            <iframe 
+                src="https://www.youtube.com/embed/"
+                title="Other Considerations for Control Systems"
+                frameborder="0"
+                allowfullscreen>
+            </iframe>
+        </div>
+        
+
+        <p>
+More to come!
         </p>
     </section>
 
