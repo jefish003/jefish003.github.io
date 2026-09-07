@@ -1188,7 +1188,7 @@
 
         <p>
             Consider the following type of second order system, 
-            $$ay''+by'+cy = h(t),$$
+            $$ay''+by'+cy = \delta(t),$$
             $$y(0) = y_0, y'(0) = y_1.$$
             Such a system is often referred to as an <em>input-output</em> problem. The (constant) coefficients, \(a,b,c\) describe the properties of the (often physical) system,
             \(g(t)\) represents the input to that system, and \(y_0,y_1\) represent the initial state of the system. Since this is a linear, constant coefficient system, by the 
@@ -1205,24 +1205,13 @@
             In the \(s\) domain, then we can characterize the free response by \(G(s)[(as+b)y_0 + ay_1]\) and the forced response by \(H(s)G(s)\). We may now define the transfer function.
             The <em>Transfer Function</em> of the input-output problem, is the ratio of the forced response to the input in the \(s\)-domain. Equivalently, the transfer function is the factor 
             in the equation for \(Y(s)\) multiplying the Laplace transform of the input, \(H(s)\). It is clear from this that the transfer function we are referring to is \(G(s)\). 
-            For higher order systems we may generalize this (recall in this case we were dealing with a second order system), and we may be interested in more complicated examples,
+            For higher order systems we may generalize this (recall in this case we were dealing with a second order system), and we may be interested in more complicated examples where
+            the input function is not simply an impulse \(\delta(t)\),
             for instance if the higher order system can be written as,
             $$a_n \frac{d^ny(t)}{dt^n} + ... + a_0y(t) = b_m\frac{d^mx(t)}{dt^m} + ... + b_0x(t)$$
             we may call \(y(t)\) the output and \(x(t)\) the input, and in the Laplace transformed space, \(Y(s)\) is the output and \(X(s)\) is the input, and we may define the
             transfer function in this case as,
-            $$G(s) = \frac{Y(s)}{X(s)} = \frac{b_ms^m + b_{m-1}s^{m-1}+ ... + b_0}{a_ns^n + a_{n-1}s^{n-1}+ ... + a_0}.$$
-
-            
-        </p>
-        <p>
-            More to come!
-        </p>
-        <p>
-            More to come!         
-        </p>
-
-        <p>
-            More to come!
+            $$G(s) = \frac{Y(s)}{X(s)} = \frac{b_ms^m + b_{m-1}s^{m-1}+ ... + b_0}{a_ns^n + a_{n-1}s^{n-1}+ ... + a_0}.$$       
         </p>
 
         <!-- Embedded YouTube Video -->
@@ -1234,6 +1223,38 @@
                 allowfullscreen>
             </iframe>
         </div>
+
+            <p>
+                Now for some examples, suppose we have the following differential equation,
+                $$y''+2y'+5y = \delta(t),$$
+                $$y(0) = 0, y'(0) = 0,$$
+                where \(\delta(t) 
+                Then,
+                $$(s^2+2s+5)Y(s) = 1,$$
+                and it is clear that in this case \(G(s) = \frac{1}{(s^2+2s+5)}\) which happens to be the same as \(Y(s)\). 
+            </p>
+
+            <p>
+                Consider the following system,
+                $$0.1\ddot{y}+6y+4(y-x) = 0.4\dot{x}.$$
+                Rewriting this system to get the input portion all on the right hand side,
+                $$0.1\ddot{y}+6y+4y = 0.4\dot{x}+4x,$$
+                we may now write the Laplace transformed function as,
+                $$(0.1s^2+10)Y(s) = (0.4s+4)X(s) \implies G(s) = \frac{Y(s)}{X(s)} = \frac{0.4s+4}{0.1s^2+10}.$$ 
+                And we would need the initial conditions to fully solve this problem. 
+                
+            </p>
+                
+            <p>
+                As another example, suppose whe have a spring-mass-dashpot system organized in the following way,
+                $$m\ddot{y}+b\dot{y}+ky = b \dot{u} + ku,$$
+                where \(m\) represents the mass, \(b\) is the damping, \(k\) is the spring constant. 
+                It is clear that \(y(t)\) represents the output and \(u(t)\) represents the input. Then,
+                $$(ms^2+bs+k)Y(s) = (bs+k)U(s).$$
+                This situation leads to a more complicated transfer function, namely,
+                $$G(s) = \frac{Y(s)}{U(s)} = \frac{bs+k}{ms^2+bs+k}$$ 
+                and we would need to know the initial conditions to evaluate this system further. 
+            </p>
 
     </section>
 
