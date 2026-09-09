@@ -286,6 +286,15 @@ More to come!
 
         <p>
 We will also not some other terms that will be useful, the impedance and the admittance. Impedance (in Laplace transformed space) \(Z(s) = \frac{V(s)}{I(s)}\), and admittance \(Y(s) = \frac{I(s)}{V(s)}\).
+            It is easy to see that in this case, assuming zero initial conditions, across a capacitor, 
+            $$V(s) = \frac{1}{Cs}I(s) \implies Z(s) = \frac{1}{Cs}, Y(s) = Cs.$$
+            Similarly for a resistor,
+            $$V(s) = RI(s) \implies Z(s) = R, Y(s) = \frac{1}{R}.$$
+            And for the inductor, 
+            $$V(s) = LsI(s) \implies Z(s) = Ls, Y(s) = \frac{1}{Ls}.$$
+            This becomes a convenient way to write the equations as we shall see. We will find, conveniently, that the sum of the impedences multiplied by \(I(s)\) will be equal to
+            the sum of the applied voltages \(V(s)\). 
+            
             
         </p>
     </section>
