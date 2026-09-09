@@ -225,9 +225,47 @@ More to come!
         </p>
     </section>
 
+    <section class="section">
+        <h2 id="electrical-transfer-functions">Electrical Network Transfer Functions</h2>
+
+        <p>
+            We should begin by explaining some modeling elements of linear (remember for transfer functions we are assuming linear time invariant) electrical systems. The first 
+            thing we will discuss is Ohm's law, which is a law for linear resistors, and it states that,
+            $$e_R = iR \implies R = \frac{e_R}{i},$$
+            where \(i\) is the current (which is the same as \(\frac{dq}{dt}\) where \(q\) is the charge), \(e_R\) is the voltage across the resistor and \(R\) is the resistance of the resistor. So a resistor represents one common element of an 
+            electrical network, so does a capacitor. The capacitance is given by,
+            $$C = \frac{q}{e_C},$$
+            where \(C\) is the capacitance, \(e_C\) is the voltage across the (linear) capacitor. We can rewrite this in terms of the current, recalling that \(i = \frac{dq}{dt}\) and rewriting,
+            \(e_C = \frac{q}{C}\), if I differentiate this equation,
+            $$\frac{de_C}{dt} = \frac{1}{C}\frac{dq}{dt} \implies C\frac{de_C}{dt} = i.$$
+            Thus, if I want to write the voltage out in terms of \(i\) (which will be useful thanks to Kirchoffs laws), I need to integrate both sides to find
+            $$e_C(t) = \frac{1}{C}\int \limits_{0}^t i dt + e_C(0).$$
+            Finally, we will discuss inductance elements. The inductance can be written as,
+            $$L = \frac{e_L}{\frac{di}{dt}} \implies e_L = L\frac{di}{dt},$$
+            where \(e_C\) is the voltage across the (linear) inductor, and \(L\) is the inductance. If we so need, we may write things in terms of the current accross the capacitor,
+            $$i_L(t) = \frac{1}{L}\int \limits_{0}^{t}e_L dt + i_L(0).$$
+        </p>
+
+        <!-- Embedded YouTube Video -->
+        <div class="video-container">
+            <iframe 
+                src="https://www.youtube.com/embed/"
+                title="Introduction to Analysis and Design of Control Systems"
+                frameborder="0"
+                allowfullscreen>
+            </iframe>
+        </div>
+        
+
+        <p>
+More to come!
+        </p>
+    </section>
+
+
     
     <section class="section">
-        <h2>Derivatives</h2>
+        <h2 id="derivatives">Derivatives</h2>
 
         <p>
             Placeholder
