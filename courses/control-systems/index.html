@@ -226,7 +226,7 @@ More to come!
     </section>
 
     <section class="section">
-        <h2 id="electrical-transfer-functions">Electrical Network Transfer Functions</h2>
+        <h2 id="electrical-transfer-functions1">Electrical Network Transfer Functions Part 1</h2>
 
         <p>
             We should begin by explaining some modeling elements of linear (remember for transfer functions we are assuming linear time invariant) electrical systems. The first 
@@ -246,11 +246,27 @@ More to come!
             $$i_L(t) = \frac{1}{L}\int \limits_{0}^{t}e_L dt + i_L(0).$$
         </p>
 
+<p>
+    In series circuits (where elements are all in a line connected together, and the path of the current must leave one element and directly enter the next), we may write the voltages
+    as follows, 
+    $$e = \sum \limits_k e_k,$$
+    where \(e_k\) is the \(k\)th voltage element. Frequently we will be interested in how elements either in series, in parallel, or a mix of the 2 behave. In series, resistors based
+    on the sum rule above follow the same sum rule, this is easy to see, since \(e = iR\), thus,
+    $$e = \sum \limits_k i_kR_k.$$
+    Thus in series,
+    $$R_{eq} = R_1 + ...+ R_n,$$
+    where \(R_{eq}\) is the equivalent resistance, if there are \(n\) series connected resistors. 
+    You will find, by the same logic, that inductance elements obey this same rule. However, due to the relationship between voltage and capacitance (namely
+    voltage on one side means \(\frac{1}{C}\) on the other side of the equation) we get that in series
+    $$\frac{1}{C_{eq}} = \frac{1}{C_1}+ ...+\frac{1}{C_n}.$$
+    
+</p>
+        
         <!-- Embedded YouTube Video -->
         <div class="video-container">
             <iframe 
                 src="https://www.youtube.com/embed/"
-                title="Introduction to Analysis and Design of Control Systems"
+                title="Electrical Network Transfer Functions Part 1"
                 frameborder="0"
                 allowfullscreen>
             </iframe>
