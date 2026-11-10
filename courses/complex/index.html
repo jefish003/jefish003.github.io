@@ -115,7 +115,7 @@
         </p>
 
         <p>
-            If you want the fast version, below is a short video introducing limits.
+            If you want the fast version, below is a short video introducing complex numbers.
         </p>
 
         <!-- Embedded YouTube Video -->
@@ -136,7 +136,7 @@
             where the coefficients \(a_2,a_1,a_0 \in \mathbb{R}\) (that is each of those coefficients are real numbers). 
             And if you haven't guessed the answer to my question above, what happened to those other two solutions is that they were "pushed" into the complex plane. So, while one real root 
             always remains for the cubic no matter how much I increase or decrease the constant I add on (or any cubic for that matter with real coefficients), the other two roots become 
-            imaginary. Interestingly, when those coefficients are real, we are guaranteed that the imaginary roots will come in complex conjugate pairs (don't worry we will define the complex
+            imaginary. Interestingly, when those coefficients are real (on polynomials), we are guaranteed that the imaginary roots will come in complex conjugate pairs (don't worry we will define the complex
             conjugate shortly if you have never heard that term). 
         </p>
       
@@ -167,7 +167,7 @@
             $$z_1 - z_2 = (1-(-2), -5 -(-3)) = (3,-2).$$
         </p>
         <p>
-            For multiplication of complex numbers, it is probably tempting to try and define it as \(z_1z_2 = (x_1x_2, y_1,y_2)\) but this is quite clearly just plain wrong. You should think
+            For multiplication of complex numbers, it is probably tempting to try and define it as \(z_1z_2 = (x_1x_2, y_1y_2)\) but this is quite clearly just plain wrong. You should think
             about this for a moment before reading my answer as to why it is "quite clearly just plain wrong". The reason is that there are a couple of related glaring problems with defining
             things this way. The first, is we know that \(i = \sqrt{-1}\), so naturally, \(i^2 = \sqrt{-1}^2 = -1\), which is a real number. We can write \(i\) in our notation as \((0,1)\). So,
             if we defined multiplication as we did above we would find that \((0*0,1*1)\) which gives \((0,1)\), but this is definitely not what we want, because \(i^2 = (-1,0)\). Another easy
@@ -186,6 +186,39 @@
             
         </p>
     </section>
+
+
+            <section class="section">
+        <h2 id="complex-conjugation">The Complex Conjugate</h2>
+
+        <p>
+            Above we discussed both addition and multiplication. However, division of complex numbers is going to throw a bit of a wrench at us,
+            so now is a natural time to introduce the tool that helps us avoid that wrench! The tool I am talking about is the complex conjugate.
+        </p>
+        <p>
+            The complex conjugate is a simple concept, but it helps us tremendously simplify our algebra of complex numbers. The complex conjugate
+            simply replaces any coefficient of the term containing \(i\) with \(-i\). For example, if \(z = (2,1), z^* = (2, -1)\), where \(z^*\)
+            is the complex conjugate. Or written another way, \(z = 2+i, z^* = 2-i\). Notice that the real part remains unchanged under conjugation,
+            this will be a key fact for us at points in the future. You may be wondering why we need complex conjugation, and the reason is it greatly
+            simplifies things for us in certain circumstances, because any number multiplied by it's complex conjugate will be a real number! Take our
+            example above, \(z = 2+i, z^* = 2-i\) thus, \(zz^* = (2+i)(2-i) = 4+2i-2i-i^2 = 5\). Notice how the "cross terms" which contain \(i\) in 
+            them get cancelled out. This is the key, when we multiply a complex number by its complex conjugate those terms containing \(i\) always will
+            be cancelled out, leaving only a real number! We will do another example for fun, \(z = 5-3i, z^* = 5+3i\) thus, \(z^*z = (5+3i)(5-3i) = 25+15i-15i-9i^2 = 34\).
+            
+        </p>
+
+        <!-- Embedded YouTube Video -->
+        <div class="video-container">
+            <iframe 
+                src="https://www.youtube.com/embed/"
+                title="Method of Substitution"
+                frameborder="0"
+                allowfullscreen>
+            </iframe>
+        </div>
+
+    </section>
+    
 
 </div>
 
