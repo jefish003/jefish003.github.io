@@ -178,9 +178,16 @@
           $$\frac{\partial \Psi}{\partial t} = \frac{i\hslash}{2m}\frac{\partial^2\Psi}{\partial x^2}-\frac{i}{\hslash}V\Psi$$,
           and recalling that \(\Psi^*\Psi = |\Psi|^2 = \Psi^*\frac{\partial \Psi}{\partial t}+\frac{\partial \Psi^*}{\partial t}\), and thus appropriately adding
           we find that,
-          $$\frac{\partial}{\partial t}|\Psi|^2 = \frac{i\hslash}{2m}\Big(\Psi^*\frac{\partial^2\Psi}{\partial x^2}-\frac{\partial^2\Psi^*}{\partial x}\Big).$$
-          
-          
+          $$\frac{\partial}{\partial t}|\Psi|^2 = \frac{i\hslash}{2m}\Big(\Psi^*\frac{\partial^2\Psi}{\partial x^2}-\frac{\partial^2\Psi^*}{\partial x^2}\Big).$$
+          Now we can see that 
+          $$\frac{i\hslash}{2m}\Big(\Psi^*\frac{\partial^2\Psi}{\partial x^2}-\frac{\partial^2\Psi^*}{\partial x}\Big) = \frac{\partial}{\partial x}\Big[\frac{i\hslash}{2m}\Big(\Psi^*\frac{\partial\Psi}{\partial x}-\frac{\partial\Psi^*}{\partial x}\Big)\Big]$$
+          by pulling out one of the derivatives with respect to \(x\). Now we can pull this back into the integral, and since we have a term \(\frac{d}{dx}\) and a \(dx\) term inside
+          the integral, we can use 
+                  <a href="/courses/calculus/integral/index.html#fundamental-theorem-calculus">
+            the fundamental theorem of calculus,
+        </a>           
+          we find that,
+          $$\frac{d}{dt}\int \limits_{-\infty}^\infty |\Psi(x,t)|^2 dx = \frac{i\hslash}{2m}\Big(\Psi^*\frac{\partial\Psi}{\partial x}-\frac{\partial\Psi^*}{\partial x}\Big).$$
       </p>
     </section>
     <section class="section">
