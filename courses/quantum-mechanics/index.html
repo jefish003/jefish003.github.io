@@ -161,7 +161,18 @@
         </p>
       <p>
           You should note that the integral above covers all of <em>space</em> but there is no mention of time. So, how can we be sure that solutions remain square integrable through all of time?
-          (Note that the implicit assumption here is that we are operating in a closed system, in an open system there are no guarantees that something remains square integrable for all time!)
+          (Note that the implicit assumption here is that we are operating in a closed system, in an open system there are no guarantees that something remains square integrable for all time!) 
+          It turns out, so long as the potential energy function \(V\) is <em>well behaved</em>, in the sense that it doesn't produce a wave function that flings probability to \(\infty\) in
+          finite time and sits inside a smooth domain, then we can prove that the Hermitian wave function remains normalized for all time. We begin with
+          $$\frac{d}{dt}\int \limits_{-\infty}^\infty |\Psi(x,t)|^2 dx = \int \limits_{-\infty}^\infty \frac{\partial}{\partial t}|\Psi(x,t)|^2 dx,$$
+          and we are able to pull that derivative inside the integral sign under the assumptions on the wave function I discussed above. We will note that for any complex valued function,
+          \(|\Psi|^2 = \Psi^*\Psi\), where \(\Psi^*\) is the complex conjugate of \(\Psi\), so,
+          $$\frac{\partial}{\partial t}|\Psi|^2 = \frac{\partial}{\partial t}(\Psi^*\Psi) = \Psi^*\frac{\partial \Psi}{\partial t}+\frac{\partial \Psi^*}{\partial t},$$
+          where the last part comes from the 
+                  <a href="/courses/calculus/differential/index.html#product-rule">
+            product rule.
+        </a> 
+        Note that,
           
       </p>
     </section>
