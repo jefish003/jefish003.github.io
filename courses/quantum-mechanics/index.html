@@ -190,7 +190,7 @@
           $$\frac{d}{dt}\int \limits_{-\infty}^\infty |\Psi(x,t)|^2 dx = \frac{i\hslash}{2m}\Big(\Psi^*\frac{\partial\Psi}{\partial x}-\frac{\partial\Psi^*}{\partial x}\Big)\Big|_{-\infty}^\infty.$$
           Notice the evaluation that must happen at \(\pm \infty\), but in order for \(\Psi(x,t)\) to be normalizable (which we require for the system to be physical) that \(\Psi(x,t) \rightarrow 0\) as \(x \rightarrow \pm \infty\),
           and thus applying the integration limits in the above equation, we find that,
-          $$\frac{d}{dt}\int \limits_{-\infty}^infty|\Psi(x,t)|^2 dx =0$$,
+          $$\frac{d}{dt}\int \limits_{-\infty}^\infty|\Psi(x,t)|^2 dx =0,$$
           which implies that the integral itself is constant in time (since taking the derivative causes the integral to become identically \(0\)), and thus if we start off 
           normalized, under reasonable assumptions we will remain normalized for all of time. 
           
@@ -198,17 +198,57 @@
       </p>
     </section>
     <section class="section">
+        <h2 id="momentum">Momentum of a particle</h2>
+
+        <p>
+            For a particle in a particular state \(\Psi\), the expectation value of \(x\) for that particle is,
+            $$\langle x \rangle = \int \limits_{-\infty}^\infty x|\Psi(x,t)|^2 dx.$$
+            We would like to understand the physical interpretation of this, what does it mean for a particle to have an average position? We know thanks to the 
+            physicists in the 1920's (including Niels Bohr who was one of the champions of the concept of wavefunction collapse) that the wavefunction \(\Psi(x,t)\) 
+            collapses as soon as it is measured to a particular position, so we cannot interpret this as the probability of finding a particular particle at \(\langle x \rangle\). 
+            Instead, the appropriate way to interpret this is that if we were to prepare a whole <em>ensemble</em> of particles, each one starting in the state \(\Psi(x,t)\), that
+            the mean value of measured position of this ensemble would be \(\langle x \rangle\). 
+        </p>
+
+        
+        <!-- Embedded YouTube Video -->
+        <div class="video-container">
+            <iframe 
+                src="https://www.youtube.com/embed/"
+                title="The Wave Function"
+                frameborder="0"
+                allowfullscreen>
+            </iframe>
+        </div>
+
+        <p>
+More to come!
+        </p>
+    </section>
+
+    <section class="section">
         <h2 id="introduction-schrodinger-equation">Introduction to Schrodinger's Equation</h2>
 
         <p>
             Placeholder
         </p>
 
+        
+        <!-- Embedded YouTube Video -->
+        <div class="video-container">
+            <iframe 
+                src="https://www.youtube.com/embed/"
+                title="The Wave Function"
+                frameborder="0"
+                allowfullscreen>
+            </iframe>
+        </div>
 
         <p>
 More to come!
         </p>
     </section>
+    
 
 </div>
 
