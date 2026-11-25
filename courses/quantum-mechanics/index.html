@@ -187,7 +187,14 @@
             the fundamental theorem of calculus,
         </a>           
           we find that,
-          $$\frac{d}{dt}\int \limits_{-\infty}^\infty |\Psi(x,t)|^2 dx = \frac{i\hslash}{2m}\Big(\Psi^*\frac{\partial\Psi}{\partial x}-\frac{\partial\Psi^*}{\partial x}\Big)|_{-\infty}^\infty.$$
+          $$\frac{d}{dt}\int \limits_{-\infty}^\infty |\Psi(x,t)|^2 dx = \frac{i\hslash}{2m}\Big(\Psi^*\frac{\partial\Psi}{\partial x}-\frac{\partial\Psi^*}{\partial x}\Big)\Big|_{-\infty}^\infty.$$
+          Notice the evaluation that must happen at \(\pm \infty\), but in order for \(\Psi(x,t)\) to be normalizable (which we require for the system to be physical) that \(\Psi(x,t) \rightarrow 0\) as \(x \rightarrow \pm \infty\),
+          and thus applying the integration limits in the above equation, we find that,
+          $$\frac{d}{dt}\int \limits_{-\infty}^infty|\Psi(x,t)|^2 dx =0$$,
+          which implies that the integral itself is constant in time (since taking the derivative causes the integral to become identically \(0\)), and thus if we start off 
+          normalized, under reasonable assumptions we will remain normalized for all of time. 
+          
+          
       </p>
     </section>
     <section class="section">
