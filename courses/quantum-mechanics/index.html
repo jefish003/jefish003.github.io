@@ -172,7 +172,14 @@
                   <a href="/courses/calculus/differential/index.html#product-rule">
             product rule.
         </a> 
-        Note that,
+        Note that, by taking the complex conjugate of the Schrodinger equation (from above) we find,
+          $$\frac{\partial \Psi^*}{\partial t} = \frac{-i\hslash}{2m}\frac{\partial^2\Psi^*}{\partial x^2}+\frac{i}{\hslash}V\Psi^*$$.
+          Restating the Schrodinger equation,
+          $$\frac{\partial \Psi}{\partial t} = \frac{i\hslash}{2m}\frac{\partial^2\Psi}{\partial x^2}-\frac{i}{\hslash}V\Psi$$,
+          and recalling that \(\Psi^*\Psi = |\Psi|^2 = \Psi^*\frac{\partial \Psi}{\partial t}+\frac{\partial \Psi^*}{\partial t}\), and thus appropriately adding
+          we find that,
+          $$\frac{\partial}{\partial t}|\Psi|^2 = \frac{i\hslash}{2m}\Big(\Psi^*\frac{\partial^2\Psi}{\partial x^2}-\frac{\partial^2\Psi^*}{\partial x}\Big).$$
+          
           
       </p>
     </section>
